@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Jost:wght@300;900&family=Montserrat:wght@400;600&family=Raleway:wght@300;400;500;600;700;800&display=swap");
 *,
 ::before,
 ::after {
@@ -7,4 +9,64 @@
           box-sizing: border-box;
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
+}
+
+@font-face {
+  font-family: "JOURNALISM";
+  src: url("../fonts/JOURNALISM/JOURNALISM.eot");
+  src: local("JOURNALISM"), url("../fonts/JOURNALISM/JOURNALISM.eot?#iefix") format("embedded-opentype"), url("../fonts/JOURNALISM/JOURNALISM.woff2") format("woff2"), url("../fonts/JOURNALISM/JOURNALISM.woff") format("woff"), url("../fonts/JOURNALISM/JOURNALISM.ttf") format("truetype");
+}
+@font-face {
+  font-family: "NEXT ART";
+  src: url("../fonts/NEXT-ART/NEXT-ART_Light.otf");
+  src: url("../fonts/NEXT-ART/NEXT-ART_SemiBold.otf");
+  src: url("../fonts/NEXT-ART/NEXT-ART_Bold.otf");
+  src: url("../fonts/NEXT-ART/NEXT-ART_Heavy.otf");
+}
+@font-face {
+  font-family: "icon-font";
+  src: url("../.fonts/Icon-Font/icon-font.eot?qkxsc");
+  src: url("../fonts/Icon-Font/icon-font.eot?qkxsc#iefix") format("embedded-opentype"), url("../fonts/Icon-Font/icon-font.ttf?qkxsc") format("truetype"), url("../fonts/Icon-Font/icon-font.woff?qkxsc") format("woff"), url("../fonts/Icon-Font/icon-font.svg?qkxsc#icon-font") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+i {
+  font-family: "icon-font" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-vk:before {
+  content: "";
+}
+
+.icon-phone:before {
+  content: "";
+}
+
+.icon-facebook:before {
+  content: "";
+}
+
+.icon-check:before {
+  content: "";
+}
+
+.icon-arrow-down:before {
+  content: "";
+}
+
+.icon-instagram:before {
+  content: "";
+}
+
+.icon-viber:before {
+  content: "";
 }
