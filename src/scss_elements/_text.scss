@@ -1,0 +1,23 @@
+.text {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: $dark-grey;
+    line-height: 30px;
+
+    &_small {
+        font-weight: 300;
+        font-size: 16px;
+        color: $dark-grey;
+        letter-spacing: 0.02em;
+        line-height: 26px;
+    }
+
+    &_blue {
+        color: $dark-green;
+    }
+
+    &_black {
+        color: $black;
+    }
+}

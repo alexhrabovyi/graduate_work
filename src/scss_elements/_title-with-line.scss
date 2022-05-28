@@ -1,0 +1,18 @@
+.title-with-line {
+    font-family: "NEXT ART", sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    letter-spacing: 0.02em;
+
+    @include media-xs {
+        font-size: 20px;
+    }
+
+    &__line {
+        box-shadow: 0 -12px 0 rgba(255, 236, 160, 1) inset;
+
+        @include media-xs {
+            box-shadow: 0 -10px 0 rgba(255, 236, 160, 1) inset;
+        }
+    }
+}

@@ -1,0 +1,124 @@
+.header-wrapper {
+    margin-top: 60px;
+
+    &_for-adult {
+        margin-bottom: 100px;
+    }
+
+    @include media-l {
+        margin-bottom: 40px;
+    }
+
+    @include media-s {
+        margin-top: 143px;
+        margin-bottom: 80px;
+    }
+
+    &__header {
+        @include flex-builder(row,space-between, center);
+
+        @include media-s {
+            @include flex-builder(column, none, none);
+        }
+    }
+
+    &__button {
+        margin-top: 40px;
+
+        @include media-l {
+            margin-top: 25px;
+        }
+
+        @include media-m {
+            margin-top: 20px;
+        }
+    }
+
+    &__interactive-block {
+        margin-top: 70px;
+        width: 52.78%;
+
+        @include media-l {
+            margin-top: 50px;
+        }
+
+        @include media-m {
+            margin-top: 30px;
+        }
+
+        @include media-s {
+            margin-top: 0;
+            margin-bottom: 40px;
+            width: 80%;
+            align-self: center;
+        }
+
+        @include media-xs {
+            width: 100%;
+        }
+    }
+
+    &__title {
+
+        @include media-s {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        margin-top: 20px;
+        font-size: 22px;
+        
+        @include media-s {
+            font-size: 20px;
+        }
+    }
+
+    &__picture-block {
+        width: 44.45%;
+        position: relative;
+
+        &_for-adult {
+            width: 46.03%;
+            @include flex-builder(row-reverse, none, none);
+        }
+
+        @include media-s {
+            width: 80%;
+            align-self: center;
+        }
+
+        @include media-xs {
+            width: 100%;
+        }
+    }
+
+    &__additional-picture {
+        position: absolute;
+        bottom: 0;
+        left: 46px;
+        width: 60.08%;
+
+        &_children-offline {
+            width: 62.22%;
+            left: 6.79%;
+            bottom: 4px;
+            z-index: -1;
+        }
+
+        &_for-adult {
+            width: 51.72%;
+            left: 0;
+            bottom: 0;
+        }
+    }
+
+    &__picture {
+        width: 100%;
+
+        &_for-adult {
+            width: 72.41%;
+        }
+    }
+
+}

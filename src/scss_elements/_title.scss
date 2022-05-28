@@ -1,0 +1,38 @@
+.title {
+    font-family: "NEXT ART", sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 50px;
+    letter-spacing: 0.02em;
+    font-feature-settings: 'kern' off;
+    color: $black;
+
+    @include media-l {
+        font-size: 44px;
+    }
+
+    @include media-m {
+        font-size: 38px;
+    }
+
+    @include media-s {
+        font-size: 32px;
+    }
+
+    @include media-xs {
+        font-size: 30px;
+    }
+
+    @media (max-width: 320px) {
+        font-size: 26px;
+    }
+}
+
+.title_small {
+    font-size: 24px;
+}
+
+.title_smaller {
+    font-size: 22px;
+    font-weight: 700;
+}

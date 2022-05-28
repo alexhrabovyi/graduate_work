@@ -1,0 +1,24 @@
+.container {
+    padding-left: 17.1875%;
+    padding-right: 17.1875%;
+
+    @include media-l {
+        padding-left: 12%;
+        padding-right: 12%;
+    }
+
+    @include media-m {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    @include media-s {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    @include media-xs {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
