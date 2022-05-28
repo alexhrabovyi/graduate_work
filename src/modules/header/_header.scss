@@ -15,7 +15,7 @@
     }
 
     &__header {
-        @include flex-builder(row,space-between, center);
+        @include flex-builder(row, space-between, center);
 
         @include media-s {
             @include flex-builder(column, none, none);
@@ -68,7 +68,7 @@
     &__text {
         margin-top: 20px;
         font-size: 22px;
-        
+
         @include media-s {
             font-size: 20px;
         }
