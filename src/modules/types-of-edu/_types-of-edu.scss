@@ -1,0 +1,50 @@
+.types-of-edu-wrapper {
+    display: flex;
+
+    @include media-s {
+        @include flex-builder(column, none, center);
+    }
+
+    &__link {
+        margin-right: 10%;
+        text-decoration: none;
+        position: relative;
+
+        @include media-s {
+            margin-right: 0;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__img {
+
+        @include media-m {
+            width: 160px;
+        }
+    } 
+
+    &__text {
+        font-family: "NEXT ART", sans-serif;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 34px;
+        color: $black;
+        position: absolute;
+        left: 71px;
+        background: $white;
+        letter-spacing: 0.02em;
+        padding-left: 2px;
+
+        @include media-xs {
+            font-size: 20px;
+        }
+
+        &_top {
+            bottom: 43px;
+        }
+
+        &_bottom {
+            bottom: 0;
+        }
+    }
+}

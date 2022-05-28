@@ -1,0 +1,36 @@
+// properties for all elements
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+}
+
+// libs 
+
+@import "../../../scss-libs/fonts";
+@import "../../../scss-libs/mixins";
+@import "../../../scss-libs/colors";
+
+// elements
+
+@import "../../../scss-elements/button-close";
+@import "../../../scss-elements/button";
+@import "../../../scss-elements/container";
+@import "../../../scss-elements/hidden";
+@import "../../../scss-elements/input";
+@import "../../../scss-elements/logo-link";
+@import "../../../scss-elements/modal-window";
+@import "../../../scss-elements/social-link";
+@import "../../../scss-elements/text";
+@import "../../../scss-elements/title-with-line";
+@import "../../../scss-elements/title";
+
+// blocks
+
+@import "../../../modules/header/header";
+@import "../../../modules/types-of-edu/types-of-edu";
