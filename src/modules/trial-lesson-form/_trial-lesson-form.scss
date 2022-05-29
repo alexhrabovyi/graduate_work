@@ -1,0 +1,198 @@
+.trial-lesson-form-wrapper {
+    @include flex-center;
+
+    &__form {
+        width: 1046px;
+        background: $light-yellow;
+        padding-left: 106px;
+        border-radius: 70px;
+        overflow: hidden;
+        @include flex-builder(row, space-between, none);
+    }
+
+    &__content-block {
+        width: 475px;
+        padding: 80px 0;
+        @include flex-builder(column, none, none);
+    }
+
+    &__title_small {
+        margin-bottom: 30px;
+    }
+
+    &__form-block {
+        width: 420px;
+        padding-top: 50px;
+        @include flex-builder(column, none, none);
+        position: relative;
+    }
+
+    &__tab-buttons-block {
+        width: 420px;
+        @include flex-builder(row, space-between, none);
+        margin-bottom: 30px;
+    }
+
+    &__tab-button {
+        width: 200px;
+        height: 33px;
+        @include flex-center-center;
+        border: none;
+        background: none;
+        border-bottom: solid 2px rgb(148, 198, 196);
+        font-family: 'Raleway';
+        font-weight: 500;
+        font-size: 18px;
+        color: $black;
+        cursor: pointer;
+        transition: .1s all ease-in-out;
+
+        &:hover {
+            border-bottom-color: $dark-green;
+        }
+
+        &_selected {
+            border-bottom-color: $dark-green;
+        }
+    }
+
+    &__select {
+        width: 100%;
+        height: 50px;
+        overflow: hidden;
+        padding: 0 17.5px 0 20px;
+        background: $white;
+        border: 1px solid $sand;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: .1s box-shadow ease-in-out;
+        transition: .2s height ease-in-out;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+
+        &:hover {
+            box-shadow: 0px 2px 4px $sand;
+        }
+    }
+
+    &__chosen-lang-block {
+        width: 100%;
+        height: 50px;
+        @include flex-builder(row, space-between, center);
+    }
+
+    &__select-icon {
+        font-size: 8px;
+        color: $black;
+        transition: .3s all ease-in-out;
+
+        &_transformed {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__select-options {
+        padding-bottom: 5px;
+    }
+
+    &__select-line {
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: $sand;
+        margin-bottom: 5px;
+    }
+
+    &__select-option {
+        width: 100%;
+        background: none;
+        border: none;
+        margin: 5px 0 5px 0;
+        text-align: start;
+        transition: .05s all ease-in-out;
+
+        &:hover {
+            color: $red;
+        }
+
+        &_selected {
+            color: $red;
+        }
+    }
+
+    &__checkbox-block {
+        width: 100%;
+        height: 26px;
+        display: flex;
+        margin: 14px 0 14px 0;
+    }
+
+    &__checkbox-button {
+        width: 50%;
+        border: none;
+        background: none;
+        @include flex-builder(row, none, center);
+        transition: .5s all ease-in-out;
+        cursor: pointer;
+
+        &:hover .trial-lesson-form-wrapper__circle-external {
+            transform: scale(1.2);
+        }
+
+        &_selected .trial-lesson-form-wrapper__circle-inner {
+            background: $dark-green;
+        }
+    }
+
+    &__circle-external {
+        display: block;
+        width: 12px;
+        height: 12px;
+        border: 1px solid $dark-green;
+        border-radius: 50%;
+        margin-right: 14px;
+        @include flex-center-center;
+    }
+
+    &__circle-inner {
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+    }
+
+    &__tab-contents {
+        margin-bottom: 14px;
+        transition: .4s all ease-in-out;
+        position: relative;
+    }
+
+    &__tab-content {
+        width: 100%;
+        opacity: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: .2s all ease-in-out;
+        pointer-events: none;
+
+        &_active {
+            opacity: 1;
+            pointer-events: all;
+        }
+    }
+
+    &__button-submit {
+        margin-top: 30px;
+    }
+
+    &__img-right {
+        width: 290px;
+        background: url("../../../modules/trial-lesson-form/svg/trial-lesson-form-bg.svg") center;
+    }
+}

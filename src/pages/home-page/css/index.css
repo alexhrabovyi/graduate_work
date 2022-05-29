@@ -1056,6 +1056,199 @@ i {
   }
 }
 
+.trial-lesson-form-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.trial-lesson-form-wrapper__form {
+  width: 1046px;
+  background: rgb(255, 251, 237);
+  padding-left: 106px;
+  border-radius: 70px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: none;
+}
+.trial-lesson-form-wrapper__content-block {
+  width: 475px;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  align-items: none;
+}
+.trial-lesson-form-wrapper__title_small {
+  margin-bottom: 30px;
+}
+.trial-lesson-form-wrapper__form-block {
+  width: 420px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  align-items: none;
+  position: relative;
+}
+.trial-lesson-form-wrapper__tab-buttons-block {
+  width: 420px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: none;
+  margin-bottom: 30px;
+}
+.trial-lesson-form-wrapper__tab-button {
+  width: 200px;
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: none;
+  border-bottom: solid 2px rgb(148, 198, 196);
+  font-family: "Raleway";
+  font-weight: 500;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: 0.1s all ease-in-out;
+}
+.trial-lesson-form-wrapper__tab-button:hover {
+  border-bottom-color: rgb(35, 105, 103);
+}
+.trial-lesson-form-wrapper__tab-button_selected {
+  border-bottom-color: rgb(35, 105, 103);
+}
+.trial-lesson-form-wrapper__select {
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  padding: 0 17.5px 0 20px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 236, 160);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.1s box-shadow ease-in-out;
+  transition: 0.2s height ease-in-out;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+.trial-lesson-form-wrapper__select:hover {
+  box-shadow: 0px 2px 4px rgb(255, 236, 160);
+}
+.trial-lesson-form-wrapper__chosen-lang-block {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.trial-lesson-form-wrapper__select-icon {
+  font-size: 8px;
+  color: rgb(0, 0, 0);
+  transition: 0.3s all ease-in-out;
+}
+.trial-lesson-form-wrapper__select-icon_transformed {
+  transform: rotate(180deg);
+}
+.trial-lesson-form-wrapper__select-options {
+  padding-bottom: 5px;
+}
+.trial-lesson-form-wrapper__select-line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: rgb(255, 236, 160);
+  margin-bottom: 5px;
+}
+.trial-lesson-form-wrapper__select-option {
+  width: 100%;
+  background: none;
+  border: none;
+  margin: 5px 0 5px 0;
+  text-align: start;
+  transition: 0.05s all ease-in-out;
+}
+.trial-lesson-form-wrapper__select-option:hover {
+  color: rgb(254, 113, 103);
+}
+.trial-lesson-form-wrapper__select-option_selected {
+  color: rgb(254, 113, 103);
+}
+.trial-lesson-form-wrapper__checkbox-block {
+  width: 100%;
+  height: 26px;
+  display: flex;
+  margin: 14px 0 14px 0;
+}
+.trial-lesson-form-wrapper__checkbox-button {
+  width: 50%;
+  border: none;
+  background: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: none;
+  align-items: center;
+  transition: 0.5s all ease-in-out;
+  cursor: pointer;
+}
+.trial-lesson-form-wrapper__checkbox-button:hover .trial-lesson-form-wrapper__circle-external {
+  transform: scale(1.2);
+}
+.trial-lesson-form-wrapper__checkbox-button_selected .trial-lesson-form-wrapper__circle-inner {
+  background: rgb(35, 105, 103);
+}
+.trial-lesson-form-wrapper__circle-external {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid rgb(35, 105, 103);
+  border-radius: 50%;
+  margin-right: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.trial-lesson-form-wrapper__circle-inner {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+.trial-lesson-form-wrapper__tab-contents {
+  margin-bottom: 14px;
+  transition: 0.4s all ease-in-out;
+  position: relative;
+}
+.trial-lesson-form-wrapper__tab-content {
+  width: 100%;
+  opacity: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.2s all ease-in-out;
+  pointer-events: none;
+}
+.trial-lesson-form-wrapper__tab-content_active {
+  opacity: 1;
+  pointer-events: all;
+}
+.trial-lesson-form-wrapper__button-submit {
+  margin-top: 30px;
+}
+.trial-lesson-form-wrapper__img-right {
+  width: 290px;
+  background: url("../../../modules/trial-lesson-form/svg/trial-lesson-form-bg.svg") center;
+}
+
 .for-child-for-adult-wrapper__content-block {
   width: 100%;
   margin-top: 140px;
