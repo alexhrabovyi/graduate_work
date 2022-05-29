@@ -842,4 +842,119 @@ i {
   margin-right: 10px;
 }
 
+.smart-wrapper {
+  margin-top: 140px;
+  margin-bottom: 97px;
+  padding: 0 26.8% 0 26.8%;
+}
+@media (max-width: 1360px) {
+  .smart-wrapper {
+    padding: 0 19% 0 19%;
+  }
+}
+@media (max-width: 1024px) {
+  .smart-wrapper {
+    padding: 0 9% 0 9%;
+  }
+}
+@media (max-width: 768px) {
+  .smart-wrapper {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+}
+@media (max-width: 576px) {
+  .smart-wrapper {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}
+.smart-wrapper__title-with-line {
+  margin-bottom: 30px;
+}
+.smart-wrapper__text_small {
+  width: 427px;
+  margin-bottom: 34px;
+}
+@media (max-width: 768px) {
+  .smart-wrapper__text_small {
+    width: 100%;
+  }
+}
+.smart-wrapper__smart-letters-block {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: none;
+}
+@media (max-width: 768px) {
+  .smart-wrapper__smart-letters-block {
+    display: none;
+  }
+}
+.smart-wrapper__smart-letters-block-mobile {
+  width: 100%;
+  display: none;
+}
+@media (max-width: 768px) {
+  .smart-wrapper__smart-letters-block-mobile {
+    display: block;
+  }
+}
+.smart-wrapper__smart-letters-block-row-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: none;
+}
+.smart-wrapper__smart-letters-block-row-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: none;
+}
+.smart-wrapper__smart-letter-block {
+  position: relative;
+  text-align: center;
+}
+.smart-wrapper__smart-letter {
+  font-family: "Jost", sans-serif;
+  font-weight: 900;
+  font-size: 90px;
+  letter-spacing: 0.5px;
+  color: rgb(255, 236, 160);
+}
+@media (max-width: 576px) {
+  .smart-wrapper__smart-letter {
+    font-size: 80px;
+  }
+}
+.smart-wrapper__text-block {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  align-items: center;
+  width: 140px;
+}
+@media (max-width: 576px) {
+  .smart-wrapper__text-block {
+    width: auto;
+  }
+}
+.smart-wrapper__text_black {
+  text-align: center;
+}
+@media (max-width: 576px) {
+  .smart-wrapper__text_black {
+    font-size: 16px;
+  }
+}
+
 /*# sourceMappingURL=index.css.map */

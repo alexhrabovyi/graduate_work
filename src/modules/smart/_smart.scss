@@ -1,0 +1,102 @@
+.smart-wrapper {
+    margin-top: 140px;
+    margin-bottom: 97px;
+    padding: 0 26.8% 0 26.8%;
+
+    @include media-l {
+        padding: 0 19% 0 19%;
+    }
+
+    @include media-m {
+        padding: 0 9% 0 9%;
+    }
+
+    @include media-s {
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    @include media-xs {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    &__title-with-line {
+        margin-bottom: 30px;
+    }
+
+    &__text_small {
+        width: 427px;
+        margin-bottom: 34px;
+
+        @include media-s {
+            width: 100%;
+        }
+    }
+
+    &__smart-letters-block {
+        width: 100%;
+        @include flex-builder(row, space-between, none);
+
+        @include media-s {
+            display: none;
+        }
+    }
+
+    &__smart-letters-block-mobile {
+        width: 100%;
+        display: none;
+
+        @include media-s {
+            display: block;
+        }
+    }
+
+    &__smart-letters-block-row-top {
+        @include flex-builder(row, space-around, none);
+    }
+
+    &__smart-letters-block-row-bottom {
+        @include flex-builder(row, space-around, none);
+    }
+
+    &__smart-letter-block {
+        position: relative;
+        text-align: center;
+    }
+
+    &__smart-letter {
+        font-family: "Jost", sans-serif;
+        font-weight: 900;
+        font-size: 90px;
+        letter-spacing: 0.5px;
+        color: $sand;
+
+        @include media-xs {
+            font-size: 80px;
+        }
+    }
+
+    &__text-block {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%);
+        @include flex-builder(column, none, center);
+        width: 140px;
+
+        @include media-xs {
+            width: auto;
+        }
+    }
+
+    &__text_black {
+        text-align: center;
+
+        @include media-xs {
+            font-size: 16px;
+        }
+    }
+}
