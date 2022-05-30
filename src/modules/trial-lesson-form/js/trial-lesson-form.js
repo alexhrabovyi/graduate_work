@@ -10,7 +10,6 @@ class Select {
     }
 
     setup() {
-
         for (let i = 0; i < this.selects.length; i++) {
             let selectOption = this.selects[i].querySelectorAll("[data-option]")
 
@@ -133,50 +132,58 @@ new Select({
 
 // ===============================================
 
-// class Checkbox {
-//     constructor(options) {
-//         this.checkboxBlock = document.querySelector(options.checkbox_block_selector);
-//         this.checkboxOption = this.checkboxBlock.querySelectorAll("[data-checkbox-option");
+class Checkbox {
+    constructor(options) {
+        this.checkBoxBlock = document.querySelectorAll(options.checkbox_block_selector);
 
-//         this.selected_class = options.selected_class;
-//         this.selectedId = options.selectedId ?? 0;
+        this.selected_class = options.selected_class;
+        this.selectedId = options.selectedId ?? 0;
 
-//         this.setup();
-//     }
+        this.setup();
+    }
 
-//     setup() {
-//         for (let i = 0; i < this.checkboxOption.length; i++) {
-//             this.checkboxOption[i].setAttribute("data-checkbox-option", i);
-//         }
+    setup() {
+        for (let i = 0; i < this.checkBoxBlock.length; i++) {
+            let checkBoxOption = this.checkBoxBlock[i].querySelectorAll("[data-checkbox-option]")
 
-//         this.checkboxBlock.setAttribute("data-selected-checkbox-id", this.selectedId);
+            for (let k = 0; k < checkBoxOption.length; k++) {
+                checkBoxOption[k].setAttribute("data-checkbox-option", k);
+            }
 
-//         this.checkboxOption[this.selectedId].classList.add(this.selected_class);
+            checkBoxOption[this.selectedId].classList.add(this.selected_class);
 
-//         this.checkboxBlock.addEventListener("click", this.selectCheckbox.bind(this));
-//     }
+            this.checkBoxBlock[i].addEventListener("click", this.selectCheckBox.bind(this));
+        }
+    }
 
-//     selectCheckbox(e) {
-//         e.preventDefault();
+    selectCheckBox(e) {
+        e.preventDefault();
 
-//         let checkbox = e.target.closest("[data-checkbox-option]");
+        let checkbox = e.target.closest("[data-checkbox-option]");
 
-//         if (!checkbox) return;
+        if (!checkbox) return;
 
-//         this.checkboxOption[this.selectedId].classList.remove(this.selected_class);
-//         checkbox.classList.add(this.selected_class);
+        let selectedCheckBox = document.querySelectorAll(`[data-checkbox-option = "${this.selectedId}"]`);
 
-//         this.selectedId = checkbox.dataset.checkboxOption;
+        for (let i = 0; i < selectedCheckBox.length; i++) {
+            selectedCheckBox[i].classList.remove(this.selected_class);
+        }
 
-//         this.checkboxBlock.setAttribute("data-selected-checkbox-id", this.selectedId);
-//     }
-// }
+        this.selectedId = checkbox.dataset.checkboxOption;
 
-// new Checkbox({
-//     checkbox_block_selector: ".trial-lesson-form-wrapper__checkbox-block",
-//     selected_class: "trial-lesson-form-wrapper__checkbox-button_selected",
-//     selectedId: 0,
-// });
+        selectedCheckBox = document.querySelectorAll(`[data-checkbox-option = "${this.selectedId}"]`);
+
+        for (let i = 0; i < selectedCheckBox.length; i++) {
+            selectedCheckBox[i].classList.add(this.selected_class);
+        }
+    }
+}
+
+new Checkbox({
+    checkbox_block_selector: ".trial-lesson-form-wrapper__checkbox-block",
+    selected_class: "trial-lesson-form-wrapper__checkbox-button_selected",
+    selectedId: 0,
+});
 
 // ===============================================
 
