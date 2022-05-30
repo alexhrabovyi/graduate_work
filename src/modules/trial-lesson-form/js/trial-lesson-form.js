@@ -187,93 +187,155 @@ new Checkbox({
 
 // ===============================================
 
-// class Tabs {
-//     constructor(options) {
-//         this.tabButtonBlock = document.querySelector(options.tab_buttons_block_selector);
-//         this.tabContentBlock = document.querySelector(options.tab_contents_block_selector);
+class FormTabs {
+    constructor(options) {
+        this.tabButtonBlock = document.querySelectorAll(options.tab_buttons_block_selector);
+        this.tabContentBlock = document.querySelectorAll(options.tab_contents_block_selector);
 
-//         this.tabButton = this.tabButtonBlock.querySelectorAll("[data-tab-button]");
-//         this.tabContent = this.tabContentsBlock = document.querySelectorAll("[data-tab-content]");
+        this.tab_button_active_class = options.tab_button_active_class;
+        this.tab_content_active_class = options.tab_content_active_class;
 
-//         this.tab_button_active_class = options.tab_button_active_class;
-//         this.tab_content_active_class = options.tab_content_active_class;
+        this.selectedId = options.selectedId ?? 0;
 
-//         this.selectedId = options.selectedId ?? 0;
+        this.setup();
+    }
 
-//         this.setup();
-//     }
+    returnHeight(el) {
+        return getComputedStyle(el).height.match(/\d+/g)[0];
+    }
 
-//     returnHeight(el) {
-//         return getComputedStyle(el).height.match(/\d+/g)[0];
-//     }
+    setup() {
+        for (let i = 0; i < this.tabButtonBlock.length; i++) {
+            this.tabButtonBlock[i].setAttribute("data-tab-button-block-id", i);
+            this.tabContentBlock[i].setAttribute("data-tab-content-block-id", i);
 
-//     clearInputs() {
-//         let inputs = this.tabContentBlock.querySelectorAll("input");
+            let tabButton = this.tabButtonBlock[i].querySelectorAll("[data-tab-button]");
+            let tabContent = this.tabContentBlock[i].querySelectorAll("[data-tab-content]");
 
-//         for (let input of inputs) {
-//             input.value = "";
-//         }
-//     }
+            for (let k = 0; k < tabButton.length; k++) {
+                tabButton[k].setAttribute("data-tab-button", k);
+                tabContent[k].setAttribute("data-tab-content", k);
+            }
 
-//     setup() {
-//         for (let i = 0; i < this.tabButton.length; i++) {
-//             this.tabButton[i].setAttribute("data-tab-button", i);
-//         }
+            let tabContentHeight = this.returnHeight(tabContent[this.selectedId]);
+            this.tabContentBlock[i].style.height = tabContentHeight + "px";
 
-//         for (let i = 0; i < this.tabContent.length; i++) {
-//             this.tabContent[i].setAttribute("data-tab-content", i);
-//         }
+            tabButton[this.selectedId].classList.add(this.tab_button_active_class);
+            tabContent[this.selectedId].classList.add(this.tab_content_active_class);
 
-//         this.tabButtonBlock.setAttribute("data-selected-tab-id", this.selectedId);
+            this.tabButtonBlock[i].addEventListener("click", this.showContent.bind(this));
+        }
+    }
 
-//         let tabContentHeight = this.returnHeight(this.tabContent[this.selectedId]);
+    showContent(e) {
+        e.preventDefault();
 
-//         this.tabContentBlock.style.height = tabContentHeight + "px";
+        if (!e.target.classList.contains(this.tab_button_active_class)) {
+            let currentButtonId = e.target.dataset.tabButton;
+            let currentBlocksId = e.target.closest("[data-tab-button-block-id]").dataset.tabButtonBlockId;
 
-//         this.tabButton[this.selectedId].classList.add(this.tab_button_active_class);
-//         this.tabContent[this.selectedId].classList.add(this.tab_content_active_class);
+            let currentButtonBlock = this.tabButtonBlock[currentBlocksId];
+            let currentContentBlock = this.tabContentBlock[currentBlocksId];
 
-//         this.tabButtonBlock.addEventListener("click", this.showContent.bind(this));
-//     }
+            let currentBlockButtons = currentButtonBlock.querySelectorAll("[data-tab-button]");
+            let currentBlockContents = currentContentBlock.querySelectorAll("[data-tab-content]");
 
-//     showContent(e) {
-//         e.preventDefault();
+            for (let i = 0; i < currentBlockButtons.length; i++) {
+                currentBlockButtons[i].classList.remove(this.tab_button_active_class);
+                currentBlockContents[i].classList.remove(this.tab_content_active_class);
+            }
 
-//         if (e.target.dataset.tabButton !== this.selectedId) {
-//             let oldTabButton = this.tabButton[this.selectedId];
-//             let oldTabContent = this.tabContent[this.selectedId]
+            let addClasses = () => {
+                currentBlockButtons[currentButtonId].classList.add(this.tab_button_active_class);
+                currentBlockContents[currentButtonId].classList.add(this.tab_content_active_class);
 
-//             oldTabButton.classList.remove(this.tab_button_active_class);
-//             oldTabContent.classList.remove(this.tab_content_active_class);
+                currentContentBlock.removeEventListener("transitionend", addClasses);
+            }
 
-//             this.selectedId = e.target.dataset.tabButton;
+            currentContentBlock.addEventListener("transitionend", addClasses);
 
-//             this.tabButtonBlock.setAttribute("data-selected-tab-id", this.selectedId);
+            let tabContentHeight = this.returnHeight(currentBlockContents[currentButtonId]);
 
-//             let addClasses = () => {
-//                 this.tabButton[this.selectedId].classList.add(this.tab_button_active_class);
-//                 this.tabContent[this.selectedId].classList.add(this.tab_content_active_class);
+            currentContentBlock.style.height = tabContentHeight + "px";
+        }
+    }
+}
 
-//                 oldTabContent.removeEventListener("transitionend", addClasses);
-//             }
+new FormTabs({
+    tab_buttons_block_selector: ".trial-lesson-form-wrapper__tab-buttons-block",
+    tab_contents_block_selector: ".trial-lesson-form-wrapper__tab-contents",
+    tab_button_active_class: "trial-lesson-form-wrapper__tab-button_selected",
+    tab_content_active_class: "trial-lesson-form-wrapper__tab-content_active",
+    selectedId: 0,
+})
 
-//             oldTabContent.addEventListener("transitionend", addClasses);
+// ===============================================
 
-//             let tabContentHeight = this.returnHeight(this.tabContent[this.selectedId]);
-//             this.tabContentBlock.style.height = tabContentHeight + "px";
+class checkTel {
+    constructor(selector) {
+        this.inputs = document.querySelectorAll(selector);
 
-//             this.clearInputs();
-//         }
-//     }
-// }
+        this.addCheck();
+    }
 
-// new Tabs({
-//     tab_buttons_block_selector: ".trial-lesson-form-wrapper__tab-buttons-block",
-//     tab_contents_block_selector: ".trial-lesson-form-wrapper__tab-contents",
-//     tab_button_active_class: "trial-lesson-form-wrapper__tab-button_selected",
-//     tab_content_active_class: "trial-lesson-form-wrapper__tab-content_active",
-//     selectedId: 0,
-// })
+    addCheck() {
+        for (let i = 0; i < this.inputs.length; i++) {
+            this.inputs[i].addEventListener("focus", (e) => e.target.value = "+380", { once: true });
+
+            this.inputs[i].addEventListener("input", (e) => {
+
+                if (e.target.value.length < 4) {
+                    e.target.value = "+380"
+                }
+
+                e.target.value = e.target.value.replace(/(?<=\+380)\D*/g, "");
+
+                let nums = e.target.value.match(/(?<=\+380)\d*/)[0].slice(0, 9);
+
+                e.target.value = "+380" + nums;
+            })
+        }
+    }
+}
+
+new checkTel('[name = "user-tel"]');
+
+// ===============================================
+
+class checkName {
+    constructor(selector) {
+        this.inputs = document.querySelectorAll(selector);
+
+        this.addCheck()
+    }
+
+    addCheck() {
+        for (let i = 0; i < this.inputs.length; i++) {
+            this.inputs[i].addEventListener("input", (e) => {
+                e.target.value = e.target.value.replace(/[^a-zа-яёіїє'\s]/gi, "");
+            })
+        }
+    }
+}
+
+new checkName('[name = "user-name"]');
+
+// ===============================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // ===============================================
 
