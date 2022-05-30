@@ -280,7 +280,11 @@ class CheckTel {
 
     addCheck() {
         for (let i = 0; i < this.inputs.length; i++) {
-            this.inputs[i].addEventListener("focus", (e) => e.target.value = "+380", { once: true });
+            this.inputs[i].addEventListener("focus", (e) => {
+                if (e.target.value.length < 4) {
+                    e.target.value = "+380"
+                }
+            }, { once: true });
 
             this.inputs[i].addEventListener("input", (e) => {
 
@@ -363,9 +367,13 @@ class CheckEmail {
                 let regExp = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
 
                 if (!regExp.test(e.target.value) && e.target.value.length != 0) {
-                    this.inputs[i].classList.add(this.errorClass);
+                    for (let k = 0; k < this.inputs.length; k++) {
+                        this.inputs[k].classList.add(this.errorClass);
+                    }
                 } else {
-                    this.inputs[i].classList.remove(this.errorClass);
+                    for (let k = 0; k < this.inputs.length; k++) {
+                        this.inputs[k].classList.remove(this.errorClass);
+                    }
                 }
             })
         }
@@ -376,6 +384,34 @@ new CheckEmail('[name = "user-email"]', "input_incorrect")
 
 // ===============================================
 
+class InputSynch {
+    constructor(selector) {
+        this.inputs = document.querySelectorAll(selector);
+
+        this.setup();
+    }
+
+    setup() {
+        for (let i = 0; i < this.inputs.length; i++) {
+            this.inputs[i].addEventListener("input", (e) => {
+                let value = e.target.value;
+
+                for (let k = 0; k < this.inputs.length; k++) {
+                    this.inputs[k].value = value;
+                }
+            })
+        }
+
+    }
+}
+
+new InputSynch("[data-trial-form-name-adult]");
+new InputSynch("[data-trial-from-tel-adult]");
+new InputSynch("[data-trial-form-parent-name]");
+new InputSynch("[data-trial-form-parent-tel]");
+new InputSynch("[data-trial-form-child-name]");
+new InputSynch("[data-trial-form-child-age]");
+new InputSynch("[data-trial-form-email]");
 
 
 
@@ -389,36 +425,5 @@ new CheckEmail('[name = "user-email"]', "input_incorrect")
 
 
 
-// ===============================================
-
-// class FormTrialLessonSetuper {
-//     constructor(trialForm_selector) {
-//         this.trialForm = document.querySelectorAll(trialForm_selector);
-
-//         this.setup();
-//     }
-
-//     setup() {
-//         for (let i = 0; i < this.trialForm.length; i++) {
-//             this.trialForm[i].setAttribute("data-trial-form-id", i);
-
-//             new Tabs({
-//                 tab_buttons_block_selector: `[data-trial-form-id="${i}"] .trial-lesson-form-wrapper__tab-buttons-block`,
-//                 tab_contents_block_selector: `[data-trial-form-id="${i}"] .trial-lesson-form-wrapper__tab-contents`,
-//                 tab_button_active_class: "trial-lesson-form-wrapper__tab-button_selected",
-//                 tab_content_active_class: "trial-lesson-form-wrapper__tab-content_active",
-//                 selectedId: 0,
-//             })
-
-//             new Select({
-//                 select_selector: `[data-trial-form-id="${i}"] .trial-lesson-form-wrapper__select`,
-//                 arrow_transform_class: "trial-lesson-form-wrapper__select-icon_transformed",
-//                 selected_option_class: "trial-lesson-form-wrapper__select-option_selected",
-//                 selectedId: 0,
-//             });
-//         }
-//     }
-// }
 
 
-// new FormTrialLessonSetuper(".trial-lesson-form-wrapper");
