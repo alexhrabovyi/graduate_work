@@ -349,7 +349,32 @@ new CheckAge('[name = "user-age"]')
 
 // ===============================================
 
+class CheckEmail {
+    constructor(selector, errorClass) {
+        this.inputs = document.querySelectorAll(selector);
+        this.errorClass = errorClass;
 
+        this.addCheck();
+    }
+
+    addCheck() {
+        for (let i = 0; i < this.inputs.length; i++) {
+            this.inputs[i].addEventListener("focusout", (e) => {
+                let regExp = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
+
+                if (!regExp.test(e.target.value) && e.target.value.length != 0) {
+                    this.inputs[i].classList.add(this.errorClass);
+                } else {
+                    this.inputs[i].classList.remove(this.errorClass);
+                }
+            })
+        }
+    }
+}
+
+new CheckEmail('[name = "user-email"]', "input_incorrect")
+
+// ===============================================
 
 
 
