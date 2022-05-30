@@ -271,7 +271,7 @@ new FormTabs({
 
 // ===============================================
 
-class checkTel {
+class CheckTel {
     constructor(selector) {
         this.inputs = document.querySelectorAll(selector);
 
@@ -298,11 +298,11 @@ class checkTel {
     }
 }
 
-new checkTel('[name = "user-tel"]');
+new CheckTel('[name = "user-tel"]');
 
 // ===============================================
 
-class checkName {
+class CheckName {
     constructor(selector) {
         this.inputs = document.querySelectorAll(selector);
 
@@ -318,7 +318,34 @@ class checkName {
     }
 }
 
-new checkName('[name = "user-name"]');
+new CheckName('[name = "user-name"]');
+
+// ===============================================
+
+class CheckAge {
+    constructor(selector) {
+        this.inputs = document.querySelectorAll(selector);
+
+        this.addCheck();
+    }
+
+    addCheck() {
+        for (let i = 0; i < this.inputs.length; i++) {
+            this.inputs[i].addEventListener("input", (e) => {
+                e.target.value = e.target.value.replace(/\D/g, "");
+
+                let regExp = /^([1-9]|1[0-9])$/;
+
+                if (!regExp.test(e.target.value)) {
+                    console.log(true);
+                    e.target.value = e.target.value.replace(/([1-9]|1[0-9])(\d)/g, (match, p1, p2) => p1);
+                }
+            })
+        }
+    }
+}
+
+new CheckAge('[name = "user-age"]')
 
 // ===============================================
 
