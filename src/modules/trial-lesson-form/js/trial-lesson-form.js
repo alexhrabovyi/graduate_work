@@ -1,89 +1,131 @@
 class Select {
     constructor(options) {
-        this.select = document.querySelector(options.select_selector);
-        this.showChosenBlock = this.select.querySelector("[data-show-chosen-block]");
-        this.chosenValue = this.select.querySelector("[data-chosen-value]");
-        this.arrowIcon = this.select.querySelector("[data-arrow-icon]");
-        this.selectOptions = this.select.querySelector("[data-options]");
-        this.selectOption = this.select.querySelectorAll("[data-option]");
+        this.selects = document.querySelectorAll(options.selects_selector);
 
         this.selectedId = options.selectedId ?? 0;
         this.arrow_transform_class = options.arrow_transform_class;
         this.selected_option_class = options.selected_option_class;
 
-        this.selectOptionsVisible = false;
-
         this.setup();
     }
 
     setup() {
-        for (let i = 0; i < this.selectOption.length; i++) {
-            this.selectOption[i].setAttribute("data-option", i);
+
+        for (let i = 0; i < this.selects.length; i++) {
+            let selectOption = this.selects[i].querySelectorAll("[data-option]")
+
+            for (let k = 0; k < selectOption.length; k++) {
+                selectOption[k].setAttribute("data-option", k);
+            }
+
+            selectOption[this.selectedId].classList.add(this.selected_option_class);
+
+            this.selects[i].setAttribute("data-select-open", false);
+            this.selects[i].querySelector("[data-chosen-value]").textContent = selectOption[this.selectedId].textContent;
+            this.selects[i].addEventListener("click", this.clickHandler.bind(this));
+        }
+    }
+
+    selectOpen(select) {
+        return select.dataset.selectOpen === "true" ? true : false;
+    }
+
+    optionsHeight(selectOptions) {
+        return +getComputedStyle(selectOptions).height.match(/\d+/g)[0];
+    }
+
+    selectHeight(select) {
+        return +getComputedStyle(select).height.match(/\d+/g)[0];
+    }
+
+    returnSelectOptions(select) {
+        return select.querySelector("[data-options]");
+    }
+
+    returnArrowIcon(select) {
+        return select.querySelector("[data-arrow-icon]");
+    }
+
+    blockClicks(select) {
+        select.style.pointerEvents = "none";
+
+        function unBlock() {
+            select.style.pointerEvents = "";
+
+            select.removeEventListener("transitionend", unBlock, { passive: true });
         }
 
-        this.chosenValue.textContent = this.selectOption[this.selectedId].textContent;
-        this.selectOption[this.selectedId].classList.add(this.selected_option_class);
-
-        this.select.setAttribute("data-chosen-lang-id", this.selectedId);
-
-        this.select.addEventListener("click", this.clickHandler.bind(this));
+        select.addEventListener("transitionend", unBlock, { passive: true });
     }
 
     clickHandler(e) {
         e.preventDefault();
 
         let target = e.target;
+        let select = e.target.closest(".trial-lesson-form-wrapper__select");
 
         if (target.closest("[data-show-chosen-block]")) {
-            this.toggle();
+            this.toggle(select);
         } else if (target.hasAttribute("data-option")) {
-            this.chooseOption(e);
+            this.chooseOption(target, select);
         }
     }
 
-    get optionsHeight() {
-        return +getComputedStyle(this.selectOptions).height.match(/\d+/g)[0];
+    toggle(select) {
+        this.selectOpen(select) ? this.close(select) : this.open(select);
     }
 
-    get selectHeight() {
-        return +getComputedStyle(this.select).height.match(/\d+/g)[0];
+    open(select) {
+        let selectOptions = this.returnSelectOptions(select);
+        let arrowIcon = this.returnArrowIcon(select);
+
+        select.style.height = this.selectHeight(select) + this.optionsHeight(selectOptions) + "px";
+        this.blockClicks(select);
+
+        arrowIcon.classList.add(this.arrow_transform_class);
+
+        select.setAttribute("data-select-open", true);
     }
 
-    toggle() {
-        this.selectOptionsVisible ? this.close() : this.open();
+    close(select) {
+        let selectOptions = this.returnSelectOptions(select);
+        let arrowIcon = this.returnArrowIcon(select);
+
+        select.style.height = this.selectHeight(select) - this.optionsHeight(selectOptions) + "px";
+        this.blockClicks(select);
+
+        arrowIcon.classList.remove(this.arrow_transform_class);
+
+        select.setAttribute("data-select-open", false);
     }
 
-    open() {
-        this.select.style.height = this.selectHeight + this.optionsHeight + "px";
+    chooseOption(target, select) {
+        let chosenValue = document.querySelectorAll("[data-chosen-value]");
 
-        this.arrowIcon.classList.add(this.arrow_transform_class);
+        for (let i = 0; i < chosenValue.length; i++) {
+            chosenValue[i].textContent = target.textContent;
+        }
 
-        this.selectOptionsVisible = true;
-    }
+        let selectedOptions = document.querySelectorAll(`[data-option = "${this.selectedId}"]`);
 
-    close() {
-        this.select.style.height = this.selectHeight - this.optionsHeight + "px";
+        for (let i = 0; i < selectedOptions.length; i++) {
+            selectedOptions[i].classList.remove(this.selected_option_class);
+        }
 
-        this.arrowIcon.classList.remove(this.arrow_transform_class);
+        this.selectedId = target.dataset.option;
 
-        this.selectOptionsVisible = false;
-    }
+        selectedOptions = document.querySelectorAll(`[data-option = "${this.selectedId}"]`);
 
-    chooseOption(e) {
-        this.chosenValue.textContent = e.target.textContent;
+        for (let i = 0; i < selectedOptions.length; i++) {
+            selectedOptions[i].classList.add(this.selected_option_class);
+        }
 
-        this.selectOption[this.selectedId].classList.remove(this.selected_option_class);
-        e.target.classList.add(this.selected_option_class);
-
-        this.selectedId = e.target.dataset.option;
-        this.select.setAttribute("data-chosen-lang-id", this.selectedId);
-
-        this.close();
+        this.close(select);
     }
 }
 
 new Select({
-    select_selector: ".trial-lesson-form-wrapper__select",
+    selects_selector: ".trial-lesson-form-wrapper__select",
     arrow_transform_class: "trial-lesson-form-wrapper__select-icon_transformed",
     selected_option_class: "trial-lesson-form-wrapper__select-option_selected",
     selectedId: 0,
@@ -91,133 +133,171 @@ new Select({
 
 // ===============================================
 
-class Checkbox {
-    constructor(options) {
-        this.checkboxBlock = document.querySelector(options.checkbox_block_selector);
-        this.checkboxOption = this.checkboxBlock.querySelectorAll("[data-checkbox-option");
+// class Checkbox {
+//     constructor(options) {
+//         this.checkboxBlock = document.querySelector(options.checkbox_block_selector);
+//         this.checkboxOption = this.checkboxBlock.querySelectorAll("[data-checkbox-option");
 
-        this.selected_class = options.selected_class;
-        this.selectedId = options.selectedId ?? 0;
+//         this.selected_class = options.selected_class;
+//         this.selectedId = options.selectedId ?? 0;
 
-        this.setup();
-    }
+//         this.setup();
+//     }
 
-    setup() {
-        for (let i = 0; i < this.checkboxOption.length; i++) {
-            this.checkboxOption[i].setAttribute("data-checkbox-option", i);
-        }
+//     setup() {
+//         for (let i = 0; i < this.checkboxOption.length; i++) {
+//             this.checkboxOption[i].setAttribute("data-checkbox-option", i);
+//         }
 
-        this.checkboxBlock.setAttribute("data-selected-checkbox-id", this.selectedId);
+//         this.checkboxBlock.setAttribute("data-selected-checkbox-id", this.selectedId);
 
-        this.checkboxOption[this.selectedId].classList.add(this.selected_class);
+//         this.checkboxOption[this.selectedId].classList.add(this.selected_class);
 
-        this.checkboxBlock.addEventListener("click", this.selectCheckbox.bind(this));
-    }
+//         this.checkboxBlock.addEventListener("click", this.selectCheckbox.bind(this));
+//     }
 
-    selectCheckbox(e) {
-        e.preventDefault();
+//     selectCheckbox(e) {
+//         e.preventDefault();
 
-        let checkbox = e.target.closest("[data-checkbox-option]");
+//         let checkbox = e.target.closest("[data-checkbox-option]");
 
-        if (!checkbox) return;
+//         if (!checkbox) return;
 
-        this.checkboxOption[this.selectedId].classList.remove(this.selected_class);
-        checkbox.classList.add(this.selected_class);
+//         this.checkboxOption[this.selectedId].classList.remove(this.selected_class);
+//         checkbox.classList.add(this.selected_class);
 
-        this.selectedId = checkbox.dataset.checkboxOption;
+//         this.selectedId = checkbox.dataset.checkboxOption;
 
-        this.checkboxBlock.setAttribute("data-selected-checkbox-id", this.selectedId);
-    }
-}
+//         this.checkboxBlock.setAttribute("data-selected-checkbox-id", this.selectedId);
+//     }
+// }
 
-new Checkbox({
-    checkbox_block_selector: ".trial-lesson-form-wrapper__checkbox-block",
-    selected_class: "trial-lesson-form-wrapper__checkbox-button_selected",
-    selectedId: 0,
-});
+// new Checkbox({
+//     checkbox_block_selector: ".trial-lesson-form-wrapper__checkbox-block",
+//     selected_class: "trial-lesson-form-wrapper__checkbox-button_selected",
+//     selectedId: 0,
+// });
 
 // ===============================================
 
-class Tabs {
-    constructor(options) {
-        this.tabButtonBlock = document.querySelector(options.tab_buttons_block_selector);
-        this.tabContentBlock = document.querySelector(options.tab_contents_block_selector);
+// class Tabs {
+//     constructor(options) {
+//         this.tabButtonBlock = document.querySelector(options.tab_buttons_block_selector);
+//         this.tabContentBlock = document.querySelector(options.tab_contents_block_selector);
 
-        this.tabButton = this.tabButtonBlock.querySelectorAll("[data-tab-button]");
-        this.tabContent = this.tabContentsBlock = document.querySelectorAll("[data-tab-content]");
+//         this.tabButton = this.tabButtonBlock.querySelectorAll("[data-tab-button]");
+//         this.tabContent = this.tabContentsBlock = document.querySelectorAll("[data-tab-content]");
 
-        this.tab_button_active_class = options.tab_button_active_class;
-        this.tab_content_active_class = options.tab_content_active_class;
+//         this.tab_button_active_class = options.tab_button_active_class;
+//         this.tab_content_active_class = options.tab_content_active_class;
 
-        this.selectedId = options.selectedId ?? 0;
+//         this.selectedId = options.selectedId ?? 0;
 
-        this.setup();
-    }
+//         this.setup();
+//     }
 
-    returnHeight(el) {
-        return getComputedStyle(el).height.match(/\d+/g)[0];
-    }
+//     returnHeight(el) {
+//         return getComputedStyle(el).height.match(/\d+/g)[0];
+//     }
 
-    clearInputs() {
-        let inputs = this.tabContentBlock.querySelectorAll("input");
+//     clearInputs() {
+//         let inputs = this.tabContentBlock.querySelectorAll("input");
 
-        for (let input of inputs) {
-            input.value = "";
-        }
-    }
+//         for (let input of inputs) {
+//             input.value = "";
+//         }
+//     }
 
-    setup() {
-        for (let i = 0; i < this.tabButton.length; i++) {
-            this.tabButton[i].setAttribute("data-tab-button", i);
-        }
+//     setup() {
+//         for (let i = 0; i < this.tabButton.length; i++) {
+//             this.tabButton[i].setAttribute("data-tab-button", i);
+//         }
 
-        for (let i = 0; i < this.tabContent.length; i++) {
-            this.tabContent[i].setAttribute("data-tab-content", i);
-        }
+//         for (let i = 0; i < this.tabContent.length; i++) {
+//             this.tabContent[i].setAttribute("data-tab-content", i);
+//         }
 
-        let tabContentHeight = this.returnHeight(this.tabContent[this.selectedId]);
+//         this.tabButtonBlock.setAttribute("data-selected-tab-id", this.selectedId);
 
-        this.tabContentBlock.style.height = tabContentHeight + "px";
+//         let tabContentHeight = this.returnHeight(this.tabContent[this.selectedId]);
 
-        this.tabButton[this.selectedId].classList.add(this.tab_button_active_class);
-        this.tabContent[this.selectedId].classList.add(this.tab_content_active_class);
+//         this.tabContentBlock.style.height = tabContentHeight + "px";
 
-        this.tabButtonBlock.addEventListener("click", this.showContent.bind(this));
-    }
+//         this.tabButton[this.selectedId].classList.add(this.tab_button_active_class);
+//         this.tabContent[this.selectedId].classList.add(this.tab_content_active_class);
 
-    showContent(e) {
-        e.preventDefault();
+//         this.tabButtonBlock.addEventListener("click", this.showContent.bind(this));
+//     }
 
-        if (e.target.dataset.tabButton !== this.selectedId) {
-            let oldTabButton = this.tabButton[this.selectedId];
-            let oldTabContent = this.tabContent[this.selectedId]
+//     showContent(e) {
+//         e.preventDefault();
 
-            oldTabButton.classList.remove(this.tab_button_active_class);
-            oldTabContent.classList.remove(this.tab_content_active_class);
+//         if (e.target.dataset.tabButton !== this.selectedId) {
+//             let oldTabButton = this.tabButton[this.selectedId];
+//             let oldTabContent = this.tabContent[this.selectedId]
 
-            this.selectedId = e.target.dataset.tabButton;
+//             oldTabButton.classList.remove(this.tab_button_active_class);
+//             oldTabContent.classList.remove(this.tab_content_active_class);
 
-            let addClasses = () => {
-                this.tabButton[this.selectedId].classList.add(this.tab_button_active_class);
-                this.tabContent[this.selectedId].classList.add(this.tab_content_active_class);
+//             this.selectedId = e.target.dataset.tabButton;
 
-                oldTabContent.removeEventListener("transitionend", addClasses);
-            }
+//             this.tabButtonBlock.setAttribute("data-selected-tab-id", this.selectedId);
 
-            oldTabContent.addEventListener("transitionend", addClasses);
+//             let addClasses = () => {
+//                 this.tabButton[this.selectedId].classList.add(this.tab_button_active_class);
+//                 this.tabContent[this.selectedId].classList.add(this.tab_content_active_class);
 
-            let tabContentHeight = this.returnHeight(this.tabContent[this.selectedId]);
-            this.tabContentBlock.style.height = tabContentHeight + "px";
+//                 oldTabContent.removeEventListener("transitionend", addClasses);
+//             }
 
-            this.clearInputs();
-        }
-    }
-}
+//             oldTabContent.addEventListener("transitionend", addClasses);
 
-new Tabs({
-    tab_buttons_block_selector: ".trial-lesson-form-wrapper__tab-buttons-block",
-    tab_contents_block_selector: ".trial-lesson-form-wrapper__tab-contents",
-    tab_button_active_class: "trial-lesson-form-wrapper__tab-button_selected",
-    tab_content_active_class: "trial-lesson-form-wrapper__tab-content_active",
-    selectedId: 0,
-}) 
+//             let tabContentHeight = this.returnHeight(this.tabContent[this.selectedId]);
+//             this.tabContentBlock.style.height = tabContentHeight + "px";
+
+//             this.clearInputs();
+//         }
+//     }
+// }
+
+// new Tabs({
+//     tab_buttons_block_selector: ".trial-lesson-form-wrapper__tab-buttons-block",
+//     tab_contents_block_selector: ".trial-lesson-form-wrapper__tab-contents",
+//     tab_button_active_class: "trial-lesson-form-wrapper__tab-button_selected",
+//     tab_content_active_class: "trial-lesson-form-wrapper__tab-content_active",
+//     selectedId: 0,
+// })
+
+// ===============================================
+
+// class FormTrialLessonSetuper {
+//     constructor(trialForm_selector) {
+//         this.trialForm = document.querySelectorAll(trialForm_selector);
+
+//         this.setup();
+//     }
+
+//     setup() {
+//         for (let i = 0; i < this.trialForm.length; i++) {
+//             this.trialForm[i].setAttribute("data-trial-form-id", i);
+
+//             new Tabs({
+//                 tab_buttons_block_selector: `[data-trial-form-id="${i}"] .trial-lesson-form-wrapper__tab-buttons-block`,
+//                 tab_contents_block_selector: `[data-trial-form-id="${i}"] .trial-lesson-form-wrapper__tab-contents`,
+//                 tab_button_active_class: "trial-lesson-form-wrapper__tab-button_selected",
+//                 tab_content_active_class: "trial-lesson-form-wrapper__tab-content_active",
+//                 selectedId: 0,
+//             })
+
+//             new Select({
+//                 select_selector: `[data-trial-form-id="${i}"] .trial-lesson-form-wrapper__select`,
+//                 arrow_transform_class: "trial-lesson-form-wrapper__select-icon_transformed",
+//                 selected_option_class: "trial-lesson-form-wrapper__select-option_selected",
+//                 selectedId: 0,
+//             });
+//         }
+//     }
+// }
+
+
+// new FormTrialLessonSetuper(".trial-lesson-form-wrapper");

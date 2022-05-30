@@ -1071,13 +1071,52 @@ i {
   justify-content: space-between;
   align-items: none;
 }
+@media (max-width: 1360px) {
+  .trial-lesson-form-wrapper__form {
+    width: 100%;
+    padding-left: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .trial-lesson-form-wrapper__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: none;
+    align-items: none;
+    padding-left: 0;
+  }
+}
 .trial-lesson-form-wrapper__content-block {
   width: 475px;
-  padding: 80px 0;
+  padding: 79px 0;
   display: flex;
   flex-direction: column;
   justify-content: none;
   align-items: none;
+}
+@media (max-width: 1360px) {
+  .trial-lesson-form-wrapper__content-block {
+    margin-right: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .trial-lesson-form-wrapper__content-block {
+    margin-right: 0;
+    width: 100%;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: none;
+    align-items: center;
+  }
+}
+@media (max-width: 576px) {
+  .trial-lesson-form-wrapper__content-block {
+    padding-top: 20px;
+  }
+}
+.trial-lesson-form-wrapper__title_small {
+  text-align: center;
 }
 .trial-lesson-form-wrapper__title_small {
   margin-bottom: 30px;
@@ -1091,6 +1130,11 @@ i {
   align-items: none;
   position: relative;
 }
+@media (max-width: 576px) {
+  .trial-lesson-form-wrapper__form-block {
+    width: 100%;
+  }
+}
 .trial-lesson-form-wrapper__tab-buttons-block {
   width: 420px;
   display: flex;
@@ -1099,9 +1143,15 @@ i {
   align-items: none;
   margin-bottom: 30px;
 }
+@media (max-width: 576px) {
+  .trial-lesson-form-wrapper__tab-buttons-block {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
 .trial-lesson-form-wrapper__tab-button {
   width: 200px;
-  height: 33px;
+  line-height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1114,6 +1164,11 @@ i {
   color: rgb(0, 0, 0);
   cursor: pointer;
   transition: 0.1s all ease-in-out;
+}
+@media (max-width: 576px) {
+  .trial-lesson-form-wrapper__tab-button {
+    width: 160px;
+  }
 }
 .trial-lesson-form-wrapper__tab-button:hover {
   border-bottom-color: rgb(35, 105, 103);
@@ -1182,12 +1237,14 @@ i {
 }
 .trial-lesson-form-wrapper__checkbox-block {
   width: 100%;
-  height: 26px;
-  display: flex;
+  min-height: 26px;
+  display: grid;
+  gap: 0 20px;
+  grid-template-columns: 1fr 1fr;
   margin: 14px 0 14px 0;
 }
 .trial-lesson-form-wrapper__checkbox-button {
-  width: 50%;
+  width: 100%;
   border: none;
   background: none;
   display: flex;
@@ -1202,6 +1259,9 @@ i {
 }
 .trial-lesson-form-wrapper__checkbox-button_selected .trial-lesson-form-wrapper__circle-inner {
   background: rgb(35, 105, 103);
+}
+.trial-lesson-form-wrapper__checkbox-text {
+  text-align: start;
 }
 .trial-lesson-form-wrapper__circle-external {
   display: block;
@@ -1244,9 +1304,21 @@ i {
 .trial-lesson-form-wrapper__button-submit {
   margin-top: 30px;
 }
+@media (max-width: 768px) {
+  .trial-lesson-form-wrapper__button-submit {
+    align-self: center;
+  }
+}
 .trial-lesson-form-wrapper__img-right {
   width: 290px;
-  background: url("../../../modules/trial-lesson-form/svg/trial-lesson-form-bg.svg") center;
+  background: url("../../../modules/trial-lesson-form/svg/trial-lesson-form-bg.svg") left center;
+}
+@media (max-width: 768px) {
+  .trial-lesson-form-wrapper__img-right {
+    width: 100%;
+    background: url("../../../modules/trial-lesson-form/svg/trial-lesson-form-bg-mobile.svg") center top;
+    height: 140px;
+  }
 }
 
 .for-child-for-adult-wrapper__content-block {
