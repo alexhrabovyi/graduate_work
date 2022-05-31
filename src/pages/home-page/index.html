@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <section class="trial-lesson-form-modal-window hidden container">
+    <section class="trial-lesson-form-modal-window container hidden">
         <form class="trial-lesson-form-wrapper__form animation-translateY">
-            <button class="button-close trial-lesson-form-wrapper__button-close" data-toggle-modal="form">
+            <button class="button-close trial-lesson-form-wrapper__button-close" data-toggle-modal="trial-form">
                 <div class="button-close__line-1"></div>
                 <div class="button-close__line-2"></div>
             </button>
@@ -87,6 +87,38 @@
                 </div>
             </div>
             <div class="trial-lesson-form-wrapper__img-right"></div>
+        </form>
+    </section>
+    <section class="payment-form-modal-window container hidden">
+        <form class="payment-form-wrapper animation-translateY">
+            <div class="payment-form-wrapper__background-left"></div>
+            <div class="payment-form-wrapper__content">
+                <button class="button-close payment-form-wrapper__button-close" data-toggle-modal="payment-form">
+                    <div class="button-close__line-1"></div>
+                    <div class="button-close__line-2"></div>
+                </button>
+                <p class="title title_small payment-form-wrapper__title_small">Оплата услуг</p>
+                <div class="payment-form-wrapper__name-tel-inputs-block">
+                    <input class="input input_shorter payment-form-wrapper__input_shorter" type="text" name="user-name"
+                        placeholder="Имя">
+                    <input class="input input_shorter payment-form-wrapper__input_shorter" type="text" name="user-tel"
+                        placeholder="Телефон">
+                </div>
+                <input class="input payment-form-wrapper__input" type="email" name="user-email" placeholder="Почта">
+                <div class="payment-form-wrapper__amount-block">
+                    <input class="input payment-form-wrapper__input" type="text" name="user-payment-amount"
+                        placeholder="Сумма платежа">
+                    <p class="payment-form-wrapper__uah-sign">&#8372;</p>
+                </div>
+                <a class="text text_small payment-form-wrapper__text_small" href="#"
+                    alt="Нажимая кнопку 'Оплатить', Вы соглашаетесь с условиями договора оферты и обработку персональных данных.">
+                    Нажимая кнопку "Оплатить", Вы соглашаетесь с условиями договора оферты и обработку персональных
+                    данных.
+                </a>
+                <button class="button button_shorter payment-form-wrapper__button_shorter">Отправить</button>
+            </div>
+            <div class="payment-form-wrapper__background-mobile"></div>
+            <div class="payment-form-wrapper__background-right"></div>
         </form>
     </section>
     <nav class="main-nav container">
@@ -276,7 +308,7 @@
             <div class="header-wrapper__interactive-block">
                 <h1 class="title header-wrapper__title">Школа иностранных языков для всей семьи</h1>
                 <button class="button header-wrapper__button button-open-trial-lesson-form"
-                    data-toggle-modal="form">Пробное занятие</button>
+                    data-toggle-modal="trial-form">Пробное занятие</button>
             </div>
             <div class="header-wrapper__picture-block">
                 <img class="header-wrapper__picture" src="../../modules/header/svg/header-home-page.svg">
@@ -897,7 +929,7 @@
                         <i class="icon-vk"></i>
                     </a>
                 </div>
-                <button class="button footer-wrapper__button">Онлайн-оплата</button>
+                <button class="button footer-wrapper__button" data-toggle-modal="payment-form">Онлайн-оплата</button>
             </nav>
             <div class="footer-wrapper__contacts-block">
                 <p class="text text_black footer-wrapper__text_black">Контакты</p>

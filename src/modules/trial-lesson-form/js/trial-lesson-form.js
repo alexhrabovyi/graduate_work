@@ -385,6 +385,27 @@
 
     // ===============================================
 
+    class checkPaymentAmount {
+        constructor(selector) {
+            this.inputs = document.querySelectorAll(selector);
+
+            this.addCheck();
+        }
+
+        addCheck() {
+            for (let i = 0; i < this.inputs.length; i++) {
+                this.inputs[i].addEventListener("input", (e) => {
+                    e.target.value = e.target.value.replace(/\D/g, "");
+
+                    e.target.value = e.target.value.replace(/(?<=\d{4})(\d)/g, (match, p) => p = "")
+                })
+            }
+        }
+    }
+
+    new checkPaymentAmount('[name = "user-payment-amount"]');
+    // ===============================================
+
     class InputSynch {
         constructor(selector) {
             this.inputs = document.querySelectorAll(selector);
@@ -519,7 +540,15 @@ class Modal {
 
 new Modal({
     modal_selector: ".trial-lesson-form-modal-window",
-    toggle_button_selector: '[data-toggle-modal="form"]',
+    toggle_button_selector: '[data-toggle-modal="trial-form"]',
+    hide_class: "hidden",
+    modal_class: "modal-window",
+    animation_class: "animation-translateY",
+});
+
+new Modal({
+    modal_selector: ".payment-form-modal-window",
+    toggle_button_selector: '[data-toggle-modal="payment-form"]',
     hide_class: "hidden",
     modal_class: "modal-window",
     animation_class: "animation-translateY",
