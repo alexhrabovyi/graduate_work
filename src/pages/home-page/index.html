@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <section class="trial-lesson-form-modal-window container hidden">
+    <section class="trial-lesson-form-modal-window container hidden modal-window">
         <form class="trial-lesson-form-wrapper__form animation-translateY">
             <button class="button-close trial-lesson-form-wrapper__button-close" data-toggle-modal="trial-form">
                 <div class="button-close__line-1"></div>
@@ -89,7 +89,7 @@
             <div class="trial-lesson-form-wrapper__img-right"></div>
         </form>
     </section>
-    <section class="payment-form-modal-window container hidden">
+    <section class="payment-form-modal-window container hidden modal-window">
         <form class="payment-form-wrapper animation-translateY">
             <div class="payment-form-wrapper__background-left"></div>
             <div class="payment-form-wrapper__content">
@@ -119,6 +119,24 @@
             </div>
             <div class="payment-form-wrapper__background-mobile"></div>
             <div class="payment-form-wrapper__background-right"></div>
+        </form>
+    </section>
+    <section class="request-call-form-modal-window container hidden modal-window">
+        <form class="request-call-form-wrapper animation-translateY">
+            <div class="request-call-form-wrapper__background-left"></div>
+            <div class="request-call-form-wrapper__content">
+                <p class="title title_small request-call-form-wrapper__title_small">
+                    Заказать звонок
+                </p>
+                <input class="input request-call-form-wrapper__input" type="text" name="user-name" placeholder="Имя">
+                <input class="input request-call-form-wrapper__input" type="tel" name="user-tel" placeholder="Телефон">
+                <button class="button button_shorter request-call-form-wrapper__button_shorter">Отправить</button>
+            </div>
+            <div class="request-call-form-wrapper__background-right"></div>
+            <button class="button-close request-call-form-wrapper__button-close" data-toggle-modal="request-call-form">
+                <div class="button-close__line-1"></div>
+                <div class="button-close__line-2"></div>
+            </button>
         </form>
     </section>
     <nav class="main-nav container">
@@ -200,7 +218,8 @@
             <a class="social-link main-nav__social-link" href="#" alt="VK">
                 <i class="icon-vk"></i>
             </a>
-            <a class="social-link main-nav__social-link request-call-button" href="#" alt="Request call">
+            <a class="social-link main-nav__social-link request-call-button" href="#" alt="Request call"
+                data-toggle-modal="request-call-form">
                 <i class="icon-phone"></i>
             </a>
         </div>
@@ -286,7 +305,8 @@
                 <a class="social-link main-nav__social-link" href="#" alt="VK">
                     <i class="icon-vk"></i>
                 </a>
-                <a class="social-link main-nav__social-link request-call-button" href="#" alt="Request call">
+                <a class="social-link main-nav__social-link request-call-button" href="#" alt="Request call"
+                    data-toggle-modal="request-call-form">
                     <i class="icon-phone"></i>
                 </a>
             </nav>

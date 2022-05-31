@@ -1,0 +1,105 @@
+.request-call-form-wrapper {
+    width: 860px;
+    height: 490px;
+    display: flex;
+    overflow: hidden;
+    background: $light-yellow;
+    border-radius: 70px;
+    transition: all .3s ease-in-out;
+    position: relative;
+
+    @include media-m {
+        width: 100%;
+        @include flex-builder(row, space-between, none);
+    }
+
+    @include media-s {
+        height: auto;
+        @include flex-builder(column, none, center);
+    }
+
+    &__background-left {
+        width: 140px;
+        background: url("../../../modules/request-call-form/svg/request-call-form-left.svg");
+
+        @include media-s {
+            display: none;
+        }
+    }
+
+    &__background-right {
+        width: 140px;
+        background: url("../../../modules/request-call-form/svg/request-call-form-right.svg");
+        position: relative;
+
+        @include media-s {
+            width: 100%;
+            background: url("../../../modules/request-call-form/svg/request-call-form-mobile-bg.svg") top center;
+            height: 140px;
+        }
+
+        @include media-xs {
+            display: none;
+        }
+    }
+
+    &__content {
+        width: 580px;
+        @include flex-builder(column, center, none);
+        padding: 0 110px;
+
+        @include media-l {
+            padding: 0 12.8%;
+        }
+
+        @include media-m {
+            width: 340px;
+            padding: 0;
+            margin: 0 10px;
+        }
+
+        @include media-s {
+            width: 100%;
+            margin: 0;
+            padding: 65px 20% 85px;
+            align-items: center;
+        }
+
+        @include media-xs {
+            padding: 65px 7% 85px;
+        }
+    }
+
+    &__title_small {
+        margin-bottom: 30px;
+
+        @media(max-width: 360px) {
+            text-align: center;
+        }
+    }
+
+    &__input {
+        margin-bottom: 16px;
+    }
+
+    &__button_shorter {
+        margin-top: 14px;
+
+    }
+
+    &__button-close {
+        position: absolute;
+        right: 160px;
+        top: 25px;
+
+        @include media-s {
+            right: 40px;
+            top: 20px;
+        }
+
+        @media(max-width: 360px) {
+            right: 30px;
+        }
+
+    }
+}

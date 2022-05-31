@@ -554,6 +554,14 @@ new Modal({
     animation_class: "animation-translateY",
 });
 
+new Modal({
+    modal_selector: ".request-call-form-modal-window",
+    toggle_button_selector: '[data-toggle-modal="request-call-form"]',
+    hide_class: "hidden",
+    modal_class: "modal-window",
+    animation_class: "animation-translateY",
+});
+
 
 
 
