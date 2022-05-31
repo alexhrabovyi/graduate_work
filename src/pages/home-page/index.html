@@ -10,6 +10,85 @@
 </head>
 
 <body>
+    <section class="trial-lesson-form-modal-window hidden container">
+        <form class="trial-lesson-form-wrapper__form animation-translateY">
+            <button class="button-close trial-lesson-form-wrapper__button-close" data-toggle-modal="form">
+                <div class="button-close__line-1"></div>
+                <div class="button-close__line-2"></div>
+            </button>
+            <div class="trial-lesson-form-wrapper__content-block">
+                <p class="title title_small trial-lesson-form-wrapper__title_small">Записаться на пробное занятие</p>
+                <div class="trial-lesson-form-wrapper__tab-buttons-block">
+                    <button class="trial-lesson-form-wrapper__tab-button" data-tab-button>
+                        Взрослые
+                    </button>
+                    <button class="trial-lesson-form-wrapper__tab-button" data-tab-button>
+                        Дети и подростки
+                    </button>
+                </div>
+                <div class="trial-lesson-form-wrapper__form-block">
+                    <div class="trial-lesson-form-wrapper__select">
+                        <div class="trial-lesson-form-wrapper__chosen-lang-block" data-show-chosen-block>
+                            <p class="text text_small  trial-lesson-form-wrapper__select-chosen-lang" data-chosen-value>
+                            </p>
+                            <i class="trial-lesson-form-wrapper__select-icon icon-arrow-down" data-arrow-icon></i>
+                        </div>
+                        <div class="trial-lesson-form-wrapper__select-options" data-options>
+                            <span class="trial-lesson-form-wrapper__select-line"></span>
+                            <button class="text text_small trial-lesson-form-wrapper__select-option" data-option>
+                                Английский язык
+                            </button>
+                            <button class="text text_small trial-lesson-form-wrapper__select-option" data-option>
+                                Французский язык
+                            </button>
+                            <button class="text text_small trial-lesson-form-wrapper__select-option" data-option>
+                                Немецкий язык
+                            </button>
+                            <button class="text text_small trial-lesson-form-wrapper__select-option" data-option>
+                                Испанский язык
+                            </button>
+                        </div>
+                    </div>
+                    <div class="trial-lesson-form-wrapper__checkbox-block">
+                        <button class="trial-lesson-form-wrapper__checkbox-button" data-checkbox-option>
+                            <span class="trial-lesson-form-wrapper__circle-external">
+                                <span class="trial-lesson-form-wrapper__circle-inner"></span>
+                            </span>
+                            <p class="text text_small trial-lesson-form-wrapper__checkbox-text">Онлайн-занятия</p>
+                        </button>
+                        <button class="trial-lesson-form-wrapper__checkbox-button" data-checkbox-option>
+                            <span class="trial-lesson-form-wrapper__circle-external">
+                                <span class="trial-lesson-form-wrapper__circle-inner"></span>
+                            </span>
+                            <p class="text text_small trial-lesson-form-wrapper__checkbox-text">Занятия в клубе</p>
+                        </button>
+                    </div>
+                    <div class="trial-lesson-form-wrapper__tab-contents">
+                        <div class="trial-lesson-form-wrapper__tab-content" data-tab-content>
+                            <input class="input trial-lesson-form-wrapper__input trial-lesson-form-wrapper__input_short"
+                                type="text" name="user-name" placeholder="Имя" data-trial-form-name-adult>
+                            <input class="input trial-lesson-form-wrapper__input trial-lesson-form-wrapper__input_short"
+                                type="text" name="user-tel" placeholder="Телефон" data-trial-from-tel-adult>
+                        </div>
+                        <div class="trial-lesson-form-wrapper__tab-content" data-tab-content>
+                            <input class="input trial-lesson-form-wrapper__input trial-lesson-form-wrapper__input_short"
+                                type="text" name="user-name" placeholder="Имя родителя" data-trial-form-parent-name>
+                            <input class="input trial-lesson-form-wrapper__input trial-lesson-form-wrapper__input_short"
+                                type="text" name="user-tel" placeholder="Телефон" data-trial-form-parent-tel>
+                            <input class="input trial-lesson-form-wrapper__input trial-lesson-form-wrapper__input_short"
+                                type="text" name="user-name" placeholder="Имя ребёнка" data-trial-form-child-name>
+                            <input class="input trial-lesson-form-wrapper__input trial-lesson-form-wrapper__input_short"
+                                type="text" name="user-age" placeholder="Возраст ребёнка" data-trial-form-child-age>
+                        </div>
+                    </div>
+                    <input class="input trial-lesson-form-wrapper__input" type="email" name="user-email"
+                        placeholder="Почта" data-trial-form-email>
+                    <button class="button button_shorter trial-lesson-form-wrapper__button-submit">Отправить</button>
+                </div>
+            </div>
+            <div class="trial-lesson-form-wrapper__img-right"></div>
+        </form>
+    </section>
     <nav class="main-nav container">
         <div class="main-nav__logo-and-links-block">
             <a class="main-nav__logo-link logo-link" href="#" alt="Speaky School">
@@ -196,7 +275,8 @@
         <header class="header-wrapper__header">
             <div class="header-wrapper__interactive-block">
                 <h1 class="title header-wrapper__title">Школа иностранных языков для всей семьи</h1>
-                <button class="button header-wrapper__button button-open-trial-lesson-form">Пробное занятие</button>
+                <button class="button header-wrapper__button button-open-trial-lesson-form"
+                    data-toggle-modal="form">Пробное занятие</button>
             </div>
             <div class="header-wrapper__picture-block">
                 <img class="header-wrapper__picture" src="../../modules/header/svg/header-home-page.svg">

@@ -7,7 +7,9 @@
         padding-left: 106px;
         border-radius: 70px;
         overflow: hidden;
+        position: relative;
         @include flex-builder(row, space-between, none);
+        transition: all .3s ease-in-out;
 
         @include media-l {
             width: 100%;
@@ -32,13 +34,9 @@
         @include media-s {
             margin-right: 0;
             width: 100%;
-            padding: 60px 20px;
+            padding: 79px 20px;
 
             @include flex-builder(column, none, center);
-        }
-
-        @include media-xs {
-            padding-top: 20px;
         }
     }
 
@@ -252,6 +250,22 @@
             width: 100%;
             background: url("../../../modules/trial-lesson-form/svg/trial-lesson-form-bg-mobile.svg") center top;
             height: 140px;
+        }
+
+        @include media-xs {
+            height: 0;
+        }
+    }
+
+    &__button-close {
+        position: absolute;
+        left: 25px;
+        top: 25px;
+
+        @include media-s {
+            left: auto;
+            right: 25px;
+            top: 20px;
         }
     }
 }
