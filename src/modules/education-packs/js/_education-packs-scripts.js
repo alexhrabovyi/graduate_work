@@ -48,7 +48,7 @@ class EducationTabs {
         }
 
         for (let i = 0; i < this.mainButtons.length; i++) {
-            this.mainButtons[i].addEventListener("click", this.foo.bind(this));
+            this.mainButtons[i].addEventListener("click", this.mainCardsHandler.bind(this));
         }
 
         if (this.additionalTabs) {
@@ -70,11 +70,53 @@ class EducationTabs {
         }
 
         for (let i = 0; i < this.additionalButtons.length; i++) {
-            this.additionalButtons[i].addEventListener("click", this.fooAdditional.bind(this));
+            this.additionalButtons[i].addEventListener("click", this.additionalCardsHandler.bind(this));
         }
     }
 
-    foo(e) {
+    hideAdditionalButtons() {
+        for (let i = 0; i < this.additionalButtons.length; i++) {
+            this.additionalButtons[i].style.opacity = "0";
+            this.additionalButtons[i].style.pointerEvents = "none";
+        }
+    }
+
+    showAdditionalButtons() {
+        for (let i = 0; i < this.additionalButtons.length; i++) {
+            this.additionalButtons[i].style.opacity = "";
+            this.additionalButtons[i].style.pointerEvents = "";
+        }
+    }
+
+    hideCard(card) {
+        card.classList.add(this.animationHide);
+
+        function hide() {
+            card.classList.add(this.cardHideClass);
+            card.classList.remove(this.animationHide);
+
+            card.removeEventListener("animationend", hide.bind(this), { once: true });
+        }
+
+        card.addEventListener("animationend", hide.bind(this), { once: true });
+    }
+
+    showCard(card) {
+        card.classList.remove(this.cardHideClass);
+        card.classList.add(this.animationShow);
+
+        function show() {
+            card.classList.remove(this.animationShow);
+
+            this.educationBlock.style.pointerEvents = "";
+
+            card.removeEventListener("animationend", show.bind(this), { once: true });
+        }
+
+        card.addEventListener("animationend", show.bind(this), { once: true });
+    }
+
+    mainCardsHandler(e) {
         e.preventDefault();
 
         let currentButton = e.target;
@@ -93,42 +135,19 @@ class EducationTabs {
             let currentCards = this.educationBlock.querySelectorAll(`[data-ed-card-main="${this.selectedMainId}"]`);
 
             if (this.additionalTabs && !currentButton.hasAttribute("data-ed-has-additional")) {
-                for (let i = 0; i < this.additionalButtons.length; i++) {
-                    this.additionalButtons[i].style.opacity = "0";
-                    this.additionalButtons[i].style.pointerEvents = "none";
-                }
+                this.hideAdditionalButtons();
+
             } else if (this.additionalTabs && currentButton.hasAttribute("data-ed-has-additional")) {
-                for (let i = 0; i < this.additionalButtons.length; i++) {
-                    this.additionalButtons[i].style.opacity = "";
-                    this.additionalButtons[i].style.pointerEvents = "";
-                }
+                this.showAdditionalButtons();
             }
 
             for (let i = 0; i < displayedCards.length; i++) {
 
                 if (displayedCards[i].hasAttribute("data-ed-card-additional") && displayedCards[i].dataset.edCardAdditional == this.selectedAdditionalId) {
-                    displayedCards[i].classList.add(this.animationHide);
+                    this.hideCard(displayedCards[i]);
 
-                    function test() {
-                        displayedCards[i].classList.add(this.cardHideClass);
-                        displayedCards[i].classList.remove(this.animationHide);
-
-                        displayedCards[i].removeEventListener("animationend", test.bind(this), { once: true });
-                    }
-
-                    displayedCards[i].addEventListener("animationend", test.bind(this), { once: true });
                 } else if (!displayedCards[i].hasAttribute("data-ed-card-additional")) {
-
-                    displayedCards[i].classList.add(this.animationHide);
-
-                    function test() {
-                        displayedCards[i].classList.add(this.cardHideClass);
-                        displayedCards[i].classList.remove(this.animationHide);
-
-                        displayedCards[i].removeEventListener("animationend", test.bind(this), { once: true });
-                    }
-
-                    displayedCards[i].addEventListener("animationend", test.bind(this), { once: true });
+                    this.hideCard(displayedCards[i]);
                 }
             }
 
@@ -138,39 +157,18 @@ class EducationTabs {
                     if (this.additionalTabs && currentButton.hasAttribute("data-ed-has-additional")) {
 
                         if (currentCards[i].dataset.edCardAdditional == this.selectedAdditionalId) {
-                            currentCards[i].classList.remove(this.cardHideClass);
-                            currentCards[i].classList.add(this.animationShow);
-
-                            function test1() {
-                                currentCards[i].classList.remove(this.animationShow);
-
-                                this.educationBlock.style.pointerEvents = "";
-
-                                currentCards[i].removeEventListener("animationend", test1.bind(this), { once: true });
-                            }
-
-                            currentCards[i].addEventListener("animationend", test1.bind(this), { once: true });
+                            this.showCard(currentCards[i]);
                         }
+
                     } else {
-                        currentCards[i].classList.remove(this.cardHideClass);
-                        currentCards[i].classList.add(this.animationShow);
-
-                        function test1() {
-                            currentCards[i].classList.remove(this.animationShow);
-
-                            this.educationBlock.style.pointerEvents = "";
-
-                            currentCards[i].removeEventListener("animationend", test1.bind(this), { once: true });
-                        }
-
-                        currentCards[i].addEventListener("animationend", test1.bind(this), { once: true });
+                        this.showCard(currentCards[i]);
                     }
                 }
             }, { once: true });
         }
     }
 
-    fooAdditional(e) {
+    additionalCardsHandler(e) {
         e.preventDefault();
 
         let currentAdditionalButton = e.target;
@@ -189,32 +187,12 @@ class EducationTabs {
             let currentAdditionalCards = this.educationBlock.querySelectorAll(`[data-ed-card-additional="${this.selectedAdditionalId}"]`);
 
             for (let i = 0; i < displayedAdditionalCards.length; i++) {
-                displayedAdditionalCards[i].classList.add(this.animationHide);
-
-                function test() {
-                    displayedAdditionalCards[i].classList.add(this.cardHideClass);
-                    displayedAdditionalCards[i].classList.remove(this.animationHide);
-
-                    displayedAdditionalCards[i].removeEventListener("animationend", test.bind(this), { once: true });
-                }
-
-                displayedAdditionalCards[i].addEventListener("animationend", test.bind(this), { once: true });
+                this.hideCard(displayedAdditionalCards[i]);
             }
 
             this.educationBlock.addEventListener("animationend", () => {
                 for (let i = 0; i < currentAdditionalCards.length; i++) {
-                    currentAdditionalCards[i].classList.remove(this.cardHideClass);
-                    currentAdditionalCards[i].classList.add(this.animationShow);
-
-                    function test1() {
-                        currentAdditionalCards[i].classList.remove(this.animationShow);
-
-                        this.educationBlock.style.pointerEvents = "";
-
-                        currentAdditionalCards[i].removeEventListener("animationend", test1.bind(this), { once: true });
-                    }
-
-                    currentAdditionalCards[i].addEventListener("animationend", test1.bind(this), { once: true });
+                    this.showCard(currentAdditionalCards[i]);
                 }
             }, { once: true });
         }
