@@ -1,0 +1,16 @@
+@keyframes opacity-dp-none {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.animation-fading-down {
+    animation: opacity-dp-none .3s forwards normal;
+}
+
+.animation-fading-up {
+    animation: opacity-dp-none .3s forwards reverse;
+}

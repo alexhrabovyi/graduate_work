@@ -1,0 +1,142 @@
+.education-packs-wrapper {
+    margin: 140px 0;
+
+    @include media-s {
+        margin: 80px 0;
+        padding: 0;
+    }
+
+    &__article {
+        @include flex-builder(column, none, center);
+    }
+
+    &__title-with-line {
+        margin-bottom: 40px;
+    }
+
+    &__buttons-block {
+        display: grid;
+        grid-template-columns: 260px 260px;
+        gap: 30px 20px;
+        justify-content: center;
+        margin-bottom: 40px;
+
+        @include media-s {
+            width: 100%;
+            grid-template-columns: 45% 45%;
+        }
+
+        &_for-three-buttons {
+            grid-template-columns: repeat(3, 260px);
+            gap: 0 20px;
+
+            @include media-l {
+                grid-template-columns: repeat(3, 247px);
+            }
+
+            @include media-m {
+                grid-template-columns: repeat(3, 200px);
+            }
+
+            @include media-s {
+                grid-template-columns: 400px;
+                gap: 30px 0;
+            }
+
+            @include media-xs {
+                grid-template-columns: 300px;
+            }
+
+            @media (max-width: 360px) {
+                grid-template-columns: 90%;
+            }
+        }
+    }
+
+    &__button {
+        background: none;
+        border: none;
+        border-bottom: solid 2px rgb(148, 198, 196);
+        width: 100%;
+        font-family: "Raleway", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        color: $black;
+        padding-bottom: 3px;
+        transition: .1s all ease-in-out;
+
+        @include media-xs {
+            width: 100%;
+        }
+
+        &:first-child {
+            justify-self: end;
+        }
+
+        &:nth-child(3) {
+            justify-self: end;
+        }
+
+        &:hover {
+            border-color: $dark-green;
+        }
+
+        &_active {
+            border-color: $dark-green;
+        }
+
+        &_small {
+            width: 140px;
+            transition: opacity 0.3s ease-in-out;
+
+            @media (max-width: 320px) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__content-block {
+        width: 100%;
+    }
+
+    &__desktop-block {
+        width: 100%;
+
+        @include media-s {
+            display: none;
+        }
+    }
+
+    &__cards-block {
+        min-width: 83%;
+        display: flex;
+        justify-content: center;
+        gap: 0 73px;
+
+        @include media-m {
+            width: 100%;
+            gap: 0;
+            justify-content: space-around;
+        }
+    }
+
+    &__mobile-block {
+        width: 100%;
+        overflow: hidden;
+
+        @media(min-width: 769px) {
+            display: none;
+        }
+    }
+
+    &__slide {
+        @include flex-builder(row, center, none);
+        width: 300px;
+
+        @include media-xs {
+            max-width: 300px;
+            width: 70%;
+        }
+    }
+}

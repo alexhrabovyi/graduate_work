@@ -1,0 +1,35 @@
+.card {
+    width: 28.68%;
+    @include flex-builder(column, none, center);
+    background: $light-yellow;
+    border-radius: 30px;
+    overflow: hidden;
+    padding-bottom: 62px;
+    position: relative;
+
+    @include media-s {
+        width: 100%;
+    }
+
+    &__img {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        margin-bottom: 14px;
+        text-align: center;
+
+        &_small {
+            font-size: 12px;
+            position: absolute;
+            bottom: 25px;
+        }
+    }
+
+    &__title_smaller {
+        margin-bottom: 40px;
+    }
+
+
+}

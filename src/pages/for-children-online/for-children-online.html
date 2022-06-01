@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изучение языков онлайн для детей с 3 лет</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <section class="trial-lesson-form-modal-window container hidden modal-window">
+        <form class="trial-lesson-form-wrapper__form animation-translateY">
+            <button class="button-close trial-lesson-form-wrapper__button-close" data-toggle-modal="trial-form">
+                <div class="button-close__line-1"></div>
+                <div class="button-close__line-2"></div>
+            </button>
+            <div class="trial-lesson-form-wrapper__content-block">
+                <p class="title title_small trial-lesson-form-wrapper__title_small">Записаться на пробное занятие</p>
+                <div class="trial-lesson-form-wrapper__tab-buttons-block">
+                    <button class="trial-lesson-form-wrapper__tab-button" data-tab-button>
+                        Взрослые
+                    </button>
+                    <button class="trial-lesson-form-wrapper__tab-button" data-tab-button>
+                        Дети и подростки
+                    </button>
+                </div>
+                <div class="trial-lesson-form-wrapper__form-block">
+                    <div class="trial-lesson-form-wrapper__select">
+                        <div class="trial-lesson-form-wrapper__chosen-lang-block" data-show-chosen-block>
+                            <p class="text text_small  trial-lesson-form-wrapper__select-chosen-lang" data-chosen-value>
+                            </p>
+                            <i class="trial-lesson-form-wrapper__select-icon icon-arrow-down" data-arrow-icon></i>
+                        </div>
+                        <div class="trial-lesson-form-wrapper__select-options" data-options>
+                            <span class="trial-lesson-form-wrapper__select-line"></span>
+                            <button class="text text_small trial-lesson-form-wrapper__select-option" data-option>
+                                Английский язык
+                            </button>
+                            <button class="text text_small trial-lesson-form-wrapper__select-option" data-option>
+                                Французский язык
+                            </button>
+                            <button class="text text_small trial-lesson-form-wrapper__select-option" data-option>
+                                Немецкий язык
+                            </button>
+                            <button class="text text_small trial-lesson-form-wrapper__select-option" data-option>
+                                Испанский язык
+                            </button>
+                        </div>
+                    </div>
+                    <div class="trial-lesson-form-wrapper__checkbox-block">
+                        <button class="trial-lesson-form-wrapper__checkbox-button" data-checkbox-option>
+                            <span class="trial-lesson-form-wrapper__circle-external">
+                                <span class="trial-lesson-form-wrapper__circle-inner"></span>
+                            </span>
+                            <p class="text text_small trial-lesson-form-wrapper__checkbox-text">Онлайн-занятия</p>
+                        </button>
+                        <button class="trial-lesson-form-wrapper__checkbox-button" data-checkbox-option>
+                            <span class="trial-lesson-form-wrapper__circle-external">
+                                <span class="trial-lesson-form-wrapper__circle-inner"></span>
+                            </span>
+                            <p class="text text_small trial-lesson-form-wrapper__checkbox-text">Занятия в клубе</p>
+                        </button>
+                    </div>
+                    <div class="trial-lesson-form-wrapper__tab-contents">
+                        <div class="trial-lesson-form-wrapper__tab-content" data-tab-content>
+                            <input class="input trial-lesson-form-wrapper__input trial-lesson-form-wrapper__input_short"
+                                type="text" name="user-name" placeholder="Имя" data-trial-form-name-adult>
+                            <input class="input trial-lesson-form-wrapper__input trial-lesson-form-wrapper__input_short"
+                                type="text" name="user-tel" placeholder="Телефон" data-trial-from-tel-adult>
+                        </div>
+                        <div class="trial-lesson-form-wrapper__tab-content" data-tab-content>
+                            <input class="input trial-lesson-form-wrapper__input trial-lesson-form-wrapper__input_short"
+                                type="text" name="user-name" placeholder="Имя родителя" data-trial-form-parent-name>
+                            <input class="input trial-lesson-form-wrapper__input trial-lesson-form-wrapper__input_short"
+                                type="text" name="user-tel" placeholder="Телефон" data-trial-form-parent-tel>
+                            <input class="input trial-lesson-form-wrapper__input trial-lesson-form-wrapper__input_short"
+                                type="text" name="user-name" placeholder="Имя ребёнка" data-trial-form-child-name>
+                            <input class="input trial-lesson-form-wrapper__input trial-lesson-form-wrapper__input_short"
+                                type="text" name="user-age" placeholder="Возраст ребёнка" data-trial-form-child-age>
+                        </div>
+                    </div>
+                    <input class="input trial-lesson-form-wrapper__input" type="email" name="user-email"
+                        placeholder="Почта" data-trial-form-email>
+                    <button class="button button_shorter trial-lesson-form-wrapper__button-submit">Отправить</button>
+                </div>
+            </div>
+            <div class="trial-lesson-form-wrapper__img-right"></div>
+        </form>
+    </section>
+    <section class="payment-form-modal-window container hidden modal-window">
+        <form class="payment-form-wrapper animation-translateY">
+            <div class="payment-form-wrapper__background-left"></div>
+            <div class="payment-form-wrapper__content">
+                <button class="button-close payment-form-wrapper__button-close" data-toggle-modal="payment-form">
+                    <div class="button-close__line-1"></div>
+                    <div class="button-close__line-2"></div>
+                </button>
+                <p class="title title_small payment-form-wrapper__title_small">Оплата услуг</p>
+                <div class="payment-form-wrapper__name-tel-inputs-block">
+                    <input class="input input_shorter payment-form-wrapper__input_shorter" type="text" name="user-name"
+                        placeholder="Имя">
+                    <input class="input input_shorter payment-form-wrapper__input_shorter" type="text" name="user-tel"
+                        placeholder="Телефон">
+                </div>
+                <input class="input payment-form-wrapper__input" type="email" name="user-email" placeholder="Почта">
+                <div class="payment-form-wrapper__amount-block">
+                    <input class="input payment-form-wrapper__input" type="text" name="user-payment-amount"
+                        placeholder="Сумма платежа">
+                    <p class="payment-form-wrapper__uah-sign">&#8372;</p>
+                </div>
+                <a class="text text_small payment-form-wrapper__text_small" href="#"
+                    alt="Нажимая кнопку 'Оплатить', Вы соглашаетесь с условиями договора оферты и обработку персональных данных.">
+                    Нажимая кнопку "Оплатить", Вы соглашаетесь с условиями договора оферты и обработку персональных
+                    данных.
+                </a>
+                <button class="button button_shorter payment-form-wrapper__button_shorter">Отправить</button>
+            </div>
+            <div class="payment-form-wrapper__background-mobile"></div>
+            <div class="payment-form-wrapper__background-right"></div>
+        </form>
+    </section>
+    <section class="request-call-form-modal-window container hidden modal-window">
+        <form class="request-call-form-wrapper animation-translateY">
+            <div class="request-call-form-wrapper__background-left"></div>
+            <div class="request-call-form-wrapper__content">
+                <p class="title title_small request-call-form-wrapper__title_small">
+                    Заказать звонок
+                </p>
+                <input class="input request-call-form-wrapper__input" type="text" name="user-name" placeholder="Имя">
+                <input class="input request-call-form-wrapper__input" type="tel" name="user-tel" placeholder="Телефон">
+                <button class="button button_shorter request-call-form-wrapper__button_shorter">Отправить</button>
+            </div>
+            <div class="request-call-form-wrapper__background-right"></div>
+            <button class="button-close request-call-form-wrapper__button-close" data-toggle-modal="request-call-form">
+                <div class="button-close__line-1"></div>
+                <div class="button-close__line-2"></div>
+            </button>
+        </form>
+    </section>
+    <nav class="main-nav container">
+        <div class="main-nav__logo-and-links-block">
+            <a class="main-nav__logo-link logo-link" href="#" alt="Speaky School">
+                <svg width="244" height="50" viewBox="0 0 244 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="logo-fill"
+                        d="M70.0045 23.9418C67.2964 23.3043 66.9207 22.4374 66.9207 21.6064C66.9207 20.2166 67.7856 19.5432 69.572 19.5432C70.8835 19.5432 72.039 19.8441 73.2158 20.4888L73.4994 20.6464L73.6766 20.3742C73.9885 19.9014 74.1728 19.3139 74.1728 18.791C74.1728 18.1032 73.8113 17.7021 73.0031 17.48C71.876 17.1433 70.8906 17 69.5933 17C65.5242 17 64.078 19.5074 64.078 21.85C64.078 24.2284 65.6518 25.7973 68.7497 26.5137C71.564 27.1871 72.1383 28.0826 72.1383 29.2217C72.1383 31.07 70.4723 31.464 69.0758 31.464C67.6863 31.464 66.3748 31.0771 64.9641 30.2533L64.6806 30.0885L64.4962 30.3607C64.1843 30.8192 64 31.4138 64 31.9511C64 32.646 64.3261 33.0472 65.1201 33.3409C66.2402 33.7708 67.5871 34 69.0191 34C72.6061 34 75.0164 31.9798 75.0164 28.9781C75.0093 26.3274 73.4639 24.7729 70.0045 23.9418Z" />
+                    <path class="logo-fill"
+                        d="M82.9707 17H77.583V33.5702H80.3619V28.2617H82.9707C86.7705 28.2617 88.9468 26.2128 88.9468 22.6452C88.9468 19.056 86.7705 17 82.9707 17ZM80.369 19.4357H82.9778C85.0974 19.4357 86.1324 20.4817 86.1324 22.6452C86.1324 24.7729 85.0691 25.8546 82.9778 25.8546H80.369V19.4357Z" />
+                    <path class="logo-fill"
+                        d="M93.9586 26.1985H99.8V23.7627H93.9586V19.4357H101.275V17H91.1797V33.5702H101.409V31.1344H93.9586V26.1985Z" />
+                    <path class="logo-fill"
+                        d="M110.626 17.1218L110.519 17H108.322L108.215 17.1218C105.358 20.453 103.331 26.6068 102.92 33.1833L102.898 33.563H105.77L105.784 33.2191C105.84 31.9654 105.961 30.7404 106.124 29.5727H112.703C112.859 30.6759 112.979 31.8723 113.071 33.2191L113.093 33.5558H115.935L115.914 33.1761C115.567 26.7859 113.49 20.4816 110.626 17.1218ZM112.277 27.1441H106.571C107.202 24.2069 108.159 21.7067 109.42 19.7008C110.711 21.7425 111.668 24.2427 112.277 27.1441Z" />
+                    <path class="logo-fill"
+                        d="M125.136 24.6582C127.617 22.7956 129.368 20.1879 129.978 17.437L130.077 17H127.107L127.043 17.2794C126.313 20.4315 124.193 22.9604 121.337 24.1281V17H118.558V33.5702H121.337V26.6928C121.84 26.5209 122.322 26.3274 122.769 26.1125C125.179 27.6671 126.689 30.0742 127.256 33.2764L127.306 33.5702H130.283L130.219 33.1618C129.723 29.7661 127.795 26.5638 125.136 24.6582Z" />
+                    <path class="logo-fill"
+                        d="M141.136 17L141.108 17.3224C140.774 20.9043 139.626 23.6839 137.691 25.6039C135.699 23.6911 134.522 20.9043 134.189 17.3224L134.16 17H131.296L131.332 17.394C131.715 21.5706 133.508 25.3603 136.273 27.8032V33.5702H139.031V27.8032C141.845 25.3102 143.646 21.5276 143.972 17.3869L144 17H141.136Z" />
+                    <path class="logo-stroke"
+                        d="M159.949 19.9375L160.204 20.1325L160.381 19.8655L160.61 19.5224L160.763 19.2923L160.546 19.1209C159.444 18.2495 157.795 17.7 156.202 17.7C154.471 17.7 153.194 18.1594 152.346 18.9111C151.496 19.665 151.108 20.686 151.108 21.7418C151.108 23.2179 151.732 24.1535 152.666 24.78C153.572 25.388 154.766 25.7015 155.896 25.9869C155.943 25.9988 155.989 26.0105 156.036 26.0223C157.141 26.3008 158.175 26.5616 158.951 27.0267C159.349 27.2649 159.665 27.5498 159.883 27.9067C160.1 28.262 160.231 28.7066 160.231 29.2827C160.231 30.1162 159.917 30.8565 159.255 31.3948C158.587 31.9383 157.535 32.2997 156.022 32.2997C154.092 32.2997 152.357 31.4552 151.517 30.4323L151.31 30.1798L151.076 30.4076L150.791 30.6854L150.598 30.8729L150.763 31.0848C151.797 32.4097 153.885 33.3 156.047 33.3C157.796 33.3 159.097 32.8522 159.966 32.111C160.839 31.3667 161.247 30.3508 161.247 29.2827L161.247 29.2818C161.245 28.5648 161.09 27.9691 160.811 27.472C160.532 26.9755 160.137 26.5934 159.677 26.2896C158.77 25.6901 157.576 25.3771 156.445 25.0888C156.412 25.0804 156.379 25.072 156.346 25.0636C155.226 24.7781 154.174 24.5103 153.389 24.0332C152.991 23.7917 152.674 23.5034 152.456 23.143C152.238 22.7842 152.107 22.3365 152.107 21.7582C152.107 20.915 152.423 20.163 153.074 19.6167C153.73 19.0663 154.757 18.7003 156.218 18.7003C157.448 18.7003 158.866 19.1078 159.949 19.9375Z"
+                        stroke-width="0.6" stroke-miterlimit="10" />
+                    <path class="logo-stroke"
+                        d="M176.137 20.3953L176.37 20.6239L176.578 20.3732L176.823 20.0791L176.995 19.8723L176.808 19.6788C175.508 18.3335 173.662 17.7 171.708 17.7C167.339 17.7 164.046 21.0501 164.046 25.5C164.046 29.9497 167.331 33.3 171.708 33.3C173.657 33.3 175.51 32.6403 176.808 31.2967L176.995 31.1032L176.823 30.8964L176.578 30.6023L176.369 30.3508L176.137 30.5809C174.89 31.8145 173.389 32.2997 171.717 32.2997C167.935 32.2997 165.07 29.3605 165.07 25.5082L165.07 25.5076C165.062 21.6392 167.927 18.7003 171.717 18.7003C173.4 18.7003 174.892 19.1705 176.137 20.3953Z"
+                        stroke-width="0.6" stroke-miterlimit="10" />
+                    <path class="logo-stroke"
+                        d="M192.035 18.0573V24.8733H182.183V18.0573V17.7573H181.883H181.476H181.176V18.0573V32.9266V33.2266H181.476H181.883H182.183V32.9266V25.8818H192.035V32.9266V33.2266H192.335H192.751H193.051V32.9266V18.0573V17.7573H192.751H192.335H192.035V18.0573Z"
+                        stroke-width="0.6" stroke-miterlimit="10" />
+                    <path class="logo-stroke"
+                        d="M205.071 17.7C200.702 17.7 197.409 21.0501 197.409 25.5C197.409 29.9497 200.693 33.3 205.071 33.3C209.449 33.3 212.733 29.9497 212.733 25.5C212.733 21.0419 209.449 17.7 205.071 17.7ZM205.071 32.2915C201.288 32.2915 198.425 29.392 198.425 25.5C198.425 21.608 201.288 18.7085 205.071 18.7085C208.855 18.7085 211.726 21.6084 211.726 25.5C211.726 29.3916 208.855 32.2915 205.071 32.2915Z"
+                        stroke-width="0.6" stroke-miterlimit="10" />
+                    <path class="logo-stroke"
+                        d="M223.236 17.7C218.867 17.7 215.574 21.0501 215.574 25.5C215.574 29.9497 218.858 33.3 223.236 33.3C227.614 33.3 230.898 29.9497 230.898 25.5C230.898 21.0419 227.614 17.7 223.236 17.7ZM223.236 32.2915C219.453 32.2915 216.59 29.392 216.59 25.5C216.59 21.608 219.453 18.7085 223.236 18.7085C227.02 18.7085 229.891 21.6084 229.891 25.4999C229.883 29.3922 227.019 32.2915 223.236 32.2915Z"
+                        stroke-width="0.6" stroke-miterlimit="10" />
+                    <path class="logo-stroke"
+                        d="M242.592 17.7573H242.292V18.0573V32.2263H234.04H233.74V32.5263V32.9266V33.2266H234.04H243H243.3V32.9266V18.0573V17.7573H243H242.592Z"
+                        stroke-width="0.6" stroke-miterlimit="10" />
+                    <path class="logo-fill"
+                        d="M25 0C11.1947 0 0 11.1947 0 25C0 27.8692 0.488006 30.6209 1.37582 33.1844C1.9579 31.4675 2.92215 29.8565 4.28622 28.4866C5.54445 27.2284 8.34313 24.2004 9.9071 23.6065C11.571 21.0078 12.8704 19.9024 16.1042 16.6686C22.6305 10.1423 29.0922 6.02658 30.5444 7.47883C31.9967 8.93109 27.881 15.3928 21.3547 21.9191C19.9671 23.3067 18.5854 24.5767 17.2507 25.7114C18.8147 26.3053 20.2787 27.2225 21.5369 28.4807C22.7952 29.7389 23.7124 31.2088 24.3062 32.7728C25.441 31.4381 26.7168 30.0564 28.1044 28.6689C34.6308 22.1425 41.0983 18.0268 42.5447 19.4791C43.9969 20.9313 39.8812 27.393 33.3549 33.9193C30.1211 37.1531 29.0687 38.4995 26.464 40.1635C25.8702 41.7215 22.7893 44.4791 21.5369 45.7314C20.1787 47.0896 18.5736 48.048 16.8744 48.6301C19.4203 49.5061 22.1543 49.9882 24.9941 49.9882C38.8053 50 50 38.8053 50 25C50 11.1947 38.8053 0 25 0Z" />
+                    <path class="logo-fill"
+                        d="M11.0357 35.2421C11.2592 35.2421 11.4885 35.1539 11.659 34.9834C12 34.6424 12 34.0838 11.659 33.7369C11.3238 33.4018 10.7476 33.4018 10.4125 33.7369C10.2479 33.9015 10.1538 34.125 10.1538 34.3602C10.1538 34.5953 10.2479 34.8188 10.4125 34.9834C10.583 35.1598 10.8064 35.2421 11.0357 35.2421Z" />
+                    <path class="logo-fill"
+                        d="M16.304 38.3935C15.9747 38.0584 15.3927 38.0584 15.0575 38.3935C14.8929 38.5581 14.7988 38.7816 14.7988 39.0167C14.7988 39.2519 14.8929 39.4753 15.0575 39.64C15.2222 39.8046 15.4456 39.8987 15.6808 39.8987C15.9159 39.8987 16.1394 39.8046 16.304 39.64C16.4686 39.4753 16.5627 39.2519 16.5627 39.0167C16.5627 38.7816 16.4745 38.5581 16.304 38.3935Z" />
+                    <path class="logo-fill"
+                        d="M8.60747 37.9173C7.95483 38.564 8.76622 40.2221 9.0308 40.716L9.07196 40.7924L9.14839 40.8336C9.40709 40.9688 10.4419 41.4979 11.2356 41.4979C11.5179 41.4979 11.7707 41.4333 11.9471 41.2569C12.5644 40.6395 12.3116 39.6459 11.265 38.5993C10.2185 37.5586 9.22482 37.3058 8.60747 37.9173Z" />
+                </svg>
+            </a>
+            <div class="main-nav__links-block">
+                <a class="main-nav__link" href="#" alt="Обучение детей" id="main-nav__dropdown-link">
+                    Обучение детей <i class="icon-arrow-down main-nav__arrow-icon"></i>
+                </a>
+                <a class="main-nav__link" href="../for-adult/for-adult.html" alt="Обучение взрослых">
+                    Обучение взрослых
+                </a>
+                <div class="main-nav__dropdown-content" id="main-nav__dropdown-content">
+                    <div class="main-nav__dropdown-triangle"></div>
+                    <div class="main-nav__dropdown-links-block">
+                        <a class="main-nav__link" href="../for-children-online/for-children-online.html"
+                            alt="Онлайн-занятия">
+                            Онлайн-занятия
+                        </a>
+                        <a class="main-nav__link" href="../for-children-offline/for-children-offline.html"
+                            alt="Занятия в клубе">
+                            Занятия в клубе
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-nav__social-links-block">
+            <a class="social-link main-nav__social-link" href="#" alt="Facebook">
+                <i class="icon-facebook"></i>
+            </a>
+            <a class="social-link main-nav__social-link" href="#" alt="Instagram">
+                <i class="icon-instagram"></i>
+            </a>
+            <a class="social-link main-nav__social-link" href="#" alt="WhatsApp">
+                <i class="icon-viber"></i>
+            </a>
+            <a class="social-link main-nav__social-link" href="#" alt="VK">
+                <i class="icon-vk"></i>
+            </a>
+            <a class="social-link main-nav__social-link request-call-button" href="#" alt="Request call"
+                data-toggle-modal="request-call-form">
+                <i class="icon-phone"></i>
+            </a>
+        </div>
+    </nav>
+    <nav class="mobile-nav">
+        <div class="mobile-nav__panel container">
+            <a class="mobile-nav__logo-link logo-link" href="#" alt="Speaky School">
+                <svg width="244" height="50" viewBox="0 0 244 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="logo-fill"
+                        d="M70.0045 23.9418C67.2964 23.3043 66.9207 22.4374 66.9207 21.6064C66.9207 20.2166 67.7856 19.5432 69.572 19.5432C70.8835 19.5432 72.039 19.8441 73.2158 20.4888L73.4994 20.6464L73.6766 20.3742C73.9885 19.9014 74.1728 19.3139 74.1728 18.791C74.1728 18.1032 73.8113 17.7021 73.0031 17.48C71.876 17.1433 70.8906 17 69.5933 17C65.5242 17 64.078 19.5074 64.078 21.85C64.078 24.2284 65.6518 25.7973 68.7497 26.5137C71.564 27.1871 72.1383 28.0826 72.1383 29.2217C72.1383 31.07 70.4723 31.464 69.0758 31.464C67.6863 31.464 66.3748 31.0771 64.9641 30.2533L64.6806 30.0885L64.4962 30.3607C64.1843 30.8192 64 31.4138 64 31.9511C64 32.646 64.3261 33.0472 65.1201 33.3409C66.2402 33.7708 67.5871 34 69.0191 34C72.6061 34 75.0164 31.9798 75.0164 28.9781C75.0093 26.3274 73.4639 24.7729 70.0045 23.9418Z" />
+                    <path class="logo-fill"
+                        d="M82.9707 17H77.583V33.5702H80.3619V28.2617H82.9707C86.7705 28.2617 88.9468 26.2128 88.9468 22.6452C88.9468 19.056 86.7705 17 82.9707 17ZM80.369 19.4357H82.9778C85.0974 19.4357 86.1324 20.4817 86.1324 22.6452C86.1324 24.7729 85.0691 25.8546 82.9778 25.8546H80.369V19.4357Z" />
+                    <path class="logo-fill"
+                        d="M93.9586 26.1985H99.8V23.7627H93.9586V19.4357H101.275V17H91.1797V33.5702H101.409V31.1344H93.9586V26.1985Z" />
+                    <path class="logo-fill"
+                        d="M110.626 17.1218L110.519 17H108.322L108.215 17.1218C105.358 20.453 103.331 26.6068 102.92 33.1833L102.898 33.563H105.77L105.784 33.2191C105.84 31.9654 105.961 30.7404 106.124 29.5727H112.703C112.859 30.6759 112.979 31.8723 113.071 33.2191L113.093 33.5558H115.935L115.914 33.1761C115.567 26.7859 113.49 20.4816 110.626 17.1218ZM112.277 27.1441H106.571C107.202 24.2069 108.159 21.7067 109.42 19.7008C110.711 21.7425 111.668 24.2427 112.277 27.1441Z" />
+                    <path class="logo-fill"
+                        d="M125.136 24.6582C127.617 22.7956 129.368 20.1879 129.978 17.437L130.077 17H127.107L127.043 17.2794C126.313 20.4315 124.193 22.9604 121.337 24.1281V17H118.558V33.5702H121.337V26.6928C121.84 26.5209 122.322 26.3274 122.769 26.1125C125.179 27.6671 126.689 30.0742 127.256 33.2764L127.306 33.5702H130.283L130.219 33.1618C129.723 29.7661 127.795 26.5638 125.136 24.6582Z" />
+                    <path class="logo-fill"
+                        d="M141.136 17L141.108 17.3224C140.774 20.9043 139.626 23.6839 137.691 25.6039C135.699 23.6911 134.522 20.9043 134.189 17.3224L134.16 17H131.296L131.332 17.394C131.715 21.5706 133.508 25.3603 136.273 27.8032V33.5702H139.031V27.8032C141.845 25.3102 143.646 21.5276 143.972 17.3869L144 17H141.136Z" />
+                    <path class="logo-stroke"
+                        d="M159.949 19.9375L160.204 20.1325L160.381 19.8655L160.61 19.5224L160.763 19.2923L160.546 19.1209C159.444 18.2495 157.795 17.7 156.202 17.7C154.471 17.7 153.194 18.1594 152.346 18.9111C151.496 19.665 151.108 20.686 151.108 21.7418C151.108 23.2179 151.732 24.1535 152.666 24.78C153.572 25.388 154.766 25.7015 155.896 25.9869C155.943 25.9988 155.989 26.0105 156.036 26.0223C157.141 26.3008 158.175 26.5616 158.951 27.0267C159.349 27.2649 159.665 27.5498 159.883 27.9067C160.1 28.262 160.231 28.7066 160.231 29.2827C160.231 30.1162 159.917 30.8565 159.255 31.3948C158.587 31.9383 157.535 32.2997 156.022 32.2997C154.092 32.2997 152.357 31.4552 151.517 30.4323L151.31 30.1798L151.076 30.4076L150.791 30.6854L150.598 30.8729L150.763 31.0848C151.797 32.4097 153.885 33.3 156.047 33.3C157.796 33.3 159.097 32.8522 159.966 32.111C160.839 31.3667 161.247 30.3508 161.247 29.2827L161.247 29.2818C161.245 28.5648 161.09 27.9691 160.811 27.472C160.532 26.9755 160.137 26.5934 159.677 26.2896C158.77 25.6901 157.576 25.3771 156.445 25.0888C156.412 25.0804 156.379 25.072 156.346 25.0636C155.226 24.7781 154.174 24.5103 153.389 24.0332C152.991 23.7917 152.674 23.5034 152.456 23.143C152.238 22.7842 152.107 22.3365 152.107 21.7582C152.107 20.915 152.423 20.163 153.074 19.6167C153.73 19.0663 154.757 18.7003 156.218 18.7003C157.448 18.7003 158.866 19.1078 159.949 19.9375Z"
+                        stroke-width="0.6" stroke-miterlimit="10" />
+                    <path class="logo-stroke"
+                        d="M176.137 20.3953L176.37 20.6239L176.578 20.3732L176.823 20.0791L176.995 19.8723L176.808 19.6788C175.508 18.3335 173.662 17.7 171.708 17.7C167.339 17.7 164.046 21.0501 164.046 25.5C164.046 29.9497 167.331 33.3 171.708 33.3C173.657 33.3 175.51 32.6403 176.808 31.2967L176.995 31.1032L176.823 30.8964L176.578 30.6023L176.369 30.3508L176.137 30.5809C174.89 31.8145 173.389 32.2997 171.717 32.2997C167.935 32.2997 165.07 29.3605 165.07 25.5082L165.07 25.5076C165.062 21.6392 167.927 18.7003 171.717 18.7003C173.4 18.7003 174.892 19.1705 176.137 20.3953Z"
+                        stroke-width="0.6" stroke-miterlimit="10" />
+                    <path class="logo-stroke"
+                        d="M192.035 18.0573V24.8733H182.183V18.0573V17.7573H181.883H181.476H181.176V18.0573V32.9266V33.2266H181.476H181.883H182.183V32.9266V25.8818H192.035V32.9266V33.2266H192.335H192.751H193.051V32.9266V18.0573V17.7573H192.751H192.335H192.035V18.0573Z"
+                        stroke-width="0.6" stroke-miterlimit="10" />
+                    <path class="logo-stroke"
+                        d="M205.071 17.7C200.702 17.7 197.409 21.0501 197.409 25.5C197.409 29.9497 200.693 33.3 205.071 33.3C209.449 33.3 212.733 29.9497 212.733 25.5C212.733 21.0419 209.449 17.7 205.071 17.7ZM205.071 32.2915C201.288 32.2915 198.425 29.392 198.425 25.5C198.425 21.608 201.288 18.7085 205.071 18.7085C208.855 18.7085 211.726 21.6084 211.726 25.5C211.726 29.3916 208.855 32.2915 205.071 32.2915Z"
+                        stroke-width="0.6" stroke-miterlimit="10" />
+                    <path class="logo-stroke"
+                        d="M223.236 17.7C218.867 17.7 215.574 21.0501 215.574 25.5C215.574 29.9497 218.858 33.3 223.236 33.3C227.614 33.3 230.898 29.9497 230.898 25.5C230.898 21.0419 227.614 17.7 223.236 17.7ZM223.236 32.2915C219.453 32.2915 216.59 29.392 216.59 25.5C216.59 21.608 219.453 18.7085 223.236 18.7085C227.02 18.7085 229.891 21.6084 229.891 25.4999C229.883 29.3922 227.019 32.2915 223.236 32.2915Z"
+                        stroke-width="0.6" stroke-miterlimit="10" />
+                    <path class="logo-stroke"
+                        d="M242.592 17.7573H242.292V18.0573V32.2263H234.04H233.74V32.5263V32.9266V33.2266H234.04H243H243.3V32.9266V18.0573V17.7573H243H242.592Z"
+                        stroke-width="0.6" stroke-miterlimit="10" />
+                    <path class="logo-fill"
+                        d="M25 0C11.1947 0 0 11.1947 0 25C0 27.8692 0.488006 30.6209 1.37582 33.1844C1.9579 31.4675 2.92215 29.8565 4.28622 28.4866C5.54445 27.2284 8.34313 24.2004 9.9071 23.6065C11.571 21.0078 12.8704 19.9024 16.1042 16.6686C22.6305 10.1423 29.0922 6.02658 30.5444 7.47883C31.9967 8.93109 27.881 15.3928 21.3547 21.9191C19.9671 23.3067 18.5854 24.5767 17.2507 25.7114C18.8147 26.3053 20.2787 27.2225 21.5369 28.4807C22.7952 29.7389 23.7124 31.2088 24.3062 32.7728C25.441 31.4381 26.7168 30.0564 28.1044 28.6689C34.6308 22.1425 41.0983 18.0268 42.5447 19.4791C43.9969 20.9313 39.8812 27.393 33.3549 33.9193C30.1211 37.1531 29.0687 38.4995 26.464 40.1635C25.8702 41.7215 22.7893 44.4791 21.5369 45.7314C20.1787 47.0896 18.5736 48.048 16.8744 48.6301C19.4203 49.5061 22.1543 49.9882 24.9941 49.9882C38.8053 50 50 38.8053 50 25C50 11.1947 38.8053 0 25 0Z" />
+                    <path class="logo-fill"
+                        d="M11.0357 35.2421C11.2592 35.2421 11.4885 35.1539 11.659 34.9834C12 34.6424 12 34.0838 11.659 33.7369C11.3238 33.4018 10.7476 33.4018 10.4125 33.7369C10.2479 33.9015 10.1538 34.125 10.1538 34.3602C10.1538 34.5953 10.2479 34.8188 10.4125 34.9834C10.583 35.1598 10.8064 35.2421 11.0357 35.2421Z" />
+                    <path class="logo-fill"
+                        d="M16.304 38.3935C15.9747 38.0584 15.3927 38.0584 15.0575 38.3935C14.8929 38.5581 14.7988 38.7816 14.7988 39.0167C14.7988 39.2519 14.8929 39.4753 15.0575 39.64C15.2222 39.8046 15.4456 39.8987 15.6808 39.8987C15.9159 39.8987 16.1394 39.8046 16.304 39.64C16.4686 39.4753 16.5627 39.2519 16.5627 39.0167C16.5627 38.7816 16.4745 38.5581 16.304 38.3935Z" />
+                    <path class="logo-fill"
+                        d="M8.60747 37.9173C7.95483 38.564 8.76622 40.2221 9.0308 40.716L9.07196 40.7924L9.14839 40.8336C9.40709 40.9688 10.4419 41.4979 11.2356 41.4979C11.5179 41.4979 11.7707 41.4333 11.9471 41.2569C12.5644 40.6395 12.3116 39.6459 11.265 38.5993C10.2185 37.5586 9.22482 37.3058 8.60747 37.9173Z" />
+                </svg>
+            </a>
+            <button class="burger mobile-nav__burger" aria-label="Main Menu">
+                <svg width="70" height="60" viewBox="0 0 100 100">
+                    <path class="burger_line burger_line1"
+                        d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                    <path class="burger_line burger_line2" d="M 20,50 H 80" />
+                    <path class="burger_line burger_line3"
+                        d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                </svg>
+            </button>
+        </div>
+        <div class="mobile-nav__content">
+            <nav class="mobile-nav__main-nav">
+                <a class="mobile-nav__link" href="../for-children-online/for-children-online.html"
+                    alt="Обучение детей онлайн">
+                    Обучение детей онлайн
+                </a>
+                <a class="mobile-nav__link" href="../for-children-offline/for-children-offline.html"
+                    alt="Обучение детей оффлайн">
+                    Обучение детей оффлайн
+                </a>
+                <a class="mobile-nav__link" href="../for-adult/for-adult.html" alt="Обучение взрослых">
+                    Обучение взрослых
+                </a>
+            </nav>
+            <nav class="mobile-nav__social-links">
+                <a class="social-link main-nav__social-link" href="#" alt="Facebook">
+                    <i class="icon-facebook"></i>
+                </a>
+                <a class="social-link main-nav__social-link" href="#" alt="Instagram">
+                    <i class="icon-instagram"></i>
+                </a>
+                <a class="social-link main-nav__social-link" href="#" alt="WhatsApp">
+                    <i class="icon-viber"></i>
+                </a>
+                <a class="social-link main-nav__social-link" href="#" alt="VK">
+                    <i class="icon-vk"></i>
+                </a>
+                <a class="social-link main-nav__social-link request-call-button" href="#" alt="Request call"
+                    data-toggle-modal="request-call-form">
+                    <i class="icon-phone"></i>
+                </a>
+            </nav>
+            <div class="mobile-nav__contacts-block">
+                <p class="text text_black mobile-nav__text_black">Контакты</p>
+                <a class="text text_small mobile-nav__contacts-link" href=" tel:+7(495)7237515">+7 (495) 723-75-15</a>
+                <a class="text text_small mobile-nav__contacts-link" href="mailto:info@speaky.school" target="_blank"
+                    alt="info@speaky.school">
+                    info@speaky.school
+                </a>
+                <p class="text text_small mobile-nav__text_small">
+                    108840, Россия,<br>г. Москва, г. Троицк,<br>Троицкий бульвар, 6
+                </p>
+            </div>
+        </div>
+    </nav>
+    <section class="header-wrapper container">
+        <header class="header-wrapper__header">
+            <div class="header-wrapper__interactive-block">
+                <h1 class="title header-wrapper__title">Изучение языков онлайн для детей<br>с 3 лет</h1>
+                <button class="button header-wrapper__button button-open-trial-lesson-form"
+                    data-toggle-modal="trial-form">Пробное занятие</button>
+            </div>
+            <div class="header-wrapper__picture-block">
+                <img class="header-wrapper__picture" src="../../modules/header/svg/header-for-children-online.svg">
+                <img class="header-wrapper__additional-picture"
+                    src="../../modules/header/img/header-for-children-online.png" alt="Kid is talking with teacher">
+            </div>
+        </header>
+    </section>
+    <section class="languages-wrapper container">
+        <article class="languages-wrapper__article">
+            <p class="title-with-line languages-wrapper__title-with-line">
+                <span class="title-with-line__line">У нас вы можете выучить:</span>
+            </p>
+            <div class="languages-wrapper__languages-block">
+                <div class="languages-wrapper__language-block">
+                    <img class="languages-wrapper__img" src="../../modules/languages/svg/uk-flag.svg"
+                        alt="United Kingdom Flag">
+                    <p class="text languages-wrapper__text">Английский</p>
+                </div>
+                <div class="languages-wrapper__language-block">
+                    <img class="languages-wrapper__img" src="../../modules/languages/svg/ge-flag.svg"
+                        alt="United Kingdom Flag">
+                    <p class="text languages-wrapper__text">Немецкий</p>
+                </div>
+                <div class="languages-wrapper__language-block">
+                    <img class="languages-wrapper__img" src="../../modules/languages/svg/sp-flag.svg"
+                        alt="United Kingdom Flag">
+                    <p class="text languages-wrapper__text">Испанский</p>
+                </div>
+                <div class="languages-wrapper__language-block">
+                    <img class="languages-wrapper__img" src="../../modules/languages/svg/fr-flag.svg"
+                        alt="United Kingdom Flag">
+                    <p class="text languages-wrapper__text">Французский</p>
+                </div>
+            </div>
+        </article>
+    </section>
+    <section class="choice-for-kid-wrapper container">
+        <article class="choice-for-kid-wrapper__article">
+            <p class="title-with-line choice-for-kid-wrapper__title-with-line">
+                <span class="title-with-line__line">Выбирая для своего ребенка</span>
+            </p>
+            <div class="choice-for-kid-wrapper__text-blocks">
+                <div class="choice-for-kid-wrapper__simple-text-block">
+                    <p class="choice-for-kid-wrapper__text text">
+                        изучение языков в нашей языковой школе, вы должны знать об особенностях нашего онлайн-обучения:
+                    </p>
+                </div>
+                <div class="choice-for-kid-wrapper__text-block choice-for-kid-wrapper__text-block_yellow">
+                    <p class="choice-for-kid-wrapper__text_small text text_small">
+                        На первом занятии мы узнаем об интересах вашего ребенка, его увлечениях и особенностях.
+                    </p>
+                </div>
+                <div class="choice-for-kid-wrapper__text-block choice-for-kid-wrapper__text-block_red">
+                    <p class="choice-for-kid-wrapper__text_small text text_small">
+                        Далее, после общения с ним, мы составляем ИНДИВИДУАЛЬНЫЙ ОБРАЗОВАТЕЛЬНЫЙ МАРШРУТ конкретно для
+                        вас.
+                    </p>
+                </div>
+            </div>
+        </article>
+    </section>
+    <section class="trial-lesson-banner container">
+        <article class="trial-lesson-banner__article">
+            <div class="trial-lesson-banner__content">
+                <p class="title-with-line trial-lesson-banner__title-with-line">
+                    <span class="title-with-line__line">Выучить язык совсем несложно</span>
+                </p>
+                <button class="button trial-lesson-banner__button button-open-trial-lesson-form">Пробное
+                    занятие</button>
+            </div>
+            <div class="trial-lesson-banner__picture-block">
+                <img class="trial-lesson-banner__img"
+                    src="../../modules/trial-lesson-banner/img/trial-lesson-banner-children-online.png"
+                    alt="Kids are painting">
+                <img class="trial-lesson-banner__svg-up"
+                    src="../../modules/trial-lesson-banner/svg/trial-lesson-banner-svg-up.svg">
+                <img class="trial-lesson-banner__svg-down"
+                    src="../../modules/trial-lesson-banner/svg/trial-lesson-banner-svg-down.svg">
+            </div>
+        </article>
+    </section>
+    <section class="components-of-result-wrapper container">
+        <article class="components-of-result-wrapper__article">
+            <p class="title-with-line components-of-result-wrapper__title-with-line">
+                <span class="title-with-line__line">Результата достигаем за счет:</span>
+            </p>
+            <div class="components-of-result-wrapper__plates-block">
+                <div class="components-of-result-wrapper__plate">
+                    <img class="components-of-result-wrapper__icon"
+                        src="../../modules/components-of-result/svg/components-of-result-icon-1.svg"
+                        alt="Language target">
+                    <p class="text text_small components-of-result-wrapper__text_small">
+                        языковой цели для каждого студента и срока достижения цели
+                    </p>
+                </div>
+                <div class="components-of-result-wrapper__plate">
+                    <img class="components-of-result-wrapper__icon"
+                        src="../../modules/components-of-result/svg/components-of-result-icon-2.svg"
+                        alt="Linguistic environment">
+                    <p class="text text_small components-of-result-wrapper__text_small">
+                        максимального погружения в языковую среду с носителями языка
+                    </p>
+                </div>
+                <div class="components-of-result-wrapper__plate">
+                    <img class="components-of-result-wrapper__icon"
+                        src="../../modules/components-of-result/svg/components-of-result-icon-3.svg"
+                        alt="Grammar and writing">
+                    <p class="text text_small components-of-result-wrapper__text_small">
+                        грамматики, письма, чтения, аудирования на каждом уроке
+                    </p>
+                </div>
+                <div class="components-of-result-wrapper__plate">
+                    <img class="components-of-result-wrapper__icon"
+                        src="../../modules/components-of-result/svg/components-of-result-icon-4.svg"
+                        alt="Passion-based assignments">
+                    <p class="text text_small components-of-result-wrapper__text_small">
+                        заданий на основе интересов и увлечений детей
+                    </p>
+                </div>
+                <div class="components-of-result-wrapper__plate">
+                    <img class="components-of-result-wrapper__icon"
+                        src="../../modules/components-of-result/svg/components-of-result-icon-5.svg"
+                        alt="Feedback with parents">
+                    <p class="text text_small components-of-result-wrapper__text_small">
+                        обратной связи с родителями каждые 8-10 занятий с промежуточными тестами
+                    </p>
+                </div>
+                <div class="components-of-result-wrapper__plate">
+                    <img class="components-of-result-wrapper__icon"
+                        src="../../modules/components-of-result/svg/components-of-result-icon-6.svg"
+                        alt="Monitoring results">
+                    <p class="text text_small components-of-result-wrapper__text_small">
+                        чёткого тайминга занятий и контроля результатов
+                    </p>
+                </div>
+            </div>
+        </article>
+    </section>
+    <section class="what-is-languages-for-us-wrapper container">
+        <article class="what-is-languages-for-us-wrapper__article">
+            <div class="what-is-languages-for-us-wrapper__picture-block">
+                <img class="what-is-languages-for-us-wrapper__img"
+                    src="../../modules/what-are-languages-for-us/img/what-are-languages-for-us-kids-online.png"
+                    alt="Girl is playing">
+                <img class="what-is-languages-for-us-wrapper__svg"
+                    src="../../modules/what-are-languages-for-us/svg/what-are-languages-for-us-figures.svg">
+            </div>
+            <div class="what-is-languages-for-us-wrapper__content">
+                <p class="title-with-line what-is-languages-for-us-wrapper__title-with-line">
+                    <span class="title-with-line__line">Что такое иностранные языки для нас?</span>
+                </p>
+                <div class="what-is-languages-for-us-wrapper__constituents">
+                    <div class="what-is-languages-for-us-wrapper__constituent">
+                        <div class="what-is-languages-for-us-wrapper__figure-block">
+                            <span
+                                class="what-is-languages-for-us-wrapper__circle what-is-languages-for-us-wrapper__circle_green"></span>
+                            <span
+                                class="what-is-languages-for-us-wrapper__dots what-is-languages-for-us-wrapper__dots_green"></span>
+                        </div>
+                        <p class="text what-is-languages-for-us-wrapper__text">
+                            Навыки
+                        </p>
+                    </div>
+                    <div class="what-is-languages-for-us-wrapper__constituent">
+                        <div class="what-is-languages-for-us-wrapper__figure-block">
+                            <span
+                                class="what-is-languages-for-us-wrapper__circle what-is-languages-for-us-wrapper__circle_red"></span>
+                            <span
+                                class="what-is-languages-for-us-wrapper__dots what-is-languages-for-us-wrapper__dots_red"></span>
+                        </div>
+                        <p class="text what-is-languages-for-us-wrapper__text">
+                            Культурная среда
+                        </p>
+                    </div>
+                    <div class="what-is-languages-for-us-wrapper__constituent">
+                        <div class="what-is-languages-for-us-wrapper__figure-block">
+                            <span
+                                class="what-is-languages-for-us-wrapper__circle what-is-languages-for-us-wrapper__circle_orange"></span>
+                            <span
+                                class="what-is-languages-for-us-wrapper__dots what-is-languages-for-us-wrapper__dots_orange"></span>
+                        </div>
+                        <p class="text what-is-languages-for-us-wrapper__text">
+                            Жизненные ценности
+                        </p>
+                    </div>
+                    <div class="what-is-languages-for-us-wrapper__constituent">
+                        <div class="what-is-languages-for-us-wrapper__figure-block">
+                            <span
+                                class="what-is-languages-for-us-wrapper__circle what-is-languages-for-us-wrapper__circle_orange"></span>
+                            <span
+                                class="what-is-languages-for-us-wrapper__dots what-is-languages-for-us-wrapper__dots_orange"></span>
+                        </div>
+                        <p class="text what-is-languages-for-us-wrapper__text">
+                            Знания
+                        </p>
+                    </div>
+                    <div class="what-is-languages-for-us-wrapper__constituent">
+                        <div class="what-is-languages-for-us-wrapper__figure-block">
+                            <span
+                                class="what-is-languages-for-us-wrapper__circle what-is-languages-for-us-wrapper__circle_yellow"></span>
+                            <span
+                                class="what-is-languages-for-us-wrapper__dots what-is-languages-for-us-wrapper__dots_yellow"></span>
+                        </div>
+                        <p class="text what-is-languages-for-us-wrapper__text">
+                            Языковая среда
+                        </p>
+                    </div>
+                    <div class="what-is-languages-for-us-wrapper__constituent">
+                        <div class="what-is-languages-for-us-wrapper__figure-block">
+                            <span
+                                class="what-is-languages-for-us-wrapper__circle what-is-languages-for-us-wrapper__circle_blue"></span>
+                            <span
+                                class="what-is-languages-for-us-wrapper__dots what-is-languages-for-us-wrapper__dots_blue"></span>
+                        </div>
+                        <p class="text what-is-languages-for-us-wrapper__text">
+                            Дружественная атмосфера
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <section class="education-packs-wrapper container">
+        <article class="education-packs-wrapper__article">
+            <p class="title-with-line education-packs-wrapper__title-with-line">
+                <span class="title-with-line__line">Пакеты обучения</span>
+            </p>
+            <div class="education-packs-wrapper__desktop-block" data-ed-content-desktop>
+                <div class="education-packs-wrapper__buttons-block">
+                    <button class="education-packs-wrapper__button" data-ed-main-button="0" data-ed-has-additional>
+                        Индивидуальные уроки
+                    </button>
+                    <button class="education-packs-wrapper__button" data-ed-main-button="1">Разговорный
+                        клуб</button>
+                    <button class="education-packs-wrapper__button education-packs-wrapper__button_small"
+                        data-ed-additional-button="0">
+                        30 минут
+                    </button>
+                    <button class="education-packs-wrapper__button education-packs-wrapper__button_small"
+                        data-ed-additional-button="1">
+                        60 минут
+                    </button>
+                </div>
+                <div class="education-packs-wrapper__cards-block">
+                    <div class="card education-packs-wrapper__card" data-ed-card data-ed-card-main="0"
+                        data-ed-card-additional="0">
+                        <img class="card__img" src="../../modules/card/svg/card-6.svg">
+                        <p class="text card__text">4 занятия по 30 мин</p>
+                        <p class="title title_smaller card__title_smaller">3400 ₽</p>
+                        <button class="button button_shortest card__button_shortest">Выбрать</button>
+                    </div>
+                    <div class="card education-packs-wrapper__card" data-ed-card data-ed-card-main="0"
+                        data-ed-card-additional="0">
+                        <img class="card__img" src="../../modules/card/svg/card-7.svg">
+                        <p class="text card__text">8 занятий по 30 мин</p>
+                        <p class="title title_smaller card__title_smaller">6800 ₽</p>
+                        <button class="button button_shortest card__button_shortest">Выбрать</button>
+                    </div>
+                    <div class="card education-packs-wrapper__card" data-ed-card data-ed-card-main="0"
+                        data-ed-card-additional="0">
+                        <img class="card__img" src="../../modules/card/svg/card-8.svg">
+                        <p class="text card__text">12 занятий по 30 мин</p>
+                        <p class="title title_smaller card__title_smaller">10200 ₽</p>
+                        <button class="button button_shortest card__button_shortest">Выбрать</button>
+                    </div>
+                    <!-- ----- -->
+                    <div class="card education-packs-wrapper__card" data-ed-card data-ed-card-main="0"
+                        data-ed-card-additional="1">
+                        <img class="card__img" src="../../modules/card/svg/card-1.svg">
+                        <p class="text card__text">4 занятия по 60 мин</p>
+                        <p class="title title_smaller card__title_smaller">5400 ₽</p>
+                        <button class="button button_shortest card__button_shortest">Выбрать</button>
+                    </div>
+                    <div class="card education-packs-wrapper__card" data-ed-card data-ed-card-main="0"
+                        data-ed-card-additional="1">
+                        <img class="card__img" src="../../modules/card/svg/card-2.svg">
+                        <p class="text card__text">8 занятий по 60 мин</p>
+                        <p class="title title_smaller card__title_smaller">10800 ₽</p>
+                        <button class="button button_shortest card__button_shortest">Выбрать</button>
+                    </div>
+                    <div class="card education-packs-wrapper__card" data-ed-card data-ed-card-main="0"
+                        data-ed-card-additional="1">
+                        <img class="card__img" src="../../modules/card/svg/card-3.svg">
+                        <p class="text card__text">12 занятий по 60 мин</p>
+                        <p class="title title_smaller card__title_smaller">16200 ₽</p>
+                        <button class="button button_shortest card__button_shortest">Выбрать</button>
+                    </div>
+                    <!-- ----- -->
+                    <div class="card education-packs-wrapper__card" data-ed-card data-ed-card-main="1">
+                        <img class="card__img" src="../../modules/card/svg/card-4.svg">
+                        <p class="text card__text">4 занятия по 60 мин</p>
+                        <p class="title title_smaller card__title_smaller">5400 ₽</p>
+                        <button class="button button_shortest card__button_shortest">Выбрать</button>
+                    </div>
+                    <div class="card education-packs-wrapper__card" data-ed-card data-ed-card-main="1">
+                        <img class="card__img" src="../../modules/card/svg/card-5.svg">
+                        <p class="text card__text">8 занятий по 60 мин</p>
+                        <p class="title title_smaller card__title_smaller">10800 ₽</p>
+                        <button class="button button_shortest card__button_shortest">Выбрать</button>
+                    </div>
+                </div>
+            </div>
+            <div class="education-packs-wrapper__mobile-block" data-ed-content-mobile>
+                <div class="education-packs-wrapper__buttons-block">
+                    <button class="education-packs-wrapper__button" data-ed-main-button="0" data-ed-has-additional>
+                        Индивидуальные уроки
+                    </button>
+                    <button class="education-packs-wrapper__button" data-ed-main-button="1">Разговорный
+                        клуб</button>
+                    <button class="education-packs-wrapper__button education-packs-wrapper__button_small"
+                        data-ed-additional-button="0">
+                        30 минут
+                    </button>
+                    <button class="education-packs-wrapper__button education-packs-wrapper__button_small"
+                        data-ed-additional-button="1">
+                        60 минут
+                    </button>
+                </div>
+                <div class="education-packs-wrapper__mobile-content">
+                    <div class="education-packs-wrapper__slider-wrapper swiper-wrapper">
+                        <div class="education-packs-wrapper__slide swiper-slide" data-ed-card data-ed-card-main="0"
+                            data-ed-card-additional="0">
+                            <div class="card education-packs-wrapper__card">
+                                <img class="card__img" src="../../modules/card/svg/card-6.svg">
+                                <p class="text card__text">4 занятия по 30 мин</p>
+                                <p class="title title_smaller card__title_smaller">3400 ₽</p>
+                                <button class="button button_shortest card__button_shortest">Выбрать</button>
+                            </div>
+                        </div>
+                        <div class="education-packs-wrapper__slide swiper-slide" data-ed-card data-ed-card-main="0"
+                            data-ed-card-additional="0">
+                            <div class="card education-packs-wrapper__card">
+                                <img class="card__img" src="../../modules/card/svg/card-7.svg">
+                                <p class="text card__text">8 занятий по 30 мин</p>
+                                <p class="title title_smaller card__title_smaller">6800 ₽</p>
+                                <button class="button button_shortest card__button_shortest">Выбрать</button>
+                            </div>
+                        </div>
+                        <div class="education-packs-wrapper__slide swiper-slide" data-ed-card data-ed-card-main="0"
+                            data-ed-card-additional="0">
+                            <div class="card education-packs-wrapper__card">
+                                <img class="card__img" src="../../modules/card/svg/card-8.svg">
+                                <p class="text card__text">12 занятий по 30 мин</p>
+                                <p class="title title_smaller card__title_smaller">10200 ₽</p>
+                                <button class="button button_shortest card__button_shortest">Выбрать</button>
+                            </div>
+                        </div>
+                        <!-- ----- -->
+                        <div class="education-packs-wrapper__slide swiper-slide" data-ed-card data-ed-card-main="0"
+                            data-ed-card-additional="1">
+                            <div class="card education-packs-wrapper__card">
+                                <img class="card__img" src="../../modules/card/svg/card-1.svg">
+                                <p class="text card__text">4 занятия по 60 мин</p>
+                                <p class="title title_smaller card__title_smaller">5400 ₽</p>
+                                <button class="button button_shortest card__button_shortest">Выбрать</button>
+                            </div>
+                        </div>
+                        <div class="education-packs-wrapper__slide swiper-slide" data-ed-card data-ed-card-main="0"
+                            data-ed-card-additional="1">
+                            <div class="card education-packs-wrapper__card">
+                                <img class="card__img" src="../../modules/card/svg/card-2.svg">
+                                <p class="text card__text">8 занятий по 60 мин</p>
+                                <p class="title title_smaller card__title_smaller">10800 ₽</p>
+                                <button class="button button_shortest card__button_shortest">Выбрать</button>
+                            </div>
+                        </div>
+                        <div class="education-packs-wrapper__slide swiper-slide" data-ed-card data-ed-card-main="0"
+                            data-ed-card-additional="1">
+                            <div class="card education-packs-wrapper__card">
+                                <img class="card__img" src="../../modules/card/svg/card-3.svg">
+                                <p class="text card__text">12 занятий по 60 мин</p>
+                                <p class="title title_smaller card__title_smaller">16200 ₽</p>
+                                <button class="button button_shortest card__button_shortest">Выбрать</button>
+                            </div>
+                        </div>
+                        <!-- ----- -->
+                        <div class="education-packs-wrapper__slide swiper-slide" data-ed-card data-ed-card-main="1">
+                            <div class="card education-packs-wrapper__card">
+                                <img class="card__img" src="../../modules/card/svg/card-4.svg">
+                                <p class="text card__text">4 занятия по 60 мин</p>
+                                <p class="title title_smaller card__title_smaller">5400 ₽</p>
+                                <button class="button button_shortest card__button_shortest">Выбрать</button>
+                            </div>
+                        </div>
+                        <div class="education-packs-wrapper__slide swiper-slide" data-ed-card data-ed-card-main="1">
+                            <div class="card education-packs-wrapper__card">
+                                <img class="card__img" src="../../modules/card/svg/card-5.svg">
+                                <p class="text card__text">8 занятий по 60 мин</p>
+                                <p class="title title_smaller card__title_smaller">10800 ₽</p>
+                                <button class="button button_shortest card__button_shortest">Выбрать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <section class="trial-lesson-form-wrapper container">
+        <form class="trial-lesson-form-wrapper__form">
+            <div class="trial-lesson-form-wrapper__content-block">
+                <p class="title title_small trial-lesson-form-wrapper__title_small">Записаться на пробное занятие</p>
+                <div class="trial-lesson-form-wrapper__tab-buttons-block">
+                    <button class="trial-lesson-form-wrapper__tab-button" data-tab-button>
+                        Взрослые
+                    </button>
+                    <button class="trial-lesson-form-wrapper__tab-button" data-tab-button>
+                        Дети и подростки
+                    </button>
+                </div>
+                <div class="trial-lesson-form-wrapper__form-block">
+                    <div class="trial-lesson-form-wrapper__select">
+                        <div class="trial-lesson-form-wrapper__chosen-lang-block" data-show-chosen-block>
+                            <p class="text text_small  trial-lesson-form-wrapper__select-chosen-lang" data-chosen-value>
+                            </p>
+                            <i class="trial-lesson-form-wrapper__select-icon icon-arrow-down" data-arrow-icon></i>
+                        </div>
+                        <div class="trial-lesson-form-wrapper__select-options" data-options>
+                            <span class="trial-lesson-form-wrapper__select-line"></span>
+                            <button class="text text_small trial-lesson-form-wrapper__select-option" data-option>
+                                Английский язык
+                            </button>
+                            <button class="text text_small trial-lesson-form-wrapper__select-option" data-option>
+                                Французский язык
+                            </button>
+                            <button class="text text_small trial-lesson-form-wrapper__select-option" data-option>
+                                Немецкий язык
+                            </button>
+                            <button class="text text_small trial-lesson-form-wrapper__select-option" data-option>
+                                Испанский язык
+                            </button>
+                        </div>
+                    </div>
+                    <div class="trial-lesson-form-wrapper__checkbox-block">
+                        <button class="trial-lesson-form-wrapper__checkbox-button" data-checkbox-option>
+                            <span class="trial-lesson-form-wrapper__circle-external">
+                                <span class="trial-lesson-form-wrapper__circle-inner"></span>
+                            </span>
+                            <p class="text text_small trial-lesson-form-wrapper__checkbox-text">Онлайн-занятия</p>
+                        </button>
+                        <button class="trial-lesson-form-wrapper__checkbox-button" data-checkbox-option>
+                            <span class="trial-lesson-form-wrapper__circle-external">
+                                <span class="trial-lesson-form-wrapper__circle-inner"></span>
+                            </span>
+                            <p class="text text_small trial-lesson-form-wrapper__checkbox-text">Занятия в клубе</p>
+                        </button>
+                    </div>
+                    <div class="trial-lesson-form-wrapper__tab-contents">
+                        <div class="trial-lesson-form-wrapper__tab-content" data-tab-content>
+                            <input class="input trial-lesson-form-wrapper__input trial-lesson-form-wrapper__input_short"
+                                type="text" name="user-name" placeholder="Имя" data-trial-form-name-adult>
+                            <input class="input trial-lesson-form-wrapper__input trial-lesson-form-wrapper__input_short"
+                                type="text" name="user-tel" placeholder="Телефон" data-trial-from-tel-adult>
+                        </div>
+                        <div class="trial-lesson-form-wrapper__tab-content" data-tab-content>
+                            <input class="input trial-lesson-form-wrapper__input trial-lesson-form-wrapper__input_short"
+                                type="text" name="user-name" placeholder="Имя родителя" data-trial-form-parent-name>
+                            <input class="input trial-lesson-form-wrapper__input trial-lesson-form-wrapper__input_short"
+                                type="text" name="user-tel" placeholder="Телефон" data-trial-form-parent-tel>
+                            <input class="input trial-lesson-form-wrapper__input trial-lesson-form-wrapper__input_short"
+                                type="text" name="user-name" placeholder="Имя ребёнка" data-trial-form-child-name>
+                            <input class="input trial-lesson-form-wrapper__input trial-lesson-form-wrapper__input_short"
+                                type="text" name="user-age" placeholder="Возраст ребёнка" data-trial-form-child-age>
+                        </div>
+                    </div>
+                    <input class="input trial-lesson-form-wrapper__input" type="email" name="user-email"
+                        placeholder="Почта" data-trial-form-email>
+                    <button class="button button_shorter trial-lesson-form-wrapper__button-submit">Отправить</button>
+                </div>
+            </div>
+            <div class="trial-lesson-form-wrapper__img-right"></div>
+        </form>
+    </section>
+    <footer class="footer-wrapper container">
+        <div class="footer-wrapper__content">
+            <nav class="footer-wrapper__nav-links">
+                <p class="text text_black footer-wrapper__text_black">Иностранные языки</p>
+                <a class="text text_small footer-wrapper__nav-link" href="../for-adult/for-adult.html"
+                    alt="Для взрослых онлайн">
+                    Для взрослых онлайн
+                </a>
+                <a class="text text_small footer-wrapper__nav-link" href="../for-adult/for-adult.html"
+                    alt="Для взрослых офлайн">
+                    Для взрослых офлайн
+                </a>
+                <a class="text text_small footer-wrapper__nav-link"
+                    href="../for-children-online/for-children-online.html" alt="Для детей онлайн">
+                    Для детей онлайн
+                </a>
+                <a class="text text_small footer-wrapper__nav-link"
+                    href="../for-children-offline/for-children-offline.html" alt="Для детей офлайн">
+                    Для детей офлайн
+                </a>
+            </nav>
+            <nav class="footer-wrapper__nav-social-links">
+                <a class="footer-wrapper__logo-link logo-link" href="#" alt="Speaky School">
+                    <svg width="291" height="60" viewBox="0 0 291 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="logo-fill"
+                            d="M7.13864 28.1859C3.91909 27.4341 3.47239 26.4119 3.47239 25.4319C3.47239 23.7931 4.50063 22.999 6.62453 22.999C8.18373 22.999 9.55752 23.3538 10.9566 24.1141L11.2937 24.2999L11.5044 23.9789C11.8753 23.4214 12.0944 22.7286 12.0944 22.1119C12.0944 21.301 11.6646 20.8279 10.7037 20.566C9.36367 20.169 8.19216 20 6.64981 20C1.81205 20 0.0927102 22.9567 0.0927102 25.7192C0.0927102 28.5238 1.96376 30.3739 5.64686 31.2187C8.99283 32.0128 9.67551 33.0687 9.67551 34.4119C9.67551 36.5915 7.6949 37.0561 6.03455 37.0561C4.38263 37.0561 2.82343 36.5999 1.14623 35.6284L0.809102 35.4341L0.589968 35.7551C0.219129 36.2958 0 36.997 0 37.6306C0 38.45 0.387696 38.9231 1.33165 39.2694C2.6633 39.7763 4.26464 40.0466 5.96713 40.0466C10.2318 40.0466 13.0973 37.6643 13.0973 34.1247C13.0889 30.999 11.2516 29.1659 7.13864 28.1859Z" />
+                        <path class="logo-fill"
+                            d="M22.5538 20.2529H16.1484V39.7927H19.4523V33.5329H22.5538C27.0713 33.5329 29.6588 31.1168 29.6588 26.9098C29.6588 22.6774 27.0713 20.2529 22.5538 20.2529ZM19.4607 23.1252H22.5623C25.0823 23.1252 26.3128 24.3586 26.3128 26.9098C26.3128 29.4188 25.0486 30.6944 22.5623 30.6944H19.4607V23.1252Z" />
+                        <path class="logo-fill"
+                            d="M35.6168 31.0999H42.5616V28.2276H35.6168V23.1252H44.3147V20.2529H32.313V39.7927H44.4748V36.9204H35.6168V31.0999Z" />
+                        <path class="logo-fill"
+                            d="M55.4323 20.4048L55.3059 20.2612H52.6932L52.5667 20.4048C49.1702 24.3331 46.7597 31.5897 46.2709 39.3448L46.2456 39.7925H49.659L49.6759 39.387C49.7433 37.9087 49.8866 36.4641 50.0804 35.0871H57.9017C58.0872 36.3881 58.2304 37.7989 58.34 39.387L58.3653 39.7841H61.745L61.7197 39.3364C61.3067 31.8009 58.8373 24.3669 55.4323 20.4048ZM57.3961 32.2233H50.6114C51.3615 28.7597 52.4993 25.8114 53.9995 23.446C55.5334 25.8537 56.6712 28.802 57.3961 32.2233Z" />
+                        <path class="logo-fill"
+                            d="M72.6841 29.2836C75.634 27.0872 77.7157 24.0122 78.4405 20.7682L78.5585 20.2529H75.0272L74.9513 20.5824C74.0832 24.2994 71.5632 27.2815 68.1666 28.6585V20.2529H64.8628V39.7927H68.1666V31.6828C68.765 31.4801 69.3381 31.252 69.8691 30.9985C72.7347 32.8317 74.5299 35.6702 75.2041 39.4463L75.2631 39.7927H78.803L78.7271 39.3112C78.1371 35.3069 75.8447 31.5307 72.6841 29.2836Z" />
+                        <path class="logo-fill"
+                            d="M91.7061 20.2529L91.6724 20.6331C91.2762 24.857 89.9109 28.1347 87.61 30.3987C85.2417 28.1432 83.8426 24.857 83.4465 20.6331L83.4128 20.2529H80.0078L80.05 20.7176C80.5051 25.6426 82.6374 30.1115 85.9244 32.9922V39.7927H89.2029V32.9922C92.5489 30.0524 94.6896 25.5919 95.0773 20.7091L95.1111 20.2529H91.7061Z" />
+                        <path class="logo-fill logo-stroke"
+                            d="M189.798 23.2821L190.053 23.4772L190.23 23.2101L190.505 22.7974L190.658 22.5673L190.441 22.3959C189.128 21.3572 187.158 20.7 185.255 20.7C183.184 20.7 181.664 21.2497 180.659 22.1415C179.651 23.0353 179.19 24.246 179.19 25.5007C179.19 27.2546 179.93 28.3615 181.037 29.1044C182.116 29.8288 183.541 30.2039 184.902 30.5477C184.96 30.5623 185.017 30.5768 185.075 30.5913C186.399 30.9252 187.651 31.2409 188.592 31.8051C189.076 32.0953 189.465 32.4443 189.733 32.884C190.001 33.3221 190.161 33.8681 190.161 34.5708C190.161 35.5898 189.776 36.4984 188.965 37.1584C188.148 37.8237 186.868 38.2604 185.039 38.2604C182.703 38.2604 180.598 37.2387 179.575 35.9921L179.368 35.7395L179.134 35.9674L178.791 36.3015L178.598 36.489L178.763 36.7009C179.991 38.276 182.483 39.342 185.069 39.342C187.162 39.342 188.711 38.8059 189.742 37.9264C190.777 37.0437 191.261 35.8393 191.261 34.5708L191.261 34.5699C191.258 33.7164 191.075 33.0104 190.744 32.4227C190.415 31.8357 189.947 31.3827 189.401 31.0215C188.32 30.3071 186.894 29.9327 185.532 29.5853C185.491 29.5748 185.45 29.5642 185.408 29.5537C184.065 29.2115 182.794 28.8874 181.841 28.3087C181.357 28.0145 180.968 27.6613 180.699 27.2175C180.43 26.7754 180.271 26.2256 180.271 25.5203C180.271 24.4899 180.657 23.5676 181.455 22.8979C182.258 22.2241 183.508 21.7815 185.275 21.7815C186.765 21.7815 188.484 22.2752 189.798 23.2821Z"
+                            stroke-width="0.6" stroke-miterlimit="10" />
+                        <path class="logo-fill logo-stroke"
+                            d="M209.27 23.8376L209.502 24.0664L209.711 23.8155L210.005 23.4618L210.177 23.255L209.99 23.0616C208.441 21.4577 206.239 20.7 203.902 20.7C198.682 20.7 194.749 24.7013 194.749 30.021C194.749 35.3405 198.672 39.342 203.902 39.342C206.232 39.342 208.443 38.553 209.99 36.9509L210.177 36.7575L210.005 36.5507L209.711 36.1969L209.502 35.9453L209.269 36.1755C207.757 37.6725 205.936 38.2604 203.912 38.2604C199.329 38.2604 195.859 34.6967 195.859 30.0308L195.859 30.0302C195.849 25.345 199.319 21.7815 203.912 21.7815C205.948 21.7815 207.759 22.351 209.27 23.8376Z"
+                            stroke-width="0.6" stroke-miterlimit="10" />
+                        <path class="logo-fill logo-stroke"
+                            d="M228.405 21.0688V29.328H216.437V21.0688V20.7688H216.137H215.646H215.346V21.0688V38.9536V39.2536H215.646H216.137H216.437V38.9536V30.4193H228.405V38.9536V39.2536H228.705H229.205H229.505V38.9536V21.0688V20.7688H229.205H228.705H228.405V21.0688Z"
+                            stroke-width="0.6" stroke-miterlimit="10" />
+                        <path class="logo-fill logo-stroke"
+                            d="M244.019 20.7C238.8 20.7 234.867 24.7013 234.867 30.021C234.867 35.3405 238.79 39.342 244.019 39.342C249.249 39.342 253.172 35.3405 253.172 30.021C253.172 24.6914 249.249 20.7 244.019 20.7ZM244.019 38.2506C239.436 38.2506 235.966 34.7349 235.966 30.021C235.966 25.3071 239.436 21.7913 244.019 21.7913C248.604 21.7913 252.082 25.3075 252.082 30.021C252.082 34.7344 248.604 38.2506 244.019 38.2506Z"
+                            stroke-width="0.6" stroke-miterlimit="10" />
+                        <path class="logo-fill logo-stroke"
+                            d="M265.863 20.7C260.643 20.7 256.71 24.7013 256.71 30.021C256.71 35.3405 260.633 39.342 265.863 39.342C271.092 39.342 275.016 35.3405 275.016 30.021C275.016 24.6914 271.092 20.7 265.863 20.7ZM265.863 38.2506C261.279 38.2506 257.81 34.7349 257.81 30.021C257.81 25.3071 261.279 21.7913 265.863 21.7913C270.447 21.7913 273.925 25.3072 273.925 30.0204C273.916 34.7349 270.446 38.2506 265.863 38.2506Z"
+                            stroke-width="0.6" stroke-miterlimit="10" />
+                        <path class="logo-fill logo-stroke"
+                            d="M289.138 20.7688H288.838V21.0688V38.1721H278.854H278.554V38.4721V38.9536V39.2536H278.854H289.629H289.929V38.9536V21.0688V20.7688H289.629H289.138Z"
+                            stroke-width="0.6" stroke-miterlimit="10" />
+                        <path class="logo-fill"
+                            d="M137 0C120.434 0 107 13.4368 107 30.0071C107 33.4509 107.586 36.7537 108.651 39.8306C109.349 37.7699 110.507 35.8363 112.143 34.192C113.653 32.6817 117.012 29.0473 118.889 28.3345C120.885 25.2152 122.444 23.8885 126.325 20.0071C134.157 12.1736 141.911 7.23359 143.653 8.97671C145.396 10.7198 140.457 18.4756 132.626 26.3091C130.96 27.9746 129.302 29.4989 127.701 30.861C129.578 31.5737 131.334 32.6747 132.844 34.1849C134.354 35.6951 135.455 37.4594 136.167 39.3366C137.529 37.7346 139.06 36.0762 140.725 34.4107C148.557 26.5773 156.318 21.6373 158.054 23.3804C159.796 25.1235 154.857 32.8793 147.026 40.7128C143.145 44.5942 141.882 46.2103 138.757 48.2075C138.044 50.0776 134.347 53.3874 132.844 54.8906C131.214 56.5208 129.288 57.6711 127.249 58.3698C130.304 59.4213 133.585 60 136.993 60C153.566 60.0141 167 46.5773 167 30.0071C167 13.4368 153.566 0 137 0Z" />
+                        <path class="logo-fill"
+                            d="M120.243 42.3007C120.511 42.3007 120.786 42.1949 120.991 41.9902C121.4 41.5809 121.4 40.9104 120.991 40.4941C120.589 40.0918 119.897 40.0918 119.495 40.4941C119.297 40.6917 119.185 40.9598 119.185 41.2421C119.185 41.5244 119.297 41.7926 119.495 41.9902C119.7 42.2019 119.968 42.3007 120.243 42.3007Z" />
+                        <path class="logo-fill"
+                            d="M126.565 46.0834C126.169 45.6812 125.471 45.6812 125.069 46.0834C124.871 46.281 124.758 46.5492 124.758 46.8315C124.758 47.1138 124.871 47.3819 125.069 47.5795C125.266 47.7771 125.534 47.8901 125.817 47.8901C126.099 47.8901 126.367 47.7771 126.565 47.5795C126.762 47.3819 126.875 47.1138 126.875 46.8315C126.875 46.5492 126.769 46.281 126.565 46.0834Z" />
+                        <path class="logo-fill"
+                            d="M117.329 45.5118C116.546 46.288 117.519 48.2782 117.837 48.871L117.886 48.9627L117.978 49.0121C118.289 49.1744 119.53 49.8096 120.483 49.8096C120.821 49.8096 121.125 49.7319 121.336 49.5202C122.077 48.7792 121.774 47.5866 120.518 46.3304C119.262 45.0813 118.07 44.7778 117.329 45.5118Z" />
+                    </svg>
+                </a>
+                <div class="footer-wrapper__nav-social-links-block">
+                    <a class="social-link footer-wrapper__social-link" href="#" alt="Facebook">
+                        <i class="icon-facebook"></i>
+                    </a>
+                    <a class="social-link footer-wrapper__social-link" href="#" alt="Instagram">
+                        <i class="icon-instagram"></i>
+                    </a>
+                    <a class="social-link footer-wrapper__social-link" href="#" alt="WhatsApp">
+                        <i class="icon-viber"></i>
+                    </a>
+                    <a class="social-link footer-wrapper__social-link" href="#" alt="VK">
+                        <i class="icon-vk"></i>
+                    </a>
+                </div>
+                <button class="button footer-wrapper__button" data-toggle-modal="payment-form">Онлайн-оплата</button>
+            </nav>
+            <div class="footer-wrapper__contacts-block">
+                <p class="text text_black footer-wrapper__text_black">Контакты</p>
+                <a class="text text_small footer-wrapper__nav-link" href=" tel:+7(495)7237515">+7 (495) 723-75-15</a>
+                <a class="text text_small footer-wrapper__nav-link" href="mailto:info@speaky.school" target="_blank"
+                    alt="info@speaky.school">
+                    info@speaky.school
+                </a>
+                <p class="text text_small footer-wrapper__text_small">
+                    108840, Россия,<br>г. Москва, г. Троицк,<br>Троицкий бульвар, 6
+                </p>
+            </div>
+        </div>
+        <div class="footer-wrapper__copyright-block">
+            <p class="text text_small footer-wrapper__copyright-text-left">
+                © 2021 Speaky school. Все права защищены
+            </p>
+            <p class="text text_small footer-wrapper__copyright-text-right">
+                Design by @arinkob | Created by @super_sani4
+            </p>
+        </div>
+    </footer>
+    <script src="../../js-libs/swiper/swiper-bundle.min.js"></script>
+    <script src="../../js-libs/checkByRegExps.js"></script>
+    <script src="../../js-libs/inputSynch.js"></script>
+    <script src="../../js-libs/modals.js"></script>
+    <script src="../../modules/main-nav/js/main-nav-link-hover.js"></script>
+    <script src="../../modules/mobile-nav/js/mobile-nav.js"></script>
+    <script src="../../modules/education-packs/js/_education-packs-scripts.js"></script>
+    <script src="../../modules/trial-lesson-form/js/trial-lesson-form.js"></script>
+</body>
+
+</html>
