@@ -1,0 +1,133 @@
+.education-packs-for-adult {
+    @include flex-builder(row, center, none);
+    margin: 140px 0;
+    padding-bottom: 150px;
+
+    @include media-s {
+        margin: 80px 0;
+    }
+
+    &__article {
+        width: 100%;
+        @include flex-builder(column, none, center);
+    }
+
+    &__title-with-line {
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        margin-bottom: 87px;
+    }
+
+    &__buttons-block {
+        width: 100%;
+        position: relative;
+        @include flex-builder(row, space-around, none);
+    }
+
+    &__round-button-block {
+        @include flex-builder(column, none, center);
+    }
+
+    &__round-button {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: solid 2px rgb(104, 156, 154);
+        background: transparent;
+        margin-bottom: 30px;
+        transition: .3s all ease-in-out;
+
+        &_active {
+            background: rgb(104, 156, 154);
+            box-shadow: 0px 0px 8px 0px rgb(104, 156, 154);
+        }
+
+        &_chosen {
+            background: $dark-green;
+            border-color: $dark-green;
+            box-shadow: 0px 0px 8px 0px $dark-green;
+        }
+    }
+
+    &__line {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: rgb(97, 181, 169);
+        top: 14px;
+        z-index: -1;
+    }
+
+    &__messages-block {
+        margin-top: 60px;
+        position: relative;
+        width: 234px;
+    }
+
+    &__message {
+        width: 100%;
+        padding: 30px 28px 16px 28px;
+        border-radius: 20px;
+        background: $sand;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: .3s all ease-in-out;
+    }
+
+    &__triangle {
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid $sand;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__checkbox {
+        width: 100%;
+        @include flex-builder(row, none, center);
+        gap: 0 14px;
+        border: none;
+        background: none;
+        margin-bottom: 14px;
+        cursor: pointer;
+    }
+
+    &__checkbox-circle {
+        min-width: 12px;
+        height: 12px;
+        border: 1px solid $dark-green;
+        @include flex-builder(row, center, center);
+        border-radius: 50%;
+        transition: .1s all ease-in-out;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    &__checkbox-circle-in-circle {
+        transition: .1s all ease-in-out;
+    }
+
+    &__text_small {
+        text-align: start;
+    }
+}
+
+.education-packs-for-adult__checkbox_active {
+    pointer-events: none;
+}
+
+.education-packs-for-adult__checkbox_active .education-packs-for-adult__checkbox-circle-in-circle {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: $dark-green;
+}

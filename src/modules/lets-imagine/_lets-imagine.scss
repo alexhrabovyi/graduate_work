@@ -1,0 +1,85 @@
+.lets-imagine-wrapper {
+    margin: 140px 0;
+    @include flex-builder(row, center, none);
+
+    @include media-s {
+        margin: 80px 0;
+    }
+
+    &__article {
+        width: 979px;
+        @include flex-builder(row, space-between, center);
+
+        @include media-l {
+            width: 100%;
+        }
+
+        @include media-m {
+            @include flex-builder(column, none, center);
+        }
+    }
+
+    &__picture-block {
+        width: 45.56%;
+        position: relative;
+        @include flex-builder(row, center, center);
+
+        @include media-m {
+            width: 60%;
+            margin-bottom: 60px;
+        }
+
+        @include media-s {
+            width: 70%;
+        }
+
+        @include media-xs {
+            width: 80%;
+        }
+
+        @media (max-width: 360px) {
+            width: 90%;
+        } 
+    }
+
+    &__svg-top {
+        width: 24.66%;
+        position: absolute;
+        left: 19.5%;
+        bottom: -7px;
+    }
+
+    &__img {
+        width: 91.03%;
+    }
+
+    &__svg-bottom   {
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+
+    &__text-block {
+        width: 45.56%;
+
+        @include media-m {
+            width: 60%;
+        }
+
+        @include media-s {
+            width: 70%;
+        }
+
+        @include media-xs {
+            width: 80%;
+        }
+
+        @media (max-width: 360px) {
+            width: 90%;
+        } 
+    }
+
+    &__title-with-line {
+        margin-bottom: 30px;
+    }
+}
