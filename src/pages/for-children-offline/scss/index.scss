@@ -1,0 +1,52 @@
+// properties for all elements
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+}
+
+// libs 
+
+@import "../../../scss-libs/fonts";
+@import "../../../scss-libs/mixins";
+@import "../../../scss-libs/colors";
+@import "../../../js-libs/swiper/swiper-bundle.min";
+
+// elements
+
+@import "../../../scss-elements/animation-fading";
+@import "../../../scss-elements/animation-translateY";
+@import "../../../scss-elements/button-close";
+@import "../../../scss-elements/button";
+@import "../../../scss-elements/container";
+@import "../../../scss-elements/element-none";
+@import "../../../scss-elements/hidden";
+@import "../../../scss-elements/input";
+@import "../../../scss-elements/logo-link";
+@import "../../../scss-elements/modal-window";
+@import "../../../scss-elements/social-link";
+@import "../../../scss-elements/text";
+@import "../../../scss-elements/title-with-line";
+@import "../../../scss-elements/title";
+
+// blocks
+
+@import "../../../modules/payment-form/payment-form";
+@import "../../../modules/request-call-form/request-call-form";
+@import "../../../modules/main-nav/main-nav";
+@import "../../../modules/mobile-nav/mobile-nav";
+@import "../../../modules/header/header";
+@import "../../../modules/languages/languages";
+@import "../../../modules/you-can/you-can";
+@import "../../../modules/trial-lesson-banner/trial-lesson-banner";
+@import "../../../modules/components-of-result/components-of-result";
+@import "../../../modules/what-are-languages-for-us/what-are-languages-for-us";
+@import "../../../modules/education-packs/education-packs";
+@import "../../../modules/card/card";
+@import "../../../modules/trial-lesson-form/trial-lesson-form";
+@import "../../../modules/footer/footer";

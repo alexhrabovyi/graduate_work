@@ -1,0 +1,48 @@
+.you-can-wrapper {
+    @include flex-builder(row, center, none);
+    margin: 140px 0;
+
+    @include media-s {
+        margin: 80px 0;
+    }
+
+    &__article {
+        max-width: 975px;
+        width: 100%;
+    }
+
+    &__title-with-line {
+        margin-bottom: 40px;
+
+        @include media-s {
+            text-align: center;
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 13.4%;
+
+        @include media-l {
+            gap: 10px 10%;
+        }
+
+        @include media-m {
+            grid-template-columns: 1fr;
+            gap: 30px 0;
+        }
+    }
+
+    &__text-block {
+        @include flex-builder(row, none, center);
+    }
+
+    &__svg {
+        margin-right: 33px;
+
+        @include media-s {
+            margin-right: 18px;
+        }
+    }
+}
