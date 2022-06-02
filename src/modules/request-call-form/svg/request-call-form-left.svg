@@ -1,17 +1,17 @@
 <svg width="140" height="490" viewBox="0 0 140 490" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 350H140V490H0L0 350Z" fill="#FC8B4C"/>
-<path d="M0 420C0 381.34 31.3401 350 70 350V490C31.3401 490 0 458.66 0 420Z" fill="#FFCC1A"/>
-<rect x="35" y="420.355" width="50" height="50" transform="rotate(-45 35 420.355)" fill="#FDE9D4"/>
+<path d="M0 350H140V490H0L0 350Z" fill="#6B356E"/>
+<path d="M0 420C0 381.34 31.3401 350 70 350V490C31.3401 490 0 458.66 0 420Z" fill="#F77E72"/>
+<rect x="35" y="420.355" width="50" height="50" transform="rotate(-45 35 420.355)" fill="#FFEF93"/>
 <circle cx="70" cy="420" r="7" fill="black"/>
-<rect y="210" width="140" height="140" fill="#FDE9D4"/>
-<path d="M70 305L40 255H100L70 305Z" fill="#FE7167"/>
+<rect y="210" width="140" height="140" fill="#FFEF93"/>
+<path d="M70 305L40 255H100L70 305Z" fill="#F8C4ED"/>
 <rect x="57" y="210" width="26" height="45" fill="black"/>
 <circle cx="70" cy="330" r="10" fill="black"/>
 <circle cx="100" cy="330" r="10" fill="black"/>
 <circle cx="40" cy="330" r="10" fill="black"/>
-<path d="M140 70L140 210L0 210V170C0 114.772 44.7715 70 100 70H140Z" fill="#FE7167"/>
+<path d="M140 70L140 210L0 210V170C0 114.772 44.7715 70 100 70H140Z" fill="#F8C4ED"/>
 <circle cx="96" cy="160" r="20" transform="rotate(90 96 160)" fill="black"/>
-<circle cx="76" cy="160" r="20" transform="rotate(90 76 160)" fill="#FDE9D4"/>
-<circle cx="35" cy="35" r="30" fill="#FDE9D4" stroke="black" stroke-width="10"/>
-<circle cx="105" cy="35" r="35" fill="#236967"/>
+<circle cx="76" cy="160" r="20" transform="rotate(90 76 160)" fill="#FFEF93"/>
+<circle cx="35" cy="35" r="30" fill="#FFEF93" stroke="black" stroke-width="10"/>
+<circle cx="105" cy="35" r="35" fill="#B60D00"/>
 </svg>

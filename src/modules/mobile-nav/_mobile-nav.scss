@@ -7,7 +7,7 @@
         right: 0;
         left: 0;
         z-index: 11;
-        background: $light-yellow;
+        background: $light-lemon;
         @include flex-builder(row, space-between, center);
         padding-top: 10px;
         padding-bottom: 10px;
@@ -27,7 +27,7 @@
 
     &__content {
         width: 100%;
-        background: $light-yellow;
+        background: $light-lemon;
         padding: 30px 0 60px 0;
         @include flex-builder(column, none, center);
         text-align: center;
@@ -69,11 +69,11 @@
         }
 
         &:hover {
-            color: $red;
+            color: $purple;
         }
 
         &:active {
-            color: $red-active;
+            color: $purple-active;
         }
     }
 
@@ -105,11 +105,11 @@
         text-decoration: none;
 
         &:hover {
-            color: $red;
+            color: $purple;
         }
 
         &:active {
-            color: $red-active;
+            color: $purple-active;
         }
     }
 }
@@ -129,7 +129,7 @@
 
 .burger_line {
     fill: none;
-    stroke: $dark-green;
+    stroke: $dark-red;
     stroke-width: 6;
     transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
         stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);

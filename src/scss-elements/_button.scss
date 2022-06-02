@@ -7,13 +7,13 @@
     font-size: 18px;
     letter-spacing: 0.01em;
     color: $white;
-    background: $dark-green;
+    background: $dark-red;
     border: none;
     cursor: pointer;
     transition: .1s all ease-in-out;
 
     &:hover {
-        background: $dark-green-active;
+        background: $dark-red-active;
     }
 
     &:active {

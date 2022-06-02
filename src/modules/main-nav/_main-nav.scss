@@ -2,7 +2,6 @@
     width: 100%;
     @include flex-builder(row, space-between, center);
     padding-top: 50px;
-    background: $white;
 
     @include media-m {
         padding-top: 30px;
@@ -21,11 +20,11 @@
         transition: .05s all ease-in-out;
 
         &:hover {
-            color: $red;
+            color: $purple;
         }
 
         &:active {
-            color: $red-active;
+            color: $purple-active;
         }
     }
 
@@ -119,7 +118,7 @@
         height: 80px;
         padding: 15px 20px;
         border-radius: 10px;
-        background: $sand;
+        background: $light-orange;
         @include flex-builder(column, space-between, flex-start);
     }
 
@@ -128,7 +127,7 @@
         height: 0;
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
-        border-bottom: 8px solid $sand;
+        border-bottom: 8px solid $light-orange;
     }
 }
 
@@ -139,5 +138,5 @@
 }
 
 .link-hover {
-    color: $red;
+    color: $purple;
 }

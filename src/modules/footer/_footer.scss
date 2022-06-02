@@ -1,5 +1,5 @@
 .footer-wrapper {
-    background: $light-yellow;
+    background: $light-lemon;
     border-radius: 70px 70px 0px 0px;
     padding-top: 65px;
     padding-bottom: 69px;
@@ -54,11 +54,11 @@
         }
 
         &:hover {
-            color: $red;
+            color: $purple;
         }
 
         &:active {
-            color: $red-active;
+            color: $purple-active;
         }
     }
 
@@ -72,7 +72,7 @@
         }
     }
 
-    &__logo-link svg{
+    &__logo-link svg {
         @media (max-width: 320px) {
             width: 100%;
         }

@@ -5,10 +5,10 @@
     transition: .05s all ease-in-out;
 
     &:hover {
-        color: $red;
+        color: $purple;
     }
 
     &:active {
-        color: $red-active;
+        color: $purple-active;
     }
 }

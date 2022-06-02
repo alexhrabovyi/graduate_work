@@ -10,10 +10,10 @@
     }
 
     &__line {
-        box-shadow: 0 -12px 0 rgba(255, 236, 160, 1) inset;
+        box-shadow: 0 -12px 0 #FFBDA2 inset;
 
         @include media-xs {
-            box-shadow: 0 -10px 0 rgba(255, 236, 160, 1) inset;
+            box-shadow: 0 -10px 0 #FFBDA2 inset;
         }
     }
 }

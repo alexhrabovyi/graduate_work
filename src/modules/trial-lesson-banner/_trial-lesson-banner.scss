@@ -5,7 +5,7 @@
         @include flex-builder(row, space-around, center);
         padding-top: 67px;
         padding-bottom: 67px;
-        background: $light-yellow;
+        background: $light-lemon;
         border-radius: 70px;
 
         @media (max-width: 890px) {
@@ -95,4 +95,3 @@
         }
     }
 }
-

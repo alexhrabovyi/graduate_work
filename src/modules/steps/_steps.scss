@@ -17,24 +17,28 @@
     &__example-block {
         width: 100%;
         @include flex-builder(row, space-between, center);
+        gap: 0 40px;
         margin-bottom: 60px;
 
         @include media-s {
+            gap: 40px 0;
             @include flex-builder(column, none, none);
         }
     }
 
     &__img {
+        width: 50%;
+
         @include media-m {
             width: 55%;
         }
-        
+
         @include media-s {
-            width: 80%;
+            width: 60%;
         }
 
         @include media-xs {
-            width: 100%;
+            width: 70%;
         }
     }
 
@@ -82,7 +86,7 @@
         font-weight: 900;
         font-size: 90px;
         letter-spacing: 0.5px;
-        color: $sand;
+        color: $light-orange;
         position: absolute;
         top: -45px;
         left: 6px;

@@ -103,7 +103,7 @@
 
         @include media-xs {
             width: 70%;
-            grid-template-columns: 1fr; 
+            grid-template-columns: 1fr;
         }
 
         @media (max-width: 360px) {
@@ -127,19 +127,19 @@
         border-radius: 50%;
 
         &_green {
-            background: $dark-green;
+            background: $dark-red;
         }
 
         &_red {
-            background: $red;
+            background: $light-pink;
         }
 
         &_orange {
-            background: $orange;
+            background: $purple;
         }
 
         &_yellow {
-            background: $yellow;
+            background: $light-red;
         }
 
         &_blue {
@@ -152,19 +152,19 @@
         border-bottom: 2px dashed;
 
         &_green {
-            border-color: $dark-green;
+            border-color: $dark-red;
         }
 
         &_red {
-            border-color: $red;
+            border-color: $light-pink;
         }
 
         &_orange {
-            border-color: $orange;
+            border-color: $purple;
         }
 
         &_yellow {
-            border-color: $yellow;
+            border-color: $light-red;
         }
 
         &_blue {

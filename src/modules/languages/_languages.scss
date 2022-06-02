@@ -8,7 +8,7 @@
     &__article {
         width: 100%;
         height: 274px;
-        background: $light-yellow;
+        background: $light-lemon;
         border-radius: 70px;
         @include flex-builder(column, center, center);
 
@@ -94,4 +94,3 @@
         }
     }
 }
-

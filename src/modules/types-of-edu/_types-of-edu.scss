@@ -1,25 +1,21 @@
 .types-of-edu-wrapper {
     display: flex;
 
+    margin-top: 100px;
+
     @include media-s {
+        margin-top: 80px;
         @include flex-builder(column, none, center);
     }
 
     &__link {
-        margin-right: 10%;
+        margin-right: 12%;
         text-decoration: none;
         position: relative;
 
         @include media-s {
             margin-right: 0;
             margin-bottom: 40px;
-        }
-    }
-
-    &__img {
-
-        @include media-m {
-            width: 160px;
         }
     }
 
@@ -30,8 +26,8 @@
         line-height: 34px;
         color: $black;
         position: absolute;
-        left: 71px;
-        background: $white;
+        left: 90px;
+        background: $light-lemon;
         letter-spacing: 0.02em;
         padding-left: 2px;
 
