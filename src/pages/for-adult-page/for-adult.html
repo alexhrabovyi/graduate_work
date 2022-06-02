@@ -493,7 +493,7 @@
             </div>
         </article>
     </section>
-    <section class="education-packs-for-adult container">
+    <section class="education-packs-for-adult education-packs-for-adult_desktop container">
         <article class="education-packs-for-adult__article">
             <p class="title-with-line education-packs-for-adult__title-with-line">
                 <span class="title-with-line__line">Пакеты обучения</span>
@@ -626,7 +626,7 @@
             </div>
             <div class="education-packs-for-adult__cards-block">
                 <!-- offline-ind -->
-                <div class="card education-packs-wrapper__card element-none" data-ed-card="1">
+                <div class="card education-packs-wrapper__card" data-ed-card="1">
                     <img class="card__img" src="../../modules/card/svg/card-1.svg">
                     <p class="text card__text">4 занятия по 60 мин</p>
                     <p class="title title_smaller card__title_smaller">5400 ₽</p>
@@ -742,6 +742,293 @@
                     <p class="title title_smaller card__title_smaller">10000 ₽</p>
                     <button class="button button_shortest card__button_shortest"
                         data-toggle-modal="payment-form">Выбрать</button>
+                </div>
+            </div>
+        </article>
+    </section>
+    <section class="education-packs-for-adult education-packs-for-adult_mobile container">
+        <article class="education-packs-for-adult__article">
+            <p class="title-with-line education-packs-for-adult__title-with-line">
+                <span class="title-with-line__line">Пакеты обучения</span>
+            </p>
+            <p class="text education-packs-for-adult__text">Выбирайте удобный формат встреч</p>
+            <div class="education-packs-for-adult__buttons-block">
+                <div class="education-packs-for-adult__round-button-block">
+                    <button
+                        class="education-packs-for-adult__round-button education-packs-for-adult__round-button_active"
+                        data-ed-round-button="0"></button>
+                    <p class="text text_black education-packs-for-adult__text_black">Вид обучения</p>
+                    <div class="education-packs-for-adult__messages-block">
+                        <div class="education-packs-for-adult__message" data-ed-message="0">
+                            <div class="education-packs-for-adult__triangle"></div>
+                            <button class="education-packs-for-adult__checkbox" data-ed-button="0"
+                                data-ed-offline-button>
+                                <div class="education-packs-for-adult__checkbox-circle">
+                                    <span class="education-packs-for-adult__checkbox-circle-in-circle"></span>
+                                </div>
+                                <p class="text text_small education-packs-for-adult__text_small">Офлайн-занятия</p>
+                            </button>
+                            <button class="education-packs-for-adult__checkbox" data-ed-button="0"
+                                data-ed-online-button>
+                                <div class="education-packs-for-adult__checkbox-circle">
+                                    <span class="education-packs-for-adult__checkbox-circle-in-circle"></span>
+                                </div>
+                                <p class="text text_small education-packs-for-adult__text_small">Онлайн-занятия</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="education-packs-for-adult__round-button-block">
+                    <button class="education-packs-for-adult__round-button" data-ed-round-button="1"></button>
+                    <p class="text text_black education-packs-for-adult__text_black">Вид занятия</p>
+                    <div class="education-packs-for-adult__messages-block">
+                        <div class="education-packs-for-adult__message hidden" data-ed-message="1"
+                            data-ed-offline-message>
+                            <div class="education-packs-for-adult__triangle"></div>
+                            <button class="education-packs-for-adult__checkbox" data-ed-button="1"
+                                data-ed-offline-button="offline-ind">
+                                <div class="education-packs-for-adult__checkbox-circle">
+                                    <span class="education-packs-for-adult__checkbox-circle-in-circle"></span>
+                                </div>
+                                <p class="text text_small education-packs-for-adult__text_small">Индивидуальные уроки
+                                </p>
+                            </button>
+                            <button class="education-packs-for-adult__checkbox" data-ed-button="1"
+                                data-ed-offline-button="offline-group">
+                                <div class="education-packs-for-adult__checkbox-circle">
+                                    <span class="education-packs-for-adult__checkbox-circle-in-circle"></span>
+                                </div>
+                                <p class="text text_small education-packs-for-adult__text_small">Групповые уроки</p>
+                            </button>
+                            <button class="education-packs-for-adult__checkbox" data-ed-button="1"
+                                data-ed-offline-button="offline-talking">
+                                <div class="education-packs-for-adult__checkbox-circle">
+                                    <span class="education-packs-for-adult__checkbox-circle-in-circle"></span>
+                                </div>
+                                <p class="text text_small education-packs-for-adult__text_small">Разговорный клуб</p>
+                            </button>
+                        </div>
+                        <div class="education-packs-for-adult__message education-packs-for-adult__message_pos-absolute hidden"
+                            data-ed-message="1" data-ed-online-message>
+                            <div class="education-packs-for-adult__triangle"></div>
+                            <button class="education-packs-for-adult__checkbox" data-ed-button="1" data-ed-online-button
+                                data-ed-ind-button>
+                                <div class="education-packs-for-adult__checkbox-circle">
+                                    <span class="education-packs-for-adult__checkbox-circle-in-circle"></span>
+                                </div>
+                                <p class="text text_small education-packs-for-adult__text_small">Индивидуальные уроки
+                                </p>
+                            </button>
+                            <button class="education-packs-for-adult__checkbox" data-ed-button="1" data-ed-online-button
+                                data-ed-group-button>
+                                <div class="education-packs-for-adult__checkbox-circle">
+                                    <span class="education-packs-for-adult__checkbox-circle-in-circle"></span>
+                                </div>
+                                <p class="text text_small education-packs-for-adult__text_small">Разговорный клуб</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="education-packs-for-adult__round-button-block">
+                    <button class="education-packs-for-adult__round-button" data-ed-round-button="2"></button>
+                    <p class="text text_black education-packs-for-adult__text_black">Длительность</p>
+                    <div class="education-packs-for-adult__messages-block">
+                        <div class="education-packs-for-adult__message hidden" data-ed-message="2"
+                            data-ed-offline-message>
+                            <div class="education-packs-for-adult__triangle"></div>
+                            <button class="education-packs-for-adult__checkbox" data-ed-button="2"
+                                data-ed-offline-button>
+                                <div class="education-packs-for-adult__checkbox-circle">
+                                    <span class="education-packs-for-adult__checkbox-circle-in-circle"></span>
+                                </div>
+                                <p class="text text_small education-packs-for-adult__text_small">60 минут</p>
+                            </button>
+                        </div>
+                        <div class="education-packs-for-adult__message education-packs-for-adult__message_pos-absolute hidden"
+                            data-ed-message="2" data-ed-online-message data-ed-group-message>
+                            <div class="education-packs-for-adult__triangle"></div>
+                            <button class="education-packs-for-adult__checkbox" data-ed-button="2"
+                                data-ed-online-button="online-group">
+                                <div class="education-packs-for-adult__checkbox-circle">
+                                    <span class="education-packs-for-adult__checkbox-circle-in-circle"></span>
+                                </div>
+                                <p class="text text_small education-packs-for-adult__text_small">60 минут</p>
+                            </button>
+                        </div>
+                        <div class="education-packs-for-adult__message education-packs-for-adult__message_pos-absolute hidden"
+                            data-ed-message="2" data-ed-online-message data-ed-ind-message>
+                            <div class="education-packs-for-adult__triangle"></div>
+                            <button class="education-packs-for-adult__checkbox" data-ed-button="2"
+                                data-ed-online-button="online-ind-30">
+                                <div class="education-packs-for-adult__checkbox-circle">
+                                    <span class="education-packs-for-adult__checkbox-circle-in-circle"></span>
+                                </div>
+                                <p class="text text_small education-packs-for-adult__text_small">30 минут</p>
+                            </button>
+                            <button class="education-packs-for-adult__checkbox" data-ed-button="2"
+                                data-ed-online-button="online-ind-60">
+                                <div class="education-packs-for-adult__checkbox-circle">
+                                    <span class="education-packs-for-adult__checkbox-circle-in-circle"></span>
+                                </div>
+                                <p class="text text_small education-packs-for-adult__text_small">60 минут</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <span class="education-packs-for-adult__line"></span>
+            </div>
+            <div class="education-packs-for-adult__cards-block education-packs-for-adult__cards-block_mobile">
+                <div class="education-packs-for-adult__slider-wrapper swiper-wrapper">
+                    <!-- offline-ind -->
+                    <div class="education-packs-for-adult__slide swiper-slide" data-ed-card="1">
+                        <div class="card education-packs-wrapper__card">
+                            <img class="card__img" src="../../modules/card/svg/card-1.svg">
+                            <p class="text card__text">4 занятия по 60 мин</p>
+                            <p class="title title_smaller card__title_smaller">5400 ₽</p>
+                            <button class="button button_shortest card__button_shortest"
+                                data-toggle-modal="payment-form">Выбрать</button>
+                        </div>
+                    </div>
+                    <div class="education-packs-for-adult__slide swiper-slide element-none" data-ed-card="1">
+                        <div class="card education-packs-wrapper__card">
+                            <img class="card__img" src="../../modules/card/svg/card-2.svg">
+                            <p class="text card__text">8 занятий по 60 мин</p>
+                            <p class="title title_smaller card__title_smaller">10800 ₽</p>
+                            <button class="button button_shortest card__button_shortest"
+                                data-toggle-modal="payment-form">Выбрать</button>
+                        </div>
+                    </div>
+                    <div class="education-packs-for-adult__slide swiper-slide element-none" data-ed-card="1">
+                        <div class="card education-packs-wrapper__card">
+                            <img class="card__img" src="../../modules/card/svg/card-3.svg">
+                            <p class="text card__text">12 занятий по 60 мин</p>
+                            <p class="title title_smaller card__title_smaller">16200 ₽</p>
+                            <button class="button button_shortest card__button_shortest"
+                                data-toggle-modal="payment-form">Выбрать</button>
+                        </div>
+                    </div>
+                    <!-- offline-group -->
+                    <div class="education-packs-for-adult__slide swiper-slide element-none" data-ed-card="2">
+                        <div class="card education-packs-wrapper__card">
+                            <img class="card__img" src="../../modules/card/svg/card-1.svg">
+                            <p class="text card__text">4 занятия по 60 мин</p>
+                            <p class="title title_smaller card__title_smaller">4300 ₽</p>
+                            <button class="button button_shortest card__button_shortest"
+                                data-toggle-modal="payment-form">Выбрать</button>
+                        </div>
+                    </div>
+                    <div class="education-packs-for-adult__slide swiper-slide element-none" data-ed-card="2">
+                        <div class="card education-packs-wrapper__card">
+                            <img class="card__img" src="../../modules/card/svg/card-2.svg">
+                            <p class="text card__text">8 занятий по 60 мин</p>
+                            <p class="title title_smaller card__title_smaller">7900 ₽</p>
+                            <button class="button button_shortest card__button_shortest"
+                                data-toggle-modal="payment-form">Выбрать</button>
+                        </div>
+                    </div>
+                    <div class="education-packs-for-adult__slide swiper-slide element-none" data-ed-card="2">
+                        <div class="card education-packs-wrapper__card">
+                            <img class="card__img" src="../../modules/card/svg/card-3.svg">
+                            <p class="text card__text">12 занятий по 60 мин</p>
+                            <p class="title title_smaller card__title_smaller">11850 ₽</p>
+                            <button class="button button_shortest card__button_shortest"
+                                data-toggle-modal="payment-form">Выбрать</button>
+                        </div>
+                    </div>
+                    <!-- offline-talking -->
+                    <div class="education-packs-for-adult__slide swiper-slide element-none" data-ed-card="3">
+                        <div class="card education-packs-wrapper__card">
+                            <img class="card__img" src="../../modules/card/svg/card-4.svg">
+                            <p class="text card__text">4 занятия по 60 мин</p>
+                            <p class="title title_smaller card__title_smaller">3600 ₽</p>
+                            <button class="button button_shortest card__button_shortest"
+                                data-toggle-modal="payment-form">Выбрать</button>
+                        </div>
+                    </div>
+                    <div class="education-packs-for-adult__slide swiper-slide element-none" data-ed-card="3">
+                        <div class="card education-packs-wrapper__card">
+                            <img class="card__img" src="../../modules/card/svg/card-5.svg">
+                            <p class="text card__text">8 занятий по 60 мин</p>
+                            <p class="title title_smaller card__title_smaller">6800 ₽</p>
+                            <button class="button button_shortest card__button_shortest"
+                                data-toggle-modal="payment-form">Выбрать</button>
+                        </div>
+                    </div>
+                    <!-- online-ind-30-->
+                    <div class="education-packs-for-adult__slide swiper-slide element-none" data-ed-card="4">
+                        <div class="card education-packs-wrapper__card">
+                            <img class="card__img" src="../../modules/card/svg/card-6.svg">
+                            <p class="text card__text">4 занятия по 30 мин</p>
+                            <p class="title title_smaller card__title_smaller">3400 ₽</p>
+                            <button class="button button_shortest card__button_shortest"
+                                data-toggle-modal="payment-form">Выбрать</button>
+                        </div>
+                    </div>
+                    <div class="education-packs-for-adult__slide swiper-slide element-none" data-ed-card="4">
+                        <div class="card education-packs-wrapper__card">
+                            <img class="card__img" src="../../modules/card/svg/card-7.svg">
+                            <p class="text card__text">8 занятий по 30 мин</p>
+                            <p class="title title_smaller card__title_smaller">6800 ₽</p>
+                            <button class="button button_shortest card__button_shortest"
+                                data-toggle-modal="payment-form">Выбрать</button>
+                        </div>
+                    </div>
+                    <div class="education-packs-for-adult__slide swiper-slide element-none" data-ed-card="4">
+                        <div class="card education-packs-wrapper__card">
+                            <img class="card__img" src="../../modules/card/svg/card-8.svg">
+                            <p class="text card__text">12 занятий по 30 мин</p>
+                            <p class="title title_smaller card__title_smaller">10200 ₽</p>
+                            <button class="button button_shortest card__button_shortest"
+                                data-toggle-modal="payment-form">Выбрать</button>
+                        </div>
+                    </div>
+                    <!-- online-ind-60-->
+                    <div class="education-packs-for-adult__slide swiper-slide element-none" data-ed-card="5">
+                        <div class="card education-packs-wrapper__card">
+                            <img class="card__img" src="../../modules/card/svg/card-1.svg">
+                            <p class="text card__text">4 занятия по 60 мин</p>
+                            <p class="title title_smaller card__title_smaller">5400 ₽</p>
+                            <button class="button button_shortest card__button_shortest"
+                                data-toggle-modal="payment-form">Выбрать</button>
+                        </div>
+                    </div>
+                    <div class="education-packs-for-adult__slide swiper-slide element-none" data-ed-card="5">
+                        <div class="card education-packs-wrapper__card">
+                            <img class="card__img" src="../../modules/card/svg/card-2.svg">
+                            <p class="text card__text">8 занятий по 60 мин</p>
+                            <p class="title title_smaller card__title_smaller">10800 ₽</p>
+                            <button class="button button_shortest card__button_shortest"
+                                data-toggle-modal="payment-form">Выбрать</button>
+                        </div>
+                    </div>
+                    <div class="education-packs-for-adult__slide swiper-slide element-none" data-ed-card="5">
+                        <div class="card education-packs-wrapper__card">
+                            <img class="card__img" src="../../modules/card/svg/card-3.svg">
+                            <p class="text card__text">12 занятий по 60 мин</p>
+                            <p class="title title_smaller card__title_smaller">16200 ₽</p>
+                            <button class="button button_shortest card__button_shortest"
+                                data-toggle-modal="payment-form">Выбрать</button>
+                        </div>
+                    </div>
+                    <!-- online-talking -->
+                    <div class="education-packs-for-adult__slide swiper-slide element-none" data-ed-card="6">
+                        <div class="card education-packs-wrapper__card">
+                            <img class="card__img" src="../../modules/card/svg/card-4.svg">
+                            <p class="text card__text">4 занятия по 60 мин</p>
+                            <p class="title title_smaller card__title_smaller">5400 ₽</p>
+                            <button class="button button_shortest card__button_shortest"
+                                data-toggle-modal="payment-form">Выбрать</button>
+                        </div>
+                    </div>
+                    <div class="education-packs-for-adult__slide swiper-slide element-none" data-ed-card="6">
+                        <div class="card education-packs-wrapper__card">
+                            <img class="card__img" src="../../modules/card/svg/card-5.svg">
+                            <p class="text card__text">8 занятий по 60 мин</p>
+                            <p class="title title_smaller card__title_smaller">10000 ₽</p>
+                            <button class="button button_shortest card__button_shortest"
+                                data-toggle-modal="payment-form">Выбрать</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </article>

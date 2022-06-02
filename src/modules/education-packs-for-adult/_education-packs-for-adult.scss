@@ -6,6 +6,20 @@
         margin: 80px 0;
     }
 
+    &_desktop {
+        @include media-s {
+            display: none;
+        }
+    }
+
+    &_mobile {
+        overflow: hidden;
+
+        @media (min-width: 769px) {
+            display: none;
+        }
+    }
+
     &__article {
         width: 100%;
         @include flex-builder(column, none, center);
@@ -17,6 +31,14 @@
 
     &__text {
         margin-bottom: 87px;
+
+        @include media-s {
+            margin-bottom: 60px;
+        }
+
+        @include media-xs {
+            margin-bottom: 40px;
+        }
     }
 
     &__buttons-block {
@@ -24,10 +46,24 @@
         position: relative;
         margin-bottom: 50px;
         @include flex-builder(row, space-around, none);
+
+        @include media-s {
+            @include flex-builder(column, center, center);
+            gap: 20px 0;
+        }
     }
 
     &__round-button-block {
         @include flex-builder(column, none, center);
+
+        @include media-s {
+            @include flex-builder(row, start, center);
+        }
+
+        @media (max-width: 425px) {
+            width: 100%;
+            @include flex-builder(column, center, center);
+        }
     }
 
     &__round-button {
@@ -38,6 +74,20 @@
         background: transparent;
         margin-bottom: 30px;
         transition: .3s all ease-in-out;
+
+        @include media-s {
+            margin-bottom: 0;
+            margin-right: 20px;
+        }
+
+        @include media-xs {
+            margin-right: 10px;
+        }
+
+        @media (max-width: 425px) {
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
 
         &_active {
             background: rgb(104, 156, 154);
@@ -51,6 +101,16 @@
         }
     }
 
+    &__text_black {
+        @include media-s {
+            width: 130px;
+        }
+
+        @media (max-width:425px) {
+            width: auto;
+        }
+    }
+
     &__line {
         position: absolute;
         width: 100%;
@@ -58,12 +118,36 @@
         background: rgb(97, 181, 169);
         top: 14px;
         z-index: -1;
+
+        @include media-s {
+            display: none;
+        }
     }
 
     &__messages-block {
         margin-top: 60px;
         position: relative;
         width: 234px;
+
+        @include media-m {
+            width: 210px;
+        }
+
+        @include media-s {
+            margin-top: 0;
+            margin-left: 40px;
+        }
+
+        @include media-xs {
+            width: 190px;
+            margin-left: 20px;
+        }
+
+        @media (max-width: 425px) {
+            margin-top: 40px;
+            margin-left: 0;
+            width: 80%;
+        }
     }
 
     &__message {
@@ -73,10 +157,27 @@
         background: $sand;
         transition: .3s all ease-in-out;
 
+        @include media-m {
+            padding: 30px 20px 16px 20px;
+        }
+
+        @include media-xs {
+            padding: 20px 15px 15px 15px;
+        }
+
+        @media (max-width: 425px) {
+            padding: 30px 20px 16px 20px;
+        }
+
         &_pos-absolute {
             position: absolute;
             top: 0;
             left: 0;
+
+            @include media-xs {
+                top: 50%;
+                transform: translateY(-50%);
+            }
         }
     }
 
@@ -90,6 +191,28 @@
         top: -20px;
         left: 50%;
         transform: translateX(-50%);
+
+        @include media-s {
+            transform: translateX(0) translateY(-50%) rotate(-90deg);
+            top: 50%;
+            left: -30px;
+        }
+
+        @include media-xs {
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 15px solid $sand;
+            left: -20px;
+        }
+
+        @media (max-width: 425px) {
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 20px solid $sand;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%) translateY(0) rotate(0);
+        }
     }
 
     &__checkbox {
@@ -128,12 +251,22 @@
         display: flex;
         justify-content: center;
         gap: 0 73px;
-        transition: .2s all ease-in-out;
+        transition: .2s height ease-in-out;
 
         @include media-m {
             width: 100%;
             gap: 0;
             justify-content: space-around;
+        }
+    }
+
+    &__slide {
+        @include flex-builder(row, center, none);
+        width: 300px;
+
+        @include media-xs {
+            max-width: 300px;
+            width: 70%;
         }
     }
 }
