@@ -2881,7 +2881,6 @@ button.swiper-pagination-bullet {
       -ms-flex-align: none;
           align-items: none;
   margin: 140px 0;
-  padding-bottom: 150px;
 }
 @media (max-width: 768px) {
   .education-packs-for-adult {
@@ -2913,6 +2912,7 @@ button.swiper-pagination-bullet {
 .education-packs-for-adult__buttons-block {
   width: 100%;
   position: relative;
+  margin-bottom: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2980,11 +2980,13 @@ button.swiper-pagination-bullet {
   padding: 30px 28px 16px 28px;
   border-radius: 20px;
   background: rgb(255, 236, 160);
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+}
+.education-packs-for-adult__message_pos-absolute {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
 }
 .education-packs-for-adult__triangle {
   width: 0;
@@ -3050,6 +3052,26 @@ button.swiper-pagination-bullet {
 }
 .education-packs-for-adult__text_small {
   text-align: start;
+}
+.education-packs-for-adult__cards-block {
+  min-width: 83%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0 73px;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+@media (max-width: 1024px) {
+  .education-packs-for-adult__cards-block {
+    width: 100%;
+    gap: 0;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 .education-packs-for-adult__checkbox_active {

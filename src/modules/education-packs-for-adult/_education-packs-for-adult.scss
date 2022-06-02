@@ -1,7 +1,6 @@
 .education-packs-for-adult {
     @include flex-builder(row, center, none);
     margin: 140px 0;
-    padding-bottom: 150px;
 
     @include media-s {
         margin: 80px 0;
@@ -23,6 +22,7 @@
     &__buttons-block {
         width: 100%;
         position: relative;
+        margin-bottom: 50px;
         @include flex-builder(row, space-around, none);
     }
 
@@ -71,10 +71,13 @@
         padding: 30px 28px 16px 28px;
         border-radius: 20px;
         background: $sand;
-        position: absolute;
-        top: 0;
-        left: 0;
         transition: .3s all ease-in-out;
+
+        &_pos-absolute {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
     }
 
     &__triangle {
@@ -118,6 +121,20 @@
 
     &__text_small {
         text-align: start;
+    }
+
+    &__cards-block {
+        min-width: 83%;
+        display: flex;
+        justify-content: center;
+        gap: 0 73px;
+        transition: .2s all ease-in-out;
+
+        @include media-m {
+            width: 100%;
+            gap: 0;
+            justify-content: space-around;
+        }
     }
 }
 
