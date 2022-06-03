@@ -46,8 +46,8 @@
         border-left: 6px solid;
         padding-left: 14px;
 
-        &_yellow {
-            border-color: rgb(253, 213, 3);
+        &_purple {
+            border-color: $purple;
             width: 21.82%;
 
             @include media-l {
@@ -56,7 +56,7 @@
         }
 
         &_red {
-            border-color: $light-pink;
+            border-color: $light-red;
             width: 30.23%;
 
             @include media-l {

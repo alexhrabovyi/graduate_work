@@ -69,11 +69,11 @@
         }
 
         &:hover {
-            color: $purple;
+            color: $dark-red;
         }
 
         &:active {
-            color: $purple-active;
+            color: $dark-red-active;
         }
     }
 
@@ -105,11 +105,11 @@
         text-decoration: none;
 
         &:hover {
-            color: $purple;
+            color: $dark-red;
         }
 
         &:active {
-            color: $purple-active;
+            color: $dark-red-active;
         }
     }
 }

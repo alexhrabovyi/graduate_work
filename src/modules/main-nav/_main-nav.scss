@@ -20,11 +20,11 @@
         transition: .05s all ease-in-out;
 
         &:hover {
-            color: $purple;
+            color: $dark-red;
         }
 
         &:active {
-            color: $purple-active;
+            color: $dark-red-active;
         }
     }
 
@@ -138,5 +138,5 @@
 }
 
 .link-hover {
-    color: $purple;
+    color: $dark-red;
 }

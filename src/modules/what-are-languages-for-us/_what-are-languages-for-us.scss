@@ -21,7 +21,6 @@
 
     &__picture-block {
         width: 28%;
-        position: relative;
 
         @include media-l {
             width: 32%;
@@ -46,13 +45,6 @@
 
     &__svg {
         width: 100%;
-    }
-
-    &__img {
-        position: absolute;
-        top: 33px;
-        left: 27px;
-        width: 73.65%;
     }
 
     &__content {
@@ -126,24 +118,20 @@
         height: 16px;
         border-radius: 50%;
 
-        &_green {
+        &_dark-red {
             background: $dark-red;
         }
 
-        &_red {
+        &_light-pink {
             background: $light-pink;
         }
 
-        &_orange {
+        &_purple {
             background: $purple;
         }
 
-        &_yellow {
-            background: $light-red;
-        }
-
-        &_blue {
-            background: rgb(3, 129, 146);
+        &_pink {
+            background: #FE5D8C;
         }
     }
 
@@ -151,24 +139,20 @@
         align-self: center;
         border-bottom: 2px dashed;
 
-        &_green {
+        &_dark-red {
             border-color: $dark-red;
         }
 
-        &_red {
+        &_light-pink {
             border-color: $light-pink;
         }
 
-        &_orange {
+        &_purple {
             border-color: $purple;
         }
 
-        &_yellow {
-            border-color: $light-red;
-        }
-
-        &_blue {
-            border-color: rgb(3, 129, 146);
+        &_pink {
+            border-color: #FE5D8C;
         }
     }
 }

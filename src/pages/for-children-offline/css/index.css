@@ -999,10 +999,10 @@ button.swiper-pagination-bullet {
   transition: 0.05s all ease-in-out;
 }
 .social-link:hover {
-  color: #6B356E;
+  color: #B60D00;
 }
 .social-link:active {
-  color: #4e2650;
+  color: #a50b00;
 }
 
 .text {
@@ -1506,10 +1506,10 @@ button.swiper-pagination-bullet {
   transition: 0.05s all ease-in-out;
 }
 .main-nav__link:hover {
-  color: #6B356E;
+  color: #B60D00;
 }
 .main-nav__link:active {
-  color: #4e2650;
+  color: #a50b00;
 }
 .main-nav__arrow-icon {
   font-size: 8px;
@@ -1678,7 +1678,7 @@ button.swiper-pagination-bullet {
 }
 
 .link-hover {
-  color: #6B356E;
+  color: #B60D00;
 }
 
 .mobile-nav__panel {
@@ -1791,10 +1791,10 @@ button.swiper-pagination-bullet {
   }
 }
 .mobile-nav__link:hover {
-  color: #6B356E;
+  color: #B60D00;
 }
 .mobile-nav__link:active {
-  color: #4e2650;
+  color: #a50b00;
 }
 .mobile-nav__social-links {
   width: 100%;
@@ -1847,10 +1847,10 @@ button.swiper-pagination-bullet {
   text-decoration: none;
 }
 .mobile-nav__contacts-link:hover {
-  color: #6B356E;
+  color: #B60D00;
 }
 .mobile-nav__contacts-link:active {
-  color: #4e2650;
+  color: #a50b00;
 }
 
 .burger {
@@ -2394,6 +2394,9 @@ button.swiper-pagination-bullet {
 @media (max-width: 768px) {
   .trial-lesson-banner__content {
     margin-bottom: 72px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 @media (max-width: 360px) {
@@ -2424,6 +2427,11 @@ button.swiper-pagination-bullet {
     font-size: 14px;
   }
 }
+@media (max-width: 768px) {
+  .trial-lesson-banner__title-with-line {
+    text-align: center;
+  }
+}
 .trial-lesson-banner__button {
   margin-top: 40px;
 }
@@ -2432,37 +2440,27 @@ button.swiper-pagination-bullet {
     margin-top: 30px;
   }
 }
-.trial-lesson-banner__picture-block {
-  position: relative;
-  z-index: 1;
+.trial-lesson-banner__svg {
+  width: 20%;
 }
-@media (max-width: 576px) {
-  .trial-lesson-banner__picture-block {
-    width: 50%;
+@media (max-width: 1024px) {
+  .trial-lesson-banner__svg {
+    width: 25%;
   }
 }
-.trial-lesson-banner__img {
-  width: 100%;
-}
-.trial-lesson-banner__svg-up {
-  position: absolute;
-  right: -25px;
-  top: -22px;
-}
-@media (max-width: 576px) {
-  .trial-lesson-banner__svg-up {
-    width: 36%;
+@media (max-width: 768px) {
+  .trial-lesson-banner__svg {
+    width: 40%;
   }
 }
-.trial-lesson-banner__svg-down {
-  position: absolute;
-  left: -30px;
-  top: -30px;
-  z-index: -1;
-}
 @media (max-width: 576px) {
-  .trial-lesson-banner__svg-down {
-    width: 130.6%;
+  .trial-lesson-banner__svg {
+    width: 60%;
+  }
+}
+@media (max-width: 360px) {
+  .trial-lesson-banner__svg {
+    width: 80%;
   }
 }
 
@@ -2616,7 +2614,6 @@ button.swiper-pagination-bullet {
 }
 .what-is-languages-for-us-wrapper__picture-block {
   width: 28%;
-  position: relative;
 }
 @media (max-width: 1360px) {
   .what-is-languages-for-us-wrapper__picture-block {
@@ -2645,12 +2642,6 @@ button.swiper-pagination-bullet {
 }
 .what-is-languages-for-us-wrapper__svg {
   width: 100%;
-}
-.what-is-languages-for-us-wrapper__img {
-  position: absolute;
-  top: 33px;
-  left: 27px;
-  width: 73.65%;
 }
 .what-is-languages-for-us-wrapper__content {
   width: 52.78%;
@@ -2760,20 +2751,17 @@ button.swiper-pagination-bullet {
   height: 16px;
   border-radius: 50%;
 }
-.what-is-languages-for-us-wrapper__circle_green {
+.what-is-languages-for-us-wrapper__circle_dark-red {
   background: #B60D00;
 }
-.what-is-languages-for-us-wrapper__circle_red {
+.what-is-languages-for-us-wrapper__circle_light-pink {
   background: #F8C4ED;
 }
-.what-is-languages-for-us-wrapper__circle_orange {
+.what-is-languages-for-us-wrapper__circle_purple {
   background: #6B356E;
 }
-.what-is-languages-for-us-wrapper__circle_yellow {
-  background: #F77E72;
-}
-.what-is-languages-for-us-wrapper__circle_blue {
-  background: rgb(3, 129, 146);
+.what-is-languages-for-us-wrapper__circle_pink {
+  background: #FE5D8C;
 }
 .what-is-languages-for-us-wrapper__dots {
   -ms-flex-item-align: center;
@@ -2781,20 +2769,17 @@ button.swiper-pagination-bullet {
       align-self: center;
   border-bottom: 2px dashed;
 }
-.what-is-languages-for-us-wrapper__dots_green {
+.what-is-languages-for-us-wrapper__dots_dark-red {
   border-color: #B60D00;
 }
-.what-is-languages-for-us-wrapper__dots_red {
+.what-is-languages-for-us-wrapper__dots_light-pink {
   border-color: #F8C4ED;
 }
-.what-is-languages-for-us-wrapper__dots_orange {
+.what-is-languages-for-us-wrapper__dots_purple {
   border-color: #6B356E;
 }
-.what-is-languages-for-us-wrapper__dots_yellow {
-  border-color: #F77E72;
-}
-.what-is-languages-for-us-wrapper__dots_blue {
-  border-color: rgb(3, 129, 146);
+.what-is-languages-for-us-wrapper__dots_pink {
+  border-color: #FE5D8C;
 }
 
 .education-packs-wrapper {
@@ -2881,7 +2866,7 @@ button.swiper-pagination-bullet {
 .education-packs-wrapper__button {
   background: none;
   border: none;
-  border-bottom: solid 2px rgb(148, 198, 196);
+  border-bottom: solid 2px #EE746A;
   width: 100%;
   font-family: "Raleway", sans-serif;
   font-style: normal;
@@ -3513,10 +3498,10 @@ button.swiper-pagination-bullet {
   }
 }
 .footer-wrapper__nav-link:hover {
-  color: #6B356E;
+  color: #B60D00;
 }
 .footer-wrapper__nav-link:active {
-  color: #4e2650;
+  color: #a50b00;
 }
 .footer-wrapper__nav-social-links {
   display: -webkit-box;

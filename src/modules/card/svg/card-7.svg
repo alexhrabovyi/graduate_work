@@ -1,22 +1,22 @@
-<svg width="300" height="150" viewBox="0 0 300 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="150" height="150" transform="matrix(1 0 0 -1 150 150)" fill="#FE7167"/>
-<path d="M223.5 48.2139L192 101.785H255L223.5 48.2139Z" fill="#FDE9D4"/>
-<rect width="27.3" height="48.2143" transform="matrix(1 0 0 -1 209.85 150)" fill="black"/>
-<ellipse rx="10.5" ry="10.7143" transform="matrix(1 0 0 -1 223.5 21.4283)" fill="black"/>
-<ellipse rx="10.5" ry="10.7143" transform="matrix(1 0 0 -1 255 21.4283)" fill="black"/>
-<ellipse rx="10.5" ry="10.7143" transform="matrix(1 0 0 -1 192 21.4283)" fill="black"/>
-<g clip-path="url(#clip0_466_2097)">
-<rect width="150" height="150" transform="matrix(0 -1 -1 0 150 150)" fill="#FDE9D4"/>
-<ellipse rx="21.3855" ry="20.3672" transform="matrix(0 -1 -1 0 3.06153 128.614)" fill="#FFCC1A"/>
-<ellipse rx="21.3855" ry="20.3672" transform="matrix(0 -1 -1 0 3.06153 92.4699)" fill="#FFCC1A"/>
-<ellipse rx="21.3855" ry="20.3672" transform="matrix(0 -1 -1 0 3.06153 56.3254)" fill="#FFCC1A"/>
-<ellipse rx="21.3855" ry="20.3672" transform="matrix(0 -1 -1 0 3.06153 21.385)" fill="#FFCC1A"/>
-<path d="M7.14244 150C26.0865 150 44.2546 142.098 57.6501 128.033C71.0455 113.968 78.571 94.8912 78.571 75C78.571 55.1088 71.0455 36.0322 57.6501 21.967C44.2546 7.90177 26.0865 3.00349e-06 7.14245 0V13.8124C22.5977 13.8124 37.4199 20.2589 48.3483 31.7338C59.2768 43.2087 65.4164 58.772 65.4164 75C65.4164 91.228 59.2768 106.791 48.3483 118.266C37.4198 129.741 22.5976 136.188 7.14244 136.188L7.14244 150Z" fill="#FFCC1A"/>
-<ellipse rx="21.4286" ry="20.4082" transform="matrix(0 -1 -1 0 115.306 75.0001)" fill="#FC8B4C"/>
+<svg width="300" height="153" viewBox="0 0 300 153" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="150" height="152.174" transform="matrix(1 0 0 -1 150 152.174)" fill="#F8C4ED"/>
+<path d="M223.5 48.9128L192 103.261H255L223.5 48.9128Z" fill="#FFEF93"/>
+<rect width="27.3" height="48.9131" transform="matrix(1 0 0 -1 209.85 152.174)" fill="black"/>
+<ellipse rx="10.5" ry="10.8696" transform="matrix(1 0 0 -1 223.5 21.7391)" fill="black"/>
+<ellipse rx="10.5" ry="10.8696" transform="matrix(1 0 0 -1 255 21.7391)" fill="black"/>
+<ellipse rx="10.5" ry="10.8696" transform="matrix(1 0 0 -1 192 21.7391)" fill="black"/>
+<g clip-path="url(#clip0_335_2578)">
+<rect width="152.174" height="150" transform="matrix(0 -1 -1 0 150 152.174)" fill="#FFEF93"/>
+<ellipse rx="21.6955" ry="20.3672" transform="matrix(0 -1 -1 0 3.06153 130.478)" fill="#F77E72"/>
+<ellipse rx="21.6955" ry="20.3672" transform="matrix(0 -1 -1 0 3.06153 93.8096)" fill="#F77E72"/>
+<ellipse rx="21.6955" ry="20.3672" transform="matrix(0 -1 -1 0 3.06153 57.1419)" fill="#F77E72"/>
+<ellipse rx="21.6955" ry="20.3672" transform="matrix(0 -1 -1 0 3.06153 21.6949)" fill="#F77E72"/>
+<path d="M7.14244 152.174C26.0865 152.174 44.2546 144.158 57.6501 129.889C71.0455 115.619 78.571 96.2665 78.571 76.087C78.571 55.9075 71.0455 36.5544 57.6501 22.2854C44.2546 8.01629 26.0865 3.04702e-06 7.14245 0V14.0126C22.5977 14.0126 37.4199 20.5525 48.3483 32.1937C59.2768 43.8349 65.4164 59.6238 65.4164 76.087C65.4164 92.5501 59.2768 108.339 48.3483 119.98C37.4198 131.621 22.5976 138.161 7.14244 138.161L7.14244 152.174Z" fill="#F77E72"/>
+<ellipse rx="21.7391" ry="20.4082" transform="matrix(0 -1 -1 0 115.306 76.0868)" fill="#6B356E"/>
 </g>
 <defs>
-<clipPath id="clip0_466_2097">
-<rect width="150" height="150" fill="white" transform="matrix(0 -1 -1 0 150 150)"/>
+<clipPath id="clip0_335_2578">
+<rect width="152.174" height="150" fill="white" transform="matrix(0 -1 -1 0 150 152.174)"/>
 </clipPath>
 </defs>
 </svg>
