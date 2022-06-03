@@ -42,7 +42,7 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-vk:before {
+.icon-facebook:before {
   content: "\e904";
 }
 
