@@ -78,11 +78,6 @@
         width: 44.45%;
         position: relative;
 
-        &_for-adult {
-            width: 46.03%;
-            @include flex-builder(row-reverse, none, none);
-        }
-
         @include media-s {
             width: 80%;
             align-self: center;
@@ -90,6 +85,27 @@
 
         @include media-xs {
             width: 100%;
+        }
+
+        &_for-adult {
+            width: 46.03%;
+            @include flex-builder(row-reverse, none, none);
+        }
+
+        &_children-offline {
+            width: 30%;
+
+            @include media-s {
+                width: 40%;
+            }
+
+            @include media-xs {
+                width: 50%;
+            }
+
+            @media (max-width: 360px) {
+                width: 70%;
+            }
         }
     }
 
