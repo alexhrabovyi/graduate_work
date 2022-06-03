@@ -21,8 +21,6 @@
 
     &__picture-block {
         width: 45.56%;
-        position: relative;
-        @include flex-builder(row, center, center);
 
         @include media-m {
             width: 60%;
@@ -39,24 +37,11 @@
 
         @media (max-width: 360px) {
             width: 90%;
-        } 
-    }
-
-    &__svg-top {
-        width: 24.66%;
-        position: absolute;
-        left: 19.5%;
-        bottom: -7px;
+        }
     }
 
     &__img {
-        width: 91.03%;
-    }
-
-    &__svg-bottom   {
         width: 100%;
-        position: absolute;
-        z-index: -1;
     }
 
     &__text-block {
@@ -76,7 +61,7 @@
 
         @media (max-width: 360px) {
             width: 90%;
-        } 
+        }
     }
 
     &__title-with-line {

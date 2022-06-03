@@ -49,19 +49,19 @@
         @include flex-builder(row, center, center);
         margin-bottom: 20px;
 
-        &_green {
+        &_dark-red {
             background: $dark-red;
         }
 
-        &_yellow {
+        &_light-red {
             background: $light-red;
         }
 
-        &_orange {
+        &_purple {
             background: $purple;
         }
 
-        &_red {
+        &_light-pink {
             background: $light-pink;
         }
     }

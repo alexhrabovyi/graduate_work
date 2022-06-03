@@ -87,12 +87,8 @@
             width: 100%;
         }
 
-        &_for-adult {
-            width: 46.03%;
-            @include flex-builder(row-reverse, none, none);
-        }
 
-        &_children-offline {
+        &_svg {
             width: 30%;
 
             @include media-s {
@@ -114,27 +110,10 @@
         bottom: 0;
         left: 46px;
         width: 60.08%;
-
-        &_children-offline {
-            width: 62.22%;
-            left: 6.79%;
-            bottom: 4px;
-            z-index: -1;
-        }
-
-        &_for-adult {
-            width: 51.72%;
-            left: 0;
-            bottom: 0;
-        }
     }
 
     &__picture {
         width: 100%;
-
-        &_for-adult {
-            width: 72.41%;
-        }
     }
 
 }
