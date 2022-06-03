@@ -1,22 +1,10 @@
 .logo-link {
-
     &:hover .logo-fill {
         fill: $dark-red-active;
-        transition: .2s all ease-in-out;
-    }
-
-    &:hover .logo-stroke {
-        fill: $dark-red-active;
-        stroke: $dark-red-active;
         transition: .2s all ease-in-out;
     }
 }
 
 .logo-fill {
     fill: $dark-red;
-}
-
-.logo-stroke {
-    fill: $dark-red;
-    stroke: $dark-red;
 }

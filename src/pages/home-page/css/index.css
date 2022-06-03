@@ -809,7 +809,7 @@ button.swiper-pagination-bullet {
   font-weight: 600;
   font-size: 18px;
   letter-spacing: 0.01em;
-  color: rgb(255, 255, 255);
+  color: #FFFFFF;
   background: #B60D00;
   border: none;
   cursor: pointer;
@@ -875,13 +875,13 @@ button.swiper-pagination-bullet {
   width: 100%;
   height: 50px;
   border-radius: 10px;
-  background: rgb(255, 255, 255);
+  background: #FFFFFF;
   border: 1px solid #FFBDA2;
   padding: 0 20px;
   font-family: "Raleway", sans-serif;
   font-weight: 300;
   letter-spacing: 0.02em;
-  color: rgb(54, 54, 54);
+  color: #363636;
   -webkit-transition: 0.1s all ease-in-out;
   transition: 0.1s all ease-in-out;
 }
@@ -893,7 +893,7 @@ button.swiper-pagination-bullet {
   -webkit-box-shadow: 0px 2px 4px #FFBDA2;
           box-shadow: 0px 2px 4px #FFBDA2;
   outline: none;
-  color: rgb(0, 0, 0);
+  color: #000000;
   font-weight: 500;
 }
 .input_incorrect {
@@ -922,20 +922,9 @@ button.swiper-pagination-bullet {
   -webkit-transition: 0.2s all ease-in-out;
   transition: 0.2s all ease-in-out;
 }
-.logo-link:hover .logo-stroke {
-  fill: #a50b00;
-  stroke: #a50b00;
-  -webkit-transition: 0.2s all ease-in-out;
-  transition: 0.2s all ease-in-out;
-}
 
 .logo-fill {
   fill: #B60D00;
-}
-
-.logo-stroke {
-  fill: #B60D00;
-  stroke: #B60D00;
 }
 
 .modal-window {
@@ -963,7 +952,7 @@ button.swiper-pagination-bullet {
 
 .social-link {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: #000000;
   font-size: 20px;
   -webkit-transition: 0.05s all ease-in-out;
   transition: 0.05s all ease-in-out;
@@ -979,13 +968,13 @@ button.swiper-pagination-bullet {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 18px;
-  color: rgb(54, 54, 54);
+  color: #363636;
   line-height: 30px;
 }
 .text_small {
   font-weight: 300;
   font-size: 16px;
-  color: rgb(54, 54, 54);
+  color: #363636;
   letter-spacing: 0.02em;
   line-height: 26px;
 }
@@ -993,7 +982,7 @@ button.swiper-pagination-bullet {
   color: #B60D00;
 }
 .text_black {
-  color: rgb(0, 0, 0);
+  color: #000000;
 }
 
 .title-with-line {
@@ -1026,7 +1015,7 @@ button.swiper-pagination-bullet {
   letter-spacing: 0.02em;
   -webkit-font-feature-settings: "kern" off;
           font-feature-settings: "kern" off;
-  color: rgb(0, 0, 0);
+  color: #000000;
 }
 @media (max-width: 1360px) {
   .title {
@@ -1238,7 +1227,7 @@ body {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 18px;
-  color: rgb(0, 0, 0);
+  color: #000000;
   position: absolute;
   top: 15px;
   right: 45px;
@@ -1467,7 +1456,7 @@ body {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: #000000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1517,10 +1506,8 @@ body {
     width: auto;
   }
 }
-@media (max-width: 1360px) {
-  .main-nav__logo-link {
-    width: 200px;
-  }
+.main-nav__logo-link {
+  width: 200px;
 }
 @media (max-width: 1024px) {
   .main-nav__logo-link {
@@ -1690,9 +1677,17 @@ body {
     display: flex;
   }
 }
+.mobile-nav__logo-link svg {
+  width: 200px;
+}
+@media (max-width: 576px) {
+  .mobile-nav__logo-link svg {
+    width: 60%;
+  }
+}
 @media (max-width: 360px) {
   .mobile-nav__logo-link svg {
-    width: 90%;
+    width: 50%;
   }
 }
 .mobile-nav__content {
@@ -1756,7 +1751,7 @@ body {
   font-weight: 500;
   font-size: 18px;
   letter-spacing: 0.02em;
-  color: rgb(0, 0, 0);
+  color: #000000;
   text-decoration: none;
   margin-bottom: 20px;
 }
@@ -2069,7 +2064,7 @@ body {
   font-weight: 900;
   font-size: 24px;
   line-height: 34px;
-  color: rgb(0, 0, 0);
+  color: #000000;
   position: absolute;
   left: 90px;
   background: #FFFFD7;
@@ -2595,7 +2590,7 @@ body {
   font-family: "Raleway";
   font-weight: 500;
   font-size: 18px;
-  color: rgb(0, 0, 0);
+  color: #000000;
   cursor: pointer;
   -webkit-transition: 0.1s all ease-in-out;
   transition: 0.1s all ease-in-out;
@@ -2616,7 +2611,7 @@ body {
   height: 50px;
   overflow: hidden;
   padding: 0 17.5px 0 20px;
-  background: rgb(255, 255, 255);
+  background: #FFFFFF;
   border: 1px solid #FFBDA2;
   border-radius: 10px;
   cursor: pointer;
@@ -2654,7 +2649,7 @@ body {
 }
 .trial-lesson-form-wrapper__select-icon {
   font-size: 8px;
-  color: rgb(0, 0, 0);
+  color: #000000;
   -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
 }
@@ -3596,10 +3591,26 @@ body {
     margin-bottom: 40px;
   }
 }
-@media (max-width: 320px) {
-  .footer-wrapper__logo-link svg {
-    width: 100%;
+.footer-wrapper__logo-link {
+  width: 200px;
+}
+@media (max-width: 1024px) {
+  .footer-wrapper__logo-link {
+    width: 70%;
   }
+}
+@media (max-width: 768px) {
+  .footer-wrapper__logo-link {
+    width: 30%;
+  }
+}
+@media (max-width: 576px) {
+  .footer-wrapper__logo-link {
+    width: 50%;
+  }
+}
+.footer-wrapper__logo-link svg {
+  width: 100%;
 }
 .footer-wrapper__nav-social-links-block {
   width: 254px;
